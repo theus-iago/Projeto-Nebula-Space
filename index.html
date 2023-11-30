@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br" onclick="pulo()">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bem vindo Jogador</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Jogo</title>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
-    
-<div class="telagame" onclick="conta()">
-    
-        <span id="counter">0</span>
-    
-    <img src="imagens/clouds.png" alt="" id="nuvemTras">
-   <img src="imagens/nuvem1.png" alt="" id="nuvemFrente">
-
-   <img src="imagens/nuvem1.png" alt="" id="nuvemFrente2">
-
-<img src="imagens/baixados-removebg-preview1.gif" class= "personagem">
-
-<img src="imagens/enemi.gif"id="bloco" >
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
+    <div class="game-board">
+        <div class="life">
+            <img src="images/player.png" alt="playerLife" class="lifes" id="i1">
+            <img src="images/player.png" alt="playerLife" class="lifes">
+            <img src="images/player.png" alt="playerLife" class="lifes">
+        </div>
+        <div class="personagem" id="player"> <div class="bullet"></div></div>
+        <div class="personagem" id="enemy"></div>
+    </div>
+    <div class="botoes">
+        <img src="images/botoes.png" alt="botoes">
+        <div class="anguloHorizontal">
+            <div class="botao" id="left" onclick="moverLeft()" onmousedown="moverLeft()"></div>
+            <div class="botao" id="right" onclick="moverRight()"></div>
+        </div>
+        <div class="anguloVertical">
+            <div class="botao" id="top" onclick="moverTop()"></div>
+            <div class="botao" id="bottom" onclick="moverBottom()"></div>
+        </div>
+        <div class="shootButton" onclick="shoot()">
+            <img src="images/fogo.png" alt="fire">
+        </div>
+    </div>
 </body>
-</html>
+    </html>
