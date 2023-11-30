@@ -1,127 +1,121 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-#counter{
-    font-size: 20pt;
-    position: absolute;
-    right: 50%;
+body {
+    background-image:url('../images/fundo.jfif');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(13, 31, 31);
+.game-board {
+    height:100%;
+    width:100%;
+    position:relative;
 }
-.telagame{
-   border: 2px solid white;
-   width: 1000px;
-   height: 500px; 
-   position: absolute;
-   transform: translateY(70%);
-   overflow: hidden;
-    background-color: rgb(80, 180, 242);
-}
-.personagem{
-position: absolute;
-width: 150px;
-height: 150px;
-bottom: -30px;
-left: 10px;
-
+.life {
 
 }
-#bloco{
-    position: absolute;
-width: 100px;
-height: 90px;
-bottom: 0px;
-right: -100px;
-animation: enemi 2s infinite ;
-
+.life > img {
+    margin:6px;
 }
-#nuvemFrente{
-    animation: nuvem 8s infinite ease-out;
-    position: absolute;
-    width: 300px;
-    height: 200px;
+.personagem {
+    height:100px;
+    width:100px;
+    position:absolute;
 }
-#nuvemFrente2{
-    animation: nuvem2 9s infinite ease-out ;
-    position: absolute;
-   top: 30%;
-    width: 300px;
-    height: 200px;
+#player {
+    background-image:url('../images/player.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    top:150px;
+    left:50%;
+    transition:all .1s;
 }
-#nuvemTras{
-    animation: nuvemTras 40s infinite ease-out ;
-    position: absolute;
-    bottom: -110px;
-   
+@keyframes death {
+    0%{opacity:100%;}
+    25%{opacity:0%;}
+    50%{opacity:100%;}
+    75%{opacity:0%;}
+    100%{opacity:100%;}
 }
-.teste{
-    animation: person 300ms linear;
+#enemy {
+    background-image:url('../images/enemy.gif');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:top 2s infinite ease-in-out;
+} 
+@keyframes top {
+    0%{top:-100px;}
+    100%{top:900px;}
+} 
+.botoes {
+    background-color:rgba(128, 128, 128, 0.471);
+    height:100%;
+    width:500px;
+    position:relative;
+    display:grid;
+    place-content:center;
 }
-
-@keyframes enemi{
-
-0%{
-    right: -100px;
+.botoes > img {
+    width:100px;
 }
-100%{
-    right: 1200px;
+.botao {
+    background-color:rgb(186, 0, 0);
+    height:36px;
+    width:36px;
+    margin:10px;
+    opacity:0;
 }
+.anguloHorizontal {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display:flex;
+  flex-direction:row;
+  gap:20px;
 }
-
-@keyframes nuvem{
-
-    0%{
-        right: -300px;
-    }
-    
-    100%{
-        right: 1000px;
-    }
-    }
-
-    @keyframes nuvem2{
-
-        0%{
-            right: -700px;
-        }
-        
-        100%{
-            right: 1000px;
-        }
-        }
-        @keyframes nuvemTras{
-
-            0%{
-                right: -1000px;
-            }
-            
-            100%{
-                right: 900px;
-            }
-            }
-
-@keyframes person{
-    0%{
-        bottom: 0px;
-
-    }
-    50%{
-        bottom: 90px;
-    }
-    70%{
-        bottom: 180px;
-    }
-    80%{
-        bottom: 50px;
-    }
-    100%{
-        bottom: 0pxpx;
-    }
+.anguloVertical {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
-
-
+.shootButton {
+  background-color:rgb(255, 52, 52);
+  border:2px solid black;
+  border-radius:50%;
+  height:70px;
+  width:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:35%;
+  left:10%;
+  transform:translate(-10%,-35%);
+}
+.bullet {
+    background-color:red;
+    border-radius:25%;
+    height:12px;
+    width:12px;
+    position:relative;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    top:0%;
+    opacity:0%;
+    transition:all .2s;
+}
