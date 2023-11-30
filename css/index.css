@@ -43,10 +43,13 @@ body {
     100%{opacity:100%;}
 }
 #enemy {
-    background-image:url('../images/enemy.gif');
+  /*   background-image:url('../images/enemy.gif');
     background-repeat:no-repeat;
     background-size:cover;
-    background-position:center center;
+    background-position:center center; */
+    background-size:gray;
+    height:150px;
+    width:150px;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
