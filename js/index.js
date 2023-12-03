@@ -19,7 +19,8 @@ function colisao() {
    if(!(positionPlayer.right < positionEnemy.left + positionGameBoard.left || positionPlayer.left > positionEnemy.right + positionGameBoard.left || positionPlayer.bottom < positionEnemy.top + positionGameBoard.top || positionPlayer.top > positionEnemy.bottom + positionGameBoard.top)) {     
      setTimeout(() => {
       player.style.animation = "death .6s ease-in-out";
-  for(let i =0;i < document.getElementsByClassName("lifes")[2];i++) {
+    let lifes = document.getElementsByClassName("lifes")[2];
+  for(let i =0;i < lifes.length;i++) {
   document.getElementsByClassName("lifes")[i].style.opacity = 0;
   }
     },100);
