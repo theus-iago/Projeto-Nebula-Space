@@ -17,10 +17,12 @@ body {
     position:relative;
 }
 .life {
-
+ display:flex;
 }
 .life > img {
     margin:6px;
+    width:50px;
+    transition:all .4s;
 }
 .personagem {
     height:100px;
@@ -32,8 +34,8 @@ body {
     background-repeat:no-repeat;
     background-size:cover;
     top:150px;
-    left:50%;
-    transition:all .1s;
+    right:40px;
+    transition:all .2s;
 }
 @keyframes death {
     0%{opacity:100%;}
@@ -61,9 +63,9 @@ body {
     100%{top:900px;}
 } 
 .botoes {
-    background-color:rgba(128, 128, 128, 0.471);
+    background-color:rgba(128,128,128,0.63);
     height:100%;
-    width:500px;
+    width:180px;
     position:relative;
     display:grid;
     place-content:center;
@@ -122,4 +124,16 @@ body {
     top:0%;
     opacity:0%;
     transition:all .2s;
+}
+@media screen and (width<=600px) {
+  body {
+    flex-direction:column;
+  }
+  .botoes {
+    height:180px;
+    width:100%;
+  }
+  .life {
+ flex-direction:column;
+}
 }

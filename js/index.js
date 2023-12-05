@@ -2,13 +2,12 @@ const body = document.querySelector("body");
 const player = document.querySelector("#player");
 const enemy = document.querySelector("#enemy");
 const gameBoard = document.querySelector(".game-board");
-const life = document.querySelector(".life");
-const lifes = document.getElementsByClassName("lifes")[0];
 
 const positionPlayer = player.getBoundingClientRect();
 const positionEnemy = enemy.getBoundingClientRect();
 const positionGameBoard = gameBoard.getBoundingClientRect();
 const positionBody = body.getBoundingClientRect();
+var vidaAtual = 3;
 
 function colisao() {
   const positionBody = body.getBoundingClientRect();
@@ -16,13 +15,20 @@ function colisao() {
   const positionEnemy = enemy.getBoundingClientRect();
   const positionGameBoard = gameBoard.getBoundingClientRect();
 
-   if(!(positionPlayer.right < positionEnemy.left + positionGameBoard.left || positionPlayer.left > positionEnemy.right + positionGameBoard.left || positionPlayer.bottom < positionEnemy.top + positionGameBoard.top || positionPlayer.top > positionEnemy.bottom + positionGameBoard.top)) {     
+   if(!(positionPlayer.right < positionEnemy.left + positionGameBoard.left || positionPlayer.left > positionEnemy.right + positionGameBoard.left || positionPlayer.bottom < positionEnemy.top + positionGameBoard.top || positionPlayer.top > positionEnemy.bottom + positionGameBoard.top)) {
+     vidaAtual --;
      setTimeout(() => {
       player.style.animation = "death .6s ease-in-out";
-    let lifes = document.getElementsByClassName("lifes")[2];
-  for(let i =0;i < lifes.length;i++) {
-  document.getElementsByClassName("lifes")[i].style.opacity = 0;
+  console.log(vidaAtual)
+  if(vidaAtual>=0) {
+   document.getElementsByClassName("lifes")[vidaAtual].style.opacity = 0;
   }
+    if(vidaAtual === 0) {
+      setTimeout(() => {
+       window.alert("Game-Over!");
+       location.reload();
+        },100);
+    }
     },100);
      player.style.animation = "";
     }
@@ -53,4 +59,4 @@ function colisao() {
       bullet.style.cssText = " opacity:0%; top:;";
     },200);
   }
-  setInterval(colisao,100);
+  setInterval(colisao,300);
