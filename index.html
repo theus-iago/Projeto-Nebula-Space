@@ -14,16 +14,18 @@
             <img src="images/player.png" alt="playerLife" class="lifes">
             <img src="images/player.png" alt="playerLife" class="lifes">
         </div>
+        <div class="game-score">
+          <h2 class="score"></h2>
+        </div>
         <div class="personagem" id="player"> <div class="bullet"></div></div>
+        <div class="personagem" id="enemy"></div>
+        <div class="personagem" id="enemy"></div>
         <div class="personagem" id="enemy"></div>
     </div>
     <div class="botoes">
-        <img src="images/botoes.png" alt="botoes">
-        <div class="anguloHorizontal">
+        <div class="angulos">
             <div class="botao" id="left" onclick="moverLeft()" onmousedown="moverLeft()"></div>
             <div class="botao" id="right" onclick="moverRight()"></div>
-        </div>
-        <div class="anguloVertical">
             <div class="botao" id="top" onclick="moverTop()"></div>
             <div class="botao" id="bottom" onclick="moverBottom()"></div>
         </div>
@@ -31,5 +33,16 @@
             <img src="images/fogo.png" alt="fire">
         </div>
     </div>
+    <div class="game-over">
+      <section class="message">
+        <div class="header">
+          <div class="titulo">
+           <h1>Game-Over</h1>
+          </div>
+         <p class="result"></p>
+        </div>
+        <p>Toque em Qualquer lugar da tela para voltar</p>
+      </section>
+    </div>
 </body>
-    </html>
+</html>

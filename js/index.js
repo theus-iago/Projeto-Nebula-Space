@@ -25,9 +25,14 @@ function colisao() {
   }
     if(vidaAtual === 0) {
       setTimeout(() => {
-       window.alert("Game-Over!");
-       location.reload();
+       document.body.style.cssText = "display:block;";
+       document.querySelector(".game-board").style.display = "none";
+       document.querySelector(".botoes").style.display = "none";
+       document.querySelector(".game-over").style.cssText = "height:100vh; width:100vw; display:flex; align-items:center; justify-content:center;";
         },100);
+        document.body.addEventListener("click", function() {
+           location.reload();
+          });
     }
     },100);
      player.style.animation = "";
@@ -59,4 +64,15 @@ function colisao() {
       bullet.style.cssText = " opacity:0%; top:;";
     },200);
   }
-  setInterval(colisao,300);
+  let num = 0;
+  function score() {
+    const score = document.querySelector(".score");
+    num++;
+    if(vidaAtual==0) {
+      document.querySelector(".result").innerHTML = Number(num);
+    }else {
+       score.innerHTML = Number(num);
+    }
+  }
+  setInterval(score,260);
+  setInterval(colisao,290);
