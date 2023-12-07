@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Jogo</title>
-    <script src="js/index.js" defer></script>
-</head>
-<body>
-    <div class="game-board">
-        <div class="life">
-            <img src="images/player.png" alt="playerLife" class="lifes">
-            <img src="images/player.png" alt="playerLife" class="lifes">
-            <img src="images/player.png" alt="playerLife" class="lifes">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>Jogo</title>
+        <script src="js/index.js" defer></script>
+    </head>
+    <body>
+        <div class="game-board">
+            <div class="life">
+                <img src="images/player.png" alt="playerLife" class="lifes" />
+                <img src="images/player.png" alt="playerLife" class="lifes" />
+                <img src="images/player.png" alt="playerLife" class="lifes" />
+            </div>
+            <div class="game-score">
+                <h2 class="score"></h2>
+            </div>
+            <div class="personagem" id="player"><div class="bullet"></div></div>
+            <div class="personagem" id="enemy"></div>
+            <div class="personagem" id="enemy"></div>
+            <div class="personagem" id="enemy"></div>
         </div>
-        <div class="game-score">
-          <h2 class="score"></h2>
+        <div class="botoes">
+            <div class="angulos">
+                <div
+                    class="botao"
+                    id="left"
+                    onclick="moverLeft()"
+                    onmousedown="moverLeft()"
+                ></div>
+                <div class="botao" id="right" onclick="moverRight()"></div>
+                <div class="botao" id="top" onclick="moverTop()"></div>
+                <div class="botao" id="bottom" onclick="moverBottom()"></div>
+            </div>
+            <div class="shootButton" onclick="shoot()">
+                <img src="images/fogo.png" alt="fire" />
+            </div>
         </div>
-        <div class="personagem" id="player"> <div class="bullet"></div></div>
-        <div class="personagem" id="enemy"></div>
-        <div class="personagem" id="enemy"></div>
-        <div class="personagem" id="enemy"></div>
-    </div>
-    <div class="botoes">
-        <div class="angulos">
-            <div class="botao" id="left" onclick="moverLeft()" onmousedown="moverLeft()"></div>
-            <div class="botao" id="right" onclick="moverRight()"></div>
-            <div class="botao" id="top" onclick="moverTop()"></div>
-            <div class="botao" id="bottom" onclick="moverBottom()"></div>
+        <div class="game-over">
+            <section class="message">
+                <div class="header">
+                    <div class="titulo">
+                        <h1>Game-Over</h1>
+                    </div>
+                    <p class="result"></p>
+                </div>
+                <p>Toque em Qualquer lugar da tela para voltar</p>
+            </section>
         </div>
-        <div class="shootButton" onclick="shoot()">
-            <img src="images/fogo.png" alt="fire">
-        </div>
-    </div>
-    <div class="game-over">
-      <section class="message">
-        <div class="header">
-          <div class="titulo">
-           <h1>Game-Over</h1>
-          </div>
-         <p class="result"></p>
-        </div>
-        <p>Toque em Qualquer lugar da tela para voltar</p>
-      </section>
-    </div>
-</body>
+    </body>
 </html>
