@@ -37,7 +37,8 @@ body {
     width: 50px;
     transition: all 0.4s;
 }
-.personagem {
+.personagem,
+.enemy {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -46,7 +47,7 @@ body {
     background-image: url("../images/player.png");
     background-repeat: no-repeat;
     background-size: cover;
-    top: 150px;
+    bottom: 50px;
     right: 40px;
     transition: all 0.2s;
 }
@@ -67,29 +68,33 @@ body {
         opacity: 100%;
     }
 }
-#enemy {
-    background-color: gray;
+.enemy {
+  background:url('../images/meteoro.png') no-repeat 100%/cover;
+}
+#enemy01 {
     border-radius: 28%;
     height: 125px;
     width: 125px;
-    top: 50%;
+    top: -1800px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    animation: top 2s infinite ease-in-out;
 }
-@keyframes top {
-    0% {
-        left: 0px;
-        top: -100px;
-    }
-    100% {
-        left: 1800px;
-        top: 1800px;
-    }
+#enemy02 {
+    border-radius: 28%;
+    height: 125px;
+    width: 125px;
+    top: -1800px;
+    left: 50%;
+}
+#enemy03 {
+    border-radius: 28%;
+    height: 125px;
+    width: 125px;
+    top: -1800px;
+    left: 50%;
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
-    height: 100%;
+    height: 300px;
     width: 180px;
     display: flex;
     align-items: center;
@@ -107,9 +112,12 @@ body {
 .angulos {
     height: 160px;
     width: 160px;
+    /*background-color:rgba(128, 128, 128, 0.63);*/
+    border-radius: 10px;
     background-image: url("../images/botoes.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 90% 90%;
+    background-position: center center;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
