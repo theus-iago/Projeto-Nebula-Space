@@ -3,204 +3,266 @@ const player = document.querySelector("#player");
 const enemy01 = document.querySelector("#enemy01");
 const enemy02 = document.querySelector("#enemy02");
 const enemy03 = document.querySelector("#enemy03");
+const bullet = document.querySelector(".bullet");
 const gameBoard = document.querySelector(".game-board");
 
 const positionPlayer = player.getBoundingClientRect();
-const positionenemy01 = enemy01.getBoundingClientRect();
-const positionenemy02 = enemy02.getBoundingClientRect();
-const positionenemy03 = enemy03.getBoundingClientRect();
+const positionEnemy01 = enemy01.getBoundingClientRect();
+const positionEnemy02 = enemy02.getBoundingClientRect();
+const positionEnemy03 = enemy03.getBoundingClientRect();
 const positionGameBoard = gameBoard.getBoundingClientRect();
 const positionBody = body.getBoundingClientRect();
 var vidaAtual = 3;
 
 function colisao() {
-  const positionBody = body.getBoundingClientRect();
-  const positionPlayer = player.getBoundingClientRect();
-  const positionenemy01 = enemy01.getBoundingClientRect();
-  const positionenemy02 = enemy02.getBoundingClientRect();
-  const positionenemy03 = enemy03.getBoundingClientRect();
-  const positionGameBoard = gameBoard.getBoundingClientRect();
+    const positionBody = body.getBoundingClientRect();
+    const positionPlayer = player.getBoundingClientRect();
+    const positionEnemy01 = enemy01.getBoundingClientRect();
+    const positionEnemy02 = enemy02.getBoundingClientRect();
+    const positionEnemy03 = enemy03.getBoundingClientRect();
+    const positionGameBoard = gameBoard.getBoundingClientRect();
 
-  if (
-    !(
-      positionPlayer.right <
-      positionenemy01.left + positionGameBoard.left ||
-      positionPlayer.left >
-      positionenemy01.right + positionGameBoard.left ||
-      positionPlayer.bottom <
-      positionenemy01.top + positionGameBoard.top ||
-      positionPlayer.top > positionenemy01.bottom + positionGameBoard.top
-    ) ||
-    !(
-      positionPlayer.right <
-      positionenemy02.left + positionGameBoard.left ||
-      positionPlayer.left >
-      positionenemy02.right + positionGameBoard.left ||
-      positionPlayer.bottom <
-      positionenemy02.top + positionGameBoard.top ||
-      positionPlayer.top > positionenemy02.bottom + positionGameBoard.top
-    ) ||
-    !(
-      positionPlayer.right <
-      positionenemy03.left + positionGameBoard.left ||
-      positionPlayer.left >
-      positionenemy03.right + positionGameBoard.left ||
-      positionPlayer.bottom <
-      positionenemy03.top + positionGameBoard.top ||
-      positionPlayer.top > positionenemy03.bottom + positionGameBoard.top
-    )
-  ) {
-    vidaAtual--;
-    setTimeout(() => {
-      player.style.animation = "death .6s ease-in-out";
-      console.log(vidaAtual);
-      if (vidaAtual >= 0) {
-        document.getElementsByClassName("lifes")[
-          vidaAtual
-        ].style.opacity = 0;
-      }
-      if (vidaAtual === 0) {
+    if (
+        !(
+            positionPlayer.right <
+                positionEnemy01.left + positionGameBoard.left ||
+            positionPlayer.left >
+                positionEnemy01.right + positionGameBoard.left ||
+            positionPlayer.bottom <
+                positionEnemy01.top + positionGameBoard.top ||
+            positionPlayer.top > positionEnemy01.bottom + positionGameBoard.top
+        ) ||
+        !(
+            positionPlayer.right <
+                positionEnemy02.left + positionGameBoard.left ||
+            positionPlayer.left >
+                positionEnemy02.right + positionGameBoard.left ||
+            positionPlayer.bottom <
+                positionEnemy02.top + positionGameBoard.top ||
+            positionPlayer.top > positionEnemy02.bottom + positionGameBoard.top
+        ) ||
+        !(
+            positionPlayer.right <
+                positionEnemy03.left + positionGameBoard.left ||
+            positionPlayer.left >
+                positionEnemy03.right + positionGameBoard.left ||
+            positionPlayer.bottom <
+                positionEnemy03.top + positionGameBoard.top ||
+            positionPlayer.top > positionEnemy03.bottom + positionGameBoard.top
+        )
+    ) {
+        vidaAtual--;
         setTimeout(() => {
-          document.body.style.cssText = "display:block;";
-          document.querySelector(".game-board").style.display =
-            "none";
-          document.querySelector(".botoes").style.display = "none";
-          document.querySelector(".game-over").style.cssText =
-            "height:100vh; width:100vw; display:flex; align-items:center; justify-content:center;";
+            player.style.animation = "death .6s ease-in-out";
+            console.log(vidaAtual);
+            if (vidaAtual >= 0) {
+                document.getElementsByClassName("lifes")[
+                    vidaAtual
+                ].style.opacity = 0;
+            }
+            if (vidaAtual === 0) {
+                setTimeout(() => {
+                    document.body.style.cssText = "display:block;";
+                    document.querySelector(".game-board").style.display =
+                        "none";
+                    document.querySelector(".botoes").style.display = "none";
+                    document.querySelector(".game-over").style.cssText =
+                        "height:100vh; width:100vw; display:flex; align-items:center; justify-content:center; flex-direction:column;";
+                }, 100);
+                document.body.addEventListener("click", function () {
+                    location.reload();
+                });
+            }
         }, 100);
-        document.body.addEventListener("click", function () {
-          location.reload();
-        });
-      }
-    }, 100);
-    player.style.animation = "";
-  }
+        player.style.animation = "";
+    }
 }
 function moverLeft() {
-  let positionPlayer = player.getBoundingClientRect();
-  player.style.left = positionPlayer.left + -100 + "px";
+    let positionPlayer = player.getBoundingClientRect();
+    player.style.left = positionPlayer.left + -100 + "px";
 }
 function moverRight() {
-  let positionPlayer = player.getBoundingClientRect();
-  player.style.left = positionPlayer.left + 100 + "px";
+    let positionPlayer = player.getBoundingClientRect();
+    player.style.left = positionPlayer.left + 100 + "px";
 }
 function moverTop() {
-  let positionPlayer = player.getBoundingClientRect();
-  player.style.top = positionPlayer.top + -100 + "px";
+    let positionPlayer = player.getBoundingClientRect();
+    player.style.top = positionPlayer.top + -100 + "px";
 }
 function moverBottom() {
-  let positionPlayer = player.getBoundingClientRect();
-  player.style.top = positionPlayer.top + 100 + "px";
+    let positionPlayer = player.getBoundingClientRect();
+    player.style.top = positionPlayer.top + 100 + "px";
 }
 function shoot() {
-  const enemy01 = document.querySelector(".enemy01");
-  const bullet = document.querySelector(".bullet");
-  bullet.style.cssText = " opacity:100%; top:-700px;";
-  setTimeout(() => {
-    bullet.style.cssText = " top:0px;";
-  }, 100);
+    const enemy01 = document.querySelector(".enemy01");
+    const bullet = document.querySelector(".bullet");
+    bullet.style.cssText = " opacity:100%; top:-700px;";
+    setTimeout(() => {
+        bullet.style.cssText = " top:0px;";
+    }, 100);
 }
-let numUnidade = 0;
-let numDezena = 0;
-let numCentena = 0;
-let numUnidadeM = 0;
+let numUnidade_Score = 0;
+let numDezena_Score = 0;
+let numCentena_Score = 0;
+let numUnidade_ScoreM_Score = 0;
 function score() {
-  const score = document.querySelector(".score");
-  numUnidade++;
-  if (numUnidade == 10) {
-    numUnidade = 0;
-    numDezena++;
-  }
-  if (numDezena == 10) {
-    numDezena = 0;
-    numCentena++;
-  }
-  if (numCentena == 10) {
-    numCentena = 0;
-    numUnidadeM++;
-  }
-  console.log(
-    numUnidadeM + "" + numCentena + "" + numDezena + "" + numUnidade
-  );
-  if (vidaAtual == 0) {
-    document.querySelector(".result").innerHTML = score.innerHTML;
-  } else {
-    document.querySelector(".numUnidade").innerHTML = numUnidade + "";
-    document.querySelector(".numDezena").innerHTML = numDezena + "";
-    document.querySelector(".numCentena").innerHTML = numCentena + "";
-    document.querySelector(".numUnidadeM").innerHTML = numUnidadeM + "";
-  }
+    const score = document.querySelector(".score");
+    numUnidade_Score++;
+    if (numUnidade_Score == 10) {
+        numUnidade_Score = 0;
+        numDezena_Score++;
+    }
+    if (numDezena_Score == 10) {
+        numDezena_Score = 0;
+        numCentena_Score++;
+    }
+    if (numCentena_Score == 10) {
+        numCentena_Score = 0;
+        numUnidade_ScoreM_Score++;
+    }
+    if (vidaAtual == 0) {
+        document.querySelector(".resultScore").innerHTML = score.innerHTML;
+    } else {
+        document.querySelector(".numUnidade_Score").innerHTML = numUnidade_Score + "";
+        document.querySelector(".numDezena_Score").innerHTML = numDezena_Score + "";
+        document.querySelector(".numCentena_Score").innerHTML = numCentena_Score + "";
+        document.querySelector(".numUnidade_ScoreM_Score").innerHTML = numUnidade_ScoreM_Score + "";
+    }
 }
 function enemyAnimations01() {
-  enemy01.style.animation = "1.6s infinite ease-in-out";
-  function randomAnimation() {
-    const random = (min, max) =>
-      Math.floor(Math.random() * (max - min) + min);
-    const animationsName = [
-      "enemy01",
-      "enemy02",
-      "enemy03",
-      "enemy04",
-      "enemy05",
-      "enemy06",
-      "enemy07",
-      "enemy08",
-      "enemy09"
-    ];
-    enemy01.style.animationName =
-      animationsName[random(0, animationsName.length)];
-  }
-  randomAnimation();
+    enemy01.style.animation = "2s infinite ease-in-out";
+    function randomAnimation() {
+        const random = (min, max) =>
+            Math.floor(Math.random() * (max - min) + min);
+        const animationsName = [
+            "enemy01",
+            "enemy02",
+            "enemy03",
+            "enemy04",
+            "enemy05",
+            "enemy06",
+            "enemy07",
+            "enemy08",
+            "enemy09"
+        ];
+        enemy01.style.animationName =
+            animationsName[random(0, animationsName.length)];
+    }
+    randomAnimation();
 }
 function enemyAnimations02() {
-  const animationsName = [
-    "enemy01",
-    "enemy02",
-    "enemy03",
-    "enemy04",
-    "enemy05",
-    "enemy06",
-    "enemy07",
-    "enemy08",
-    "enemy09"
-  ];
-  enemy02.style.animation = "2s infinite ease-in-out";
-  function randomAnimation() {
-    const random = (min, max) =>
-      Math.floor(Math.random() * (max - min) + min);
-    enemy02.style.animationName =
-      animationsName[random(0, animationsName.length)];
-  }
-  randomAnimation();
+    const animationsName = [
+        "enemy01",
+        "enemy02",
+        "enemy03",
+        "enemy04",
+        "enemy05",
+        "enemy06",
+        "enemy07",
+        "enemy08",
+        "enemy09"
+    ];
+    enemy02.style.animation = "2s infinite ease-in-out";
+    function randomAnimation() {
+        const random = (min, max) =>
+            Math.floor(Math.random() * (max - min) + min);
+        enemy02.style.animationName =
+            animationsName[random(0, animationsName.length)];
+    }
+    randomAnimation();
 }
 function enemyAnimations03() {
-  enemy03.style.animation = "3s infinite ease-in-out";
-  function randomAnimation() {
-    const random = (min, max) =>
-      Math.floor(Math.random() * (max - min) + min);
-    const animationsName = [
-      "enemy01",
-      "enemy02",
-      "enemy03",
-      "enemy04",
-      "enemy05",
-      "enemy06",
-      "enemy07",
-      "enemy08",
-      "enemy09"
-    ];
-    enemy03.style.animationName =
-      animationsName[random(0, animationsName.length)];
-  }
-  randomAnimation();
+    enemy03.style.animation = "2s infinite ease-in-out";
+    function randomAnimation() {
+        const random = (min, max) =>
+            Math.floor(Math.random() * (max - min) + min);
+        const animationsName = [
+            "enemy01",
+            "enemy02",
+            "enemy03",
+            "enemy04",
+            "enemy05",
+            "enemy06",
+            "enemy07",
+            "enemy08",
+            "enemy09"
+        ];
+        enemy03.style.animationName =
+            animationsName[random(0, animationsName.length)];
+    }
+    randomAnimation();
 }
 function moveBackground() {
- document.body.style.animation = "background2 4s infinite ease-in-out";
-  document.body.style.animationDelay = "0s";
+    document.body.style.animation = "background2 4s infinite ease-in-out";
+    document.body.style.animationDelay = "0s";
+}
+let numUnidade_Kills = 0;
+let numDezena_Kills = 0;
+let numCentena_Kills = 0;
+let numUnidade_KillsM_Kills = 0;
+function kill() {
+    const positionBullet = bullet.getBoundingClientRect();
+    const positionEnemy01 = enemy01.getBoundingClientRect();
+    const positionEnemy02 = enemy02.getBoundingClientRect();
+    const positionEnemy03 = enemy03.getBoundingClientRect();
+    const positionGameBoard = gameBoard.getBoundingClientRect();
+    if (
+        !(
+            positionBullet.right <
+                positionEnemy01.left + positionGameBoard.left ||
+            positionBullet.left >
+                positionEnemy01.right + positionGameBoard.left ||
+            positionBullet.bottom <
+                positionEnemy01.top + positionGameBoard.top ||
+            positionBullet.top > positionEnemy01.bottom + positionGameBoard.top
+        ) ||
+        !(
+            positionBullet.right <
+                positionEnemy02.left + positionGameBoard.left ||
+            positionBullet.left >
+                positionEnemy02.right + positionGameBoard.left ||
+            positionBullet.bottom <
+                positionEnemy02.top + positionGameBoard.top ||
+            positionBullet.top > positionEnemy02.bottom + positionGameBoard.top
+        ) ||
+        !(
+            positionBullet.right <
+                positionEnemy03.left + positionGameBoard.left ||
+            positionBullet.left >
+                positionEnemy03.right + positionGameBoard.left ||
+            positionBullet.bottom <
+                positionEnemy03.top + positionGameBoard.top ||
+            positionBullet.top > positionEnemy03.bottom + positionGameBoard.top
+        )
+    ) {
+    const kills = document.querySelector(".kills");
+    numUnidade_Kills++;
+    if (numUnidade_Kills == 10) {
+        numUnidade_Kills = 0;
+        numDezena_Kills++;
+    }
+    if (numDezena_Kills == 10) {
+        numDezena_Kills = 0;
+        numCentena_Kills++;
+    }
+    if (numCentena_Kills == 10) {
+        numCentena_Kills = 0;
+        numUnidade_KillsM_Kills++;
+    }
+    if (vidaAtual == 0) {
+        document.querySelector(".resultKills").innerHTML = kills.innerHTML;
+    }
+    } else {
+        document.querySelector(".numUnidade_Kills").innerHTML = numUnidade_Kills + "";
+        document.querySelector(".numDezena_Kills").innerHTML = numDezena_Kills + "";
+        document.querySelector(".numCentena_Kills").innerHTML = numCentena_Kills + "";
+        document.querySelector(".numUnidade_KillsM_Kills").innerHTML = numUnidade_KillsM_Kills + "";
+    }
 }
 setInterval(moveBackground, 2000);
-setInterval(enemyAnimations01, 1600);
+setInterval(enemyAnimations01, 2000);
 setInterval(enemyAnimations02, 2000);
-setInterval(enemyAnimations03, 3000);
+setInterval(enemyAnimations03, 2000);
 setInterval(score, 260);
 setInterval(colisao, 290);
+setInterval(kill,290);
