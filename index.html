@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/animationsEnemy.css" />
-        <title>Jogo</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/NebulaSpace-logo.jpg">
+        <title>Nebula Space</title>
         <script src="js/index.js" defer></script>
     </head>
     <body>
@@ -15,8 +16,15 @@
                 <img src="images/player.png" alt="playerLife" class="lifes" />
                 <img src="images/player.png" alt="playerLife" class="lifes" />
             </div>
+            <div class="gameFrame">
             <div class="game-score">
-                <h2 class="score"></h2>
+              <h2 style="margin:5px;padding:3px;">score:</h2>
+              <h2 class="score"><span class="numUnidadeM">0</span><span class="numCentena">0</span><span class="numDezena">0</span><span class="numUnidade">0</span></h2>
+            </div>
+            <div class="game-kills">
+              <img src="../images/meteoro.png" alt="kill" width="50">
+              <h2 class="kills"><span class="numUnidadeM">0</span><span class="numCentena">0</span><span class="numDezena">0</span><span class="numUnidade">0</span></h2>
+            </div>
             </div>
             <div class="personagem" id="player"><div class="bullet"></div></div>
             <div class="enemy" id="enemy01"></div>

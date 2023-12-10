@@ -1,22 +1,25 @@
 @keyframes enemy01 {
     0% {
-        left: 0px;
+        left: -100px;
         top: -100px;
     }
     100% {
-        left: 1800px;
-        top: 1800px;
+        left: 100%;
+        top: 80%;
     }
 }
 @keyframes enemy02 {
     0% {
+        left:60%;
         top: -100px;
     }
     50% {
-        top: 100px;
+        left:40%;
+        top: 90px;
     }
     100% {
-        top: 1800px;
+      left:0%;
+        top: 100%;
     }
 }
 @keyframes enemy03 {
@@ -28,4 +31,60 @@
         left: 0px;
         top: 800px;
     }
+}
+@keyframes enemy04 {
+  0%{
+    top:-100px;
+  }
+  100%{
+    top:100%;
+  }
+}
+@keyframes enemy05 {
+    0% {
+        left: 0px;
+        top: -100px;
+    }
+    100% {
+        left: 400px;
+        top: 800px;
+    }
+}
+@keyframes enemy06 {
+    0% {
+        left: 10%;
+        top: -100px;
+    }
+    100% {
+        left: 400px;
+        top: 800px;
+    }
+}
+@keyframes enemy07 {
+  0%{
+    left:0px;
+    top:10px;
+  }
+  100%{
+    left:800px;
+    top:100%;
+  }
+}
+@keyframes enemy08 {
+    0% {
+        left: 100%;
+        top: -100px;
+    }
+    100% {
+        left: 0px;
+        top: 800px;
+    }
+}
+@keyframes enemy09 {
+  0%{
+    top:-100px;
+  }
+  100%{
+    top:70%;
+  }
 }
