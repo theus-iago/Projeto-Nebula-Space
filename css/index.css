@@ -92,15 +92,12 @@ body {
     background-image: url("../images/player.png");
     background-repeat: no-repeat;
     background-size: cover;
-<<<<<<< HEAD
     bottom: 50px;
     right: 40px;
     transition: all 0.4s;
-=======
     left: 50%;
     top: 50%;
     transition: all 0.2s;
->>>>>>> refs/remotes/origin/main
 }
 @keyframes death {
     0% {
@@ -217,7 +214,22 @@ body {
     transform: translateX(-50%);
     top: 0%;
     opacity: 0%;
-    transition: all 0.2s;
+    display:block;
+    transition:all .3s;
+}
+@keyframes shoot {
+  0% {
+    display:none;
+    top:0%;
+  }
+  50% {
+    display:block;
+    opacity:100%;
+    top:-200px;
+  }
+  100% {
+    top:-700px;
+  }
 }
 .game-over {
     background-color: rgba(61, 61, 61, 0.855);

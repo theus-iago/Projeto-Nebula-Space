@@ -93,14 +93,6 @@ function moverBottom() {
     let positionPlayer = player.getBoundingClientRect();
     player.style.top = positionPlayer.top + 100 + "px";
 }
-function shoot() {
-    const enemy01 = document.querySelector(".enemy01");
-    const bullet = document.querySelector(".bullet");
-    bullet.style.cssText = " opacity:100%; top:-700px;";
-    setTimeout(() => {
-        bullet.style.cssText = " top:0px;";
-    }, 100);
-}
 let numUnidade_Score = 0;
 let numDezena_Score = 0;
 let numCentena_Score = 0;
@@ -123,10 +115,14 @@ function score() {
     if (vidaAtual == 0) {
         document.querySelector(".resultScore").innerHTML = score.innerHTML;
     } else {
-        document.querySelector(".numUnidade_Score").innerHTML = numUnidade_Score + "";
-        document.querySelector(".numDezena_Score").innerHTML = numDezena_Score + "";
-        document.querySelector(".numCentena_Score").innerHTML = numCentena_Score + "";
-        document.querySelector(".numUnidade_ScoreM_Score").innerHTML = numUnidade_ScoreM_Score + "";
+        document.querySelector(".numUnidade_Score").innerHTML =
+            numUnidade_Score + "";
+        document.querySelector(".numDezena_Score").innerHTML =
+            numDezena_Score + "";
+        document.querySelector(".numCentena_Score").innerHTML =
+            numCentena_Score + "";
+        document.querySelector(".numUnidade_ScoreM_Score").innerHTML =
+            numUnidade_ScoreM_Score + "";
     }
 }
 function enemyAnimations01() {
@@ -235,34 +231,62 @@ function kill() {
             positionBullet.top > positionEnemy03.bottom + positionGameBoard.top
         )
     ) {
-    const kills = document.querySelector(".kills");
-    numUnidade_Kills++;
-    if (numUnidade_Kills == 10) {
-        numUnidade_Kills = 0;
-        numDezena_Kills++;
-    }
-    if (numDezena_Kills == 10) {
-        numDezena_Kills = 0;
-        numCentena_Kills++;
-    }
-    if (numCentena_Kills == 10) {
-        numCentena_Kills = 0;
-        numUnidade_KillsM_Kills++;
-    }
-    if (vidaAtual == 0) {
-        document.querySelector(".resultKills").innerHTML = kills.innerHTML;
-    }
+        const kills = document.querySelector(".kills");
+        if(bullet.style.display == 'block') {
+        numUnidade_Kills++;
+        }
+        if (numUnidade_Kills == 10) {
+            numUnidade_Kills = 0;
+            numDezena_Kills++;
+        }
+        if (numDezena_Kills == 10) {
+            numDezena_Kills = 0;
+            numCentena_Kills++;
+        }
+        if (numCentena_Kills == 10) {
+            numCentena_Kills = 0;
+            numUnidade_KillsM_Kills++;
+        }
+        if (vidaAtual == 0) {
+            document.querySelector(".resultKills").innerHTML = kills.innerHTML;
+            setTimeout(() => enemy01.style.animation = "death .5s ease" ,600);
+        }
     } else {
-        document.querySelector(".numUnidade_Kills").innerHTML = numUnidade_Kills + "";
-        document.querySelector(".numDezena_Kills").innerHTML = numDezena_Kills + "";
-        document.querySelector(".numCentena_Kills").innerHTML = numCentena_Kills + "";
-        document.querySelector(".numUnidade_KillsM_Kills").innerHTML = numUnidade_KillsM_Kills + "";
+        document.querySelector(".numUnidade_Kills").innerHTML =
+            numUnidade_Kills + "";
+        document.querySelector(".numDezena_Kills").innerHTML =
+            numDezena_Kills + "";
+        document.querySelector(".numCentena_Kills").innerHTML =
+            numCentena_Kills + "";
+        document.querySelector(".numUnidade_KillsM_Kills").innerHTML =
+            numUnidade_KillsM_Kills + "";
     }
+}
+function shoot() {
+  setTimeout(() => {
+    bullet.style.cssText = "display:none; top:0%; opacity:100%;";
+  },100);
+  setTimeout(() => {
+    bullet.style.cssText = "display:block; top:-200px;";
+  },300);
+  setTimeout(() => {
+    bullet.style.cssText = "top:-700px;";
+  },400);
+  setTimeout(() => {
+    bullet.style.cssText = "top: 0%; opacity: 0%; display:block;";
+  },100);
+    
+    /*if(bullet.style.display=='block') {
+      bullet.style.display = "none";
+      if(bullet.style.display == 'none') {
+          bullet.style.display = "block";
+      }
+    }*/
 }
 setInterval(moveBackground, 2000);
 setInterval(enemyAnimations01, 2000);
 setInterval(enemyAnimations02, 2000);
 setInterval(enemyAnimations03, 2000);
-setInterval(score, 260);
 setInterval(colisao, 290);
-setInterval(kill,290);
+setInterval(kill, 50);
+setInterval(score, 260);
