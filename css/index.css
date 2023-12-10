@@ -92,9 +92,15 @@ body {
     background-image: url("../images/player.png");
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
     bottom: 50px;
     right: 40px;
     transition: all 0.4s;
+=======
+    left: 50%;
+    top: 50%;
+    transition: all 0.2s;
+>>>>>>> refs/remotes/origin/main
 }
 @keyframes death {
     0% {
