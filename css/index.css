@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@200&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -23,21 +24,9 @@ body {
         background-position: center center;
     }
     100% {
-        background-position: center center;
-    }
-}
-@keyframes background2 {
-    0% {
-        background-position: center center;
-    }
-    50% {
-        background-position: top center;
-    }
-    100% {
         background-position: top center;
     }
 }
-
 .game-board {
     height: 100%;
     width: 100%;
@@ -62,6 +51,7 @@ body {
 .kills {
     margin: 5px;
     padding: 3px;
+    font-family: "Pixelify Sans", sans-serif;
 }
 .score > span,
 .kills > span {
@@ -99,6 +89,18 @@ body {
     top: 50%;
     transition: all 0.2s;
 }
+/*.shield {
+  background-color:blue;
+  height:100px;
+  width:100px;
+  bottom: 50px;
+    right: 40px;
+    transition: all 0.4s;
+    left: 50%;
+    top: 50%;
+    transition: all 0.2s;
+    position:absolute;
+}*/
 @keyframes death {
     0% {
         opacity: 100%;
@@ -140,6 +142,23 @@ body {
     width: 90px;
     top: -1800px;
     left: 50%;
+}
+@keyframes deathEnemy {
+    0% {
+        display: none;
+    }
+    25% {
+        display: block;
+    }
+    50% {
+        display: none;
+    }
+    75% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
@@ -214,22 +233,22 @@ body {
     transform: translateX(-50%);
     top: 0%;
     opacity: 0%;
-    display:block;
-    transition:all .3s;
+    display: none;
+    transition: all 0.3s;
 }
 @keyframes shoot {
-  0% {
-    display:none;
-    top:0%;
-  }
-  50% {
-    display:block;
-    opacity:100%;
-    top:-200px;
-  }
-  100% {
-    top:-700px;
-  }
+    0% {
+        display: none;
+        top: 0%;
+    }
+    50% {
+        display: block;
+        opacity: 100%;
+        top: -200px;
+    }
+    100% {
+        top: -700px;
+    }
 }
 .game-over {
     background-color: rgba(61, 61, 61, 0.855);
@@ -238,6 +257,21 @@ body {
     width: 100%;
     display: none;
     transition: all 0.7s;
+}
+.game-over > .results {
+    display: flex;
+}
+#h2 {
+    background-color: #80808000;
+    border: none;
+    border-radius: 0px;
+}
+.game-over > .results > h2 {
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 14px;
+    margin: 5px;
+    padding: 2px;
 }
 .game-over > .message {
     background-color: gray;
