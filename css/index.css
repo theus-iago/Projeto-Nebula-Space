@@ -263,7 +263,7 @@ body {
 }
 .game-over > .results > .scoreResult, .game-over > .results > .killsResult {
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
 }
 #h2 {
     background-color: #80808000;
@@ -272,10 +272,13 @@ body {
 }
 .game-over > .results > .scoreResult > h2, .game-over > .results > .killsResult > h2 {
     background-color: gray;
-    border: 2px solid black;
+    border: none;
     border-radius: 14px;
     margin: 5px;
     padding: 2px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 .game-over > .message {
     background-color: gray;
