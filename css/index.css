@@ -182,8 +182,8 @@ body {
     opacity: 0;
 }
 .angulos {
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
     /*background-color:rgba(128, 128, 128, 0.63);*/
     border-radius: 10px;
     background-image: url("../images/botoes.png");
@@ -213,8 +213,8 @@ body {
     background-color: rgb(224, 0, 0);
     border: 1px solid black;
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 120px;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,14 +259,18 @@ body {
     transition: all 0.7s;
 }
 .game-over > .results {
-    display: flex;
+  display: flex;
+}
+.game-over > .results > .scoreResult, .game-over > .results > .killsResult {
+  display:flex;
+  flex-direction:column;
 }
 #h2 {
     background-color: #80808000;
     border: none;
     border-radius: 0px;
 }
-.game-over > .results > h2 {
+.game-over > .results > .scoreResult > h2, .game-over > .results > .killsResult > h2 {
     background-color: gray;
     border: 2px solid black;
     border-radius: 14px;
