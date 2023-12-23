@@ -263,7 +263,7 @@ body {
 }
 .game-over > .results > .scoreResult, .game-over > .results > .killsResult {
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
 }
 #h2 {
     background-color: #80808000;
