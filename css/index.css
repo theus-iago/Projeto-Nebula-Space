@@ -213,14 +213,14 @@ body {
     background-color: rgb(224, 0, 0);
     border: 1px solid black;
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .shootButton > img {
-    width: 60px;
+    width: 40px;
 }
 .bullet {
     background-color: red;
