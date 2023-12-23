@@ -223,7 +223,7 @@ body {
     width: 40px;
 }
 .bullet {
-    background-color: red;
+    background-image:linear-gradient(to bottom, rgb(108,21,255), rgb(21,32,255));
     border-radius: 25%;
     height: 12px;
     width: 12px;
@@ -232,7 +232,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: 0%;
-    opacity: 0%;
+    opacity: 100%;
     display: none;
     transition: all 0.3s;
 }
