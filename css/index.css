@@ -261,7 +261,7 @@ body {
 .game-over > .results {
   display: flex;
 }
-.game-over > .results > .scoreResult, .game-over > .results > .killsResult {
+.game-over > .results {
   display:flex;
   flex-direction:column;
 }
@@ -270,7 +270,7 @@ body {
     border: none;
     border-radius: 0px;
 }
-.game-over > .results > .scoreResult > h2, .game-over > .results > .killsResult > h2 {
+.game-over > .results > h2, .game-over > .results > h2 {
     background-color: gray;
     border: none;
     border-radius: 14px;
