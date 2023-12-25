@@ -223,7 +223,11 @@ body {
     width: 40px;
 }
 .bullet {
-    background-image:linear-gradient(to bottom, rgb(108,21,255), rgb(21,32,255));
+    background-image: linear-gradient(
+        to bottom,
+        rgb(108, 21, 255),
+        rgb(21, 32, 255)
+    );
     border-radius: 25%;
     height: 12px;
     width: 12px;
@@ -259,24 +263,26 @@ body {
     transition: all 0.7s;
 }
 .game-over > .results {
-  display:flex;
-  flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 #h2 {
     background-color: #80808000;
     border: none;
     border-radius: 0px;
 }
-.game-over > .results > .scoreResult > .tituloScore > h2, .game-over > .results > .killResult > .tituloKill > h2 {
-    background-color:#979797;
+.game-over > .results > .scoreResult > .tituloScore > h2,
+.game-over > .results > .killResult > .tituloKill > h2 {
+    background-color: #979797;
     border: none;
     padding: 6px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.game-over > .results > .scoreResult, .game-over > .results > .killResult {
-  display:flex;
+.game-over > .results > .scoreResult,
+.game-over > .results > .killResult {
+    display: flex;
 }
 .game-over > .message {
     background-color: gray;
@@ -304,13 +310,16 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .Score-Logo {
-  background-color:#1e1e1e;
-  padding:8px;
-  font-family:"Pixelify Sans", sans-serif;
+    background-color: #1e1e1e;
+    padding: 6px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 24px;
 }
-.tituloScore, .tituloKill {
-  border:2px solid black;
-  border-radius:30px;
-  display:flex;
-  overflow:hidden;
+.tituloScore,
+.tituloKill {
+    border: 2px solid black;
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+    margin: 8px;
 }
