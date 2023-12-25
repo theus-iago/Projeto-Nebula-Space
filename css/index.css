@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: 300% 300%;
     background-size: bottom center;
+    background-position:bottom center;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -82,12 +83,9 @@ body {
     background-image: url("../images/player.png");
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: 50px;
-    right: 40px;
-    transition: all 0.4s;
+    transition: all 0.2s;
     left: 50%;
     top: 50%;
-    transition: all 0.2s;
 }
 /*.shield {
   background-color:blue;
