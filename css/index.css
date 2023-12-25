@@ -267,11 +267,9 @@ body {
     border: none;
     border-radius: 0px;
 }
-.game-over > .results > .scoreResult > h2, .game-over > .results > .killResult > h2 {
-    background-color: gray;
+.game-over > .results > .scoreResult > .tituloScore > h2, .game-over > .results > .killResult > .tituloKill > h2 {
+    background-color:#979797;
     border: none;
-    border-radius: 18px;
-    margin: 5px;
     padding: 6px;
     display:flex;
     align-items:center;
@@ -305,4 +303,14 @@ body {
     color: black;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.Score-Logo { font-family:"Pixelify Sans", sans-serif;}
+.Score-Logo {
+  background-color:#1e1e1e;
+  padding:8px;
+  font-family:"Pixelify Sans", sans-serif;
+}
+.tituloScore, .tituloKill {
+  border:2px solid black;
+  border-radius:30px;
+  display:flex;
+  overflow:hidden;
+}
