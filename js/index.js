@@ -73,40 +73,41 @@ function colisao() {
             }
         }, 100);
         player.style.animation = "";
-    }else {
-      /*positionPlayer.left = positionPlayer.left;
-      positionPlayer.right = positionPlayer.right;
-      positionPlayer.top = positionPlayer.top;
-      positionPlayer.bottom = positionPlayer.bottom;*/
     }
 }
 function moverLeft() {
     let positionPlayer = player.getBoundingClientRect();
     let num = parseInt(positionPlayer.left);
-    positionPlayer.left < 100
-      player.style.left = positionPlayer.left + -100 + "px";
-  if(num < 100) {
-    player.style.left = 0;
-  }
-    console.log("Left: "+num);
+    positionPlayer.left < 100;
+    player.style.left = positionPlayer.left + -100 + "px";
+    if (num < 100) {
+        player.style.left = 0;
+    }
 }
 function moverRight() {
     let positionPlayer = player.getBoundingClientRect();
-    let num = parseInt(positionPlayer.right)
+    let num = parseInt(positionPlayer.right);
     player.style.left = positionPlayer.left + 100 + "px";
-    if(num > 300) {
-      gameBoard.style.borderColor = "blue";
-    player.style.left = 78 + "%";
+    if (num > 300) {
+        player.style.left = 78 + "%";
     }
-    console.log("Right:"+num)
 }
 function moverTop() {
     let positionPlayer = player.getBoundingClientRect();
+    let num = parseInt(positionPlayer.top);
+    positionPlayer.top < 100;
     player.style.top = positionPlayer.top + -100 + "px";
+    if (num < 100) {
+        player.style.top = 0;
+    }
 }
 function moverBottom() {
     let positionPlayer = player.getBoundingClientRect();
+    let num = parseInt(positionPlayer.bottom);
     player.style.top = positionPlayer.top + 100 + "px";
+    if (num > 300) {
+        player.style.top = 78 + "%";
+    }
 }
 let numUnidade_Score = 0;
 let numDezena_Score = 0;
@@ -375,9 +376,9 @@ function shoot() {
       }
     }*/
 }
-/*setInterval(enemyAnimations01, 2000);
+setInterval(enemyAnimations01, 2000);
 setInterval(enemyAnimations02, 2000);
-setInterval(enemyAnimations03, 2000);*/
+setInterval(enemyAnimations03, 2000);
 setInterval(kill, 40);
 setInterval(colisao, 290);
 setInterval(score, 260);
