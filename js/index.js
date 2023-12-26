@@ -369,12 +369,6 @@ function shoot() {
     setTimeout(() => {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
-    function jogar() {
-      initialGame.style.display = "none";
-      gameBoard.style.display = "";
-      body.style.animation = "background 4s ease-in-out";
-      botoes.style.display = "flex";
-    }
     /*if(bullet.style.display=='block') {
       bullet.style.display = "none";
       if(bullet.style.display == 'none') {
@@ -382,6 +376,12 @@ function shoot() {
       }
     }*/
 }
+    function jogar() {
+      initialGame.style.display = "none";
+      gameBoard.style.display = "";
+      body.style.animation = "background 4s ease-in-out";
+      botoes.style.display = "flex";
+    }
 if(gameBoard.style.display == "none") {
 setInterval(enemyAnimations01, 2000);
 setInterval(enemyAnimations02, 2000);
