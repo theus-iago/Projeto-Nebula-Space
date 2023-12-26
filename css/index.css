@@ -16,7 +16,7 @@ body {
     display: flex;
     transition: all 4s;
     color: white;
-    animation: background 4s ease-in-out;
+    /*animation: background 4s ease-in-out;*/
 }
 @keyframes background {
     0% {
@@ -29,11 +29,63 @@ body {
         background-position: top center;
     }
 }
+.initial-game {
+  background:url('../images/fundo.jpg') no-repeat 100% 100%/cover;
+  font-family:Arial, Helvetica, sans-serif;
+  text-shadow:1px 2px 2px black;
+  height:100%;
+  width:100%;
+  display:grid;
+  grid-template-rows:1fr 1fr 1fr;
+}
+.initial-game > header {
+  background-color:rgba(128, 128, 128, 0.63);
+  border-radius:6px;
+  border-top-left-radius:0px;
+  border-bottom-left-radius:0px;
+  grid-row:2;
+  height:300px;
+  width:300px;
+  padding:10px;
+}
+.initial-game > footer {
+  display:flex;
+  align-items:end;
+  justify-content:center;
+  grid-row:3;
+  padding:5px;
+}
+.initial-game > footer > p > a {
+  color:white;
+  text-decoration:none;
+  text-shadow:1px 2px 2px black;
+  transition:all .8s;
+}
+.initial-game > footer > p > a:hover {
+  color:#5710ffc6;
+  text-decoration:underline;
+  text-shadow:none;
+}
+.initial-game > header > .botoesHeader {
+  display:flex;
+  align-items:start;
+  justify-content:center;
+  flex-direction:column;
+}
+button {
+  background-color:#0c062b;
+  color:white;
+  border:2px solid #4300ef;
+  border-radius:6px;
+  margin:6px;
+  padding:8px;
+}
 .game-board {
     height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
+    display:none;
 }
 .gameFrame {
     margin: 5px;
@@ -163,7 +215,7 @@ body {
     background-color: rgba(128, 128, 128, 0.63);
     height: 180px;
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
