@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const initialGame = document.querySelector(".initial-game");
 const player = document.querySelector("#player");
 const enemy01 = document.querySelector("#enemy01");
 const enemy02 = document.querySelector("#enemy02");
@@ -368,7 +369,12 @@ function shoot() {
     setTimeout(() => {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
-
+    function jogar() {
+      initialGame.style.display = "none";
+      gameBoard.style.display = "";
+      body.style.animation = "background 4s ease-in-out";
+      botoes.style.display = "flex";
+    }
     /*if(bullet.style.display=='block') {
       bullet.style.display = "none";
       if(bullet.style.display == 'none') {
