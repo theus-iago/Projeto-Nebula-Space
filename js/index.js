@@ -13,7 +13,6 @@ const positionEnemy03 = enemy03.getBoundingClientRect();
 const positionGameBoard = gameBoard.getBoundingClientRect();
 const positionBody = body.getBoundingClientRect();
 var vidaAtual = 3;
-
 function colisao() {
     const positionBody = body.getBoundingClientRect();
     const positionPlayer = player.getBoundingClientRect();
@@ -21,7 +20,6 @@ function colisao() {
     const positionEnemy02 = enemy02.getBoundingClientRect();
     const positionEnemy03 = enemy03.getBoundingClientRect();
     const positionGameBoard = gameBoard.getBoundingClientRect();
-
     if (
         !(
             positionPlayer.right <
@@ -75,15 +73,32 @@ function colisao() {
             }
         }, 100);
         player.style.animation = "";
+    }else {
+      /*positionPlayer.left = positionPlayer.left;
+      positionPlayer.right = positionPlayer.right;
+      positionPlayer.top = positionPlayer.top;
+      positionPlayer.bottom = positionPlayer.bottom;*/
     }
 }
 function moverLeft() {
     let positionPlayer = player.getBoundingClientRect();
-    player.style.left = positionPlayer.left + -100 + "px";
+    let num = parseInt(positionPlayer.left);
+    positionPlayer.left < 100
+      player.style.left = positionPlayer.left + -100 + "px";
+  if(num < 100) {
+    player.style.left = 0;
+  }
+    console.log("Left: "+num);
 }
 function moverRight() {
     let positionPlayer = player.getBoundingClientRect();
+    let num = parseInt(positionPlayer.right)
     player.style.left = positionPlayer.left + 100 + "px";
+    if(num > 300) {
+      gameBoard.style.borderColor = "blue";
+    player.style.left = 78 + "%";
+    }
+    console.log("Right:"+num)
 }
 function moverTop() {
     let positionPlayer = player.getBoundingClientRect();
@@ -360,9 +375,9 @@ function shoot() {
       }
     }*/
 }
-setInterval(enemyAnimations01, 2000);
+/*setInterval(enemyAnimations01, 2000);
 setInterval(enemyAnimations02, 2000);
-setInterval(enemyAnimations03, 2000);
+setInterval(enemyAnimations03, 2000);*/
 setInterval(kill, 40);
 setInterval(colisao, 290);
 setInterval(score, 260);
