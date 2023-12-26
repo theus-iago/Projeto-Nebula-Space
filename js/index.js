@@ -382,9 +382,11 @@ function shoot() {
       }
     }*/
 }
+if(gameBoard.style.display == "none") {
 setInterval(enemyAnimations01, 2000);
 setInterval(enemyAnimations02, 2000);
 setInterval(enemyAnimations03, 2000);
 setInterval(kill, 40);
 setInterval(colisao, 290);
 setInterval(score, 260);
+}
