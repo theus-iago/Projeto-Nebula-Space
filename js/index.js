@@ -69,7 +69,7 @@ function colisao() {
                     document.querySelector(".game-over").style.cssText =
                         "height:100vh; width:100vw; display:flex; align-items:center; justify-content:center; flex-direction:column;";
                 }, 100);
-                
+
                 document.body.addEventListener("click", function () {
                     location.reload();
                 });
@@ -378,15 +378,15 @@ function shoot() {
       }
     }*/
 }
-    function jogar() {
-      initialGame.style.display = "none";
-      gameBoard.style.display = "block";
-      body.style.animation = "background 4s ease-in-out";
-      botoes.style.display = "flex";
-setInterval(enemyAnimations01, 2000);
-setInterval(enemyAnimations02, 2000);
-setInterval(enemyAnimations03, 2000);
-setInterval(kill, 40);
-setInterval(colisao, 290);
-setInterval(score, 260);
-    }
+function jogar() {
+    initialGame.style.display = "none";
+    gameBoard.style.display = "block";
+    body.style.animation = "background 4s ease-in-out";
+    botoes.style.display = "flex";
+    setInterval(enemyAnimations01, 2000);
+    setInterval(enemyAnimations02, 2000);
+    setInterval(enemyAnimations03, 2000);
+    setInterval(kill, 40);
+    setInterval(colisao, 290);
+    setInterval(score, 260);
+}
