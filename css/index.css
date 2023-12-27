@@ -78,17 +78,17 @@ button {
     border-radius: 6px;
     margin: 6px;
     padding: 2px;
-    height:50px;
-    width:100px;
-    transition:all .8s;
+    height: 50px;
+    width: 100px;
+    transition: all 0.8s;
 }
 button:hover {
-  border-color:white;
-  scale:0.90;
+    border-color: white;
+    scale: 0.9;
 }
 button:active {
-  border-color:yellow;
-  scale:1;
+    border-color: yellow;
+    scale: 1;
 }
 .game-board {
     height: 100%;
