@@ -34,6 +34,7 @@ body {
     text-shadow: 1px 2px 2px black;
     height: 100vh;
     width: 100vw;
+    overflow: scroll;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -46,26 +47,31 @@ body {
     height: 300px;
     width: 300px;
     padding: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
 }
-.initial-game > footer {
+.initial-game > header > footer {
+    height: 100%;
     display: flex;
     align-items: end;
-    justify-content: center;
+    justify-content: end;
     grid-row: 3;
     padding: 5px;
+    padding-bottom: 2px;
 }
-.initial-game > footer > p > a {
+.initial-game > header > footer > p > a {
     color: white;
     text-decoration: none;
     text-shadow: 1px 2px 2px black;
     transition: all 0.8s;
 }
-.initial-game > footer > p > a:hover {
+.initial-game > header > footer > p > a:hover {
     color: #5710ffc6;
     text-decoration: underline;
     text-shadow: none;
 }
 .initial-game > header > .botoesHeader {
+    grid-row: 2;
     display: flex;
     align-items: start;
     justify-content: center;
