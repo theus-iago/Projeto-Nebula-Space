@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: 300% 300%;
     background-size: bottom center;
-    background-position: bottom center;
+    background-position: top center;
     height: 100vh;
     overflow: hidden;
     display: flex;
