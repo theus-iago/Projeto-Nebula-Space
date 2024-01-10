@@ -1,5 +1,5 @@
 "use strict";
-/*Seção de Variáveis e Constantes*/
+
 const body = document.querySelector("body");
 const initialGame = document.querySelector(".initial-game");
 const player = document.querySelector("#player");
@@ -15,7 +15,7 @@ let numUnidade_Kills = 0;
 let numDezena_Kills = 0;
 let numCentena_Kills = 0;
 let numUnidade_KillsM_Kills = 0;
-/* ========================== */
+
 function colisao() {
     const positionBody = body.getBoundingClientRect();
     const positionPlayer = player.getBoundingClientRect();
