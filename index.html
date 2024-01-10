@@ -75,12 +75,12 @@
                 <div
                     class="botao"
                     id="left"
-                    onclick="moverLeft()"
-                    onmousedown="moverLeft()"
+                    onclick="moveToLeft()"
+                    onmousedown="move('left')"
                 ></div>
-                <div class="botao" id="right" onclick="moverRight()"></div>
-                <div class="botao" id="top" onclick="moverTop()"></div>
-                <div class="botao" id="bottom" onclick="moverBottom()"></div>
+                <div class="botao" id="right" onclick="move('right')"></div>
+                <div class="botao" id="top" onclick="move('top')"></div>
+                <div class="botao" id="bottom" onclick="move('bottom')"></div>
             </div>
             <div class="shootButton" onclick="shoot()">
                 <img src="images/fogo.png" alt="fire" />
