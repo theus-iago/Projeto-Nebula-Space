@@ -11,6 +11,11 @@ const gameBoard = document.querySelector(".game-board");
 const botoes = document.querySelector(".botoes");
 const shield = document.querySelector(".shield");
 let vidaAtual = 3;
+let numUnidade_Score = 0;
+let numDezena_Score = 0;
+let numCentena_Score = 0;
+let numUnidade_ScoreM_Score = 0;
+
 let numUnidade_Kills = 0;
 let numDezena_Kills = 0;
 let numCentena_Kills = 0;
@@ -117,32 +122,30 @@ function move(direct) {
     let positionPlayer = player.getBoundingClientRect();
     switch (direct) {
         case "left":
-            var num = Math.floor(positionPlayer.left);
-            positionPlayer.left < 100;
+            var numLeft = Math.floor(positionPlayer.left);
             player.style.left = positionPlayer.left + -100 + "px";
-            if (num < 100) {
+            if (numLeft < 100) {
                 player.style.left = 0;
             }
             break;
         case "right":
-            var num = Math.floor(positionPlayer.right);
+            var numRight = Math.floor(positionPlayer.right);
             player.style.left = positionPlayer.left + 100 + "px";
-            if (num > 300) {
+            if (numRight > 300) {
                 player.style.left = 78 + "%";
             }
             break;
         case "top":
-            var num = Math.floor(positionPlayer.top);
-            positionPlayer.top < 100;
+            var numTop = Math.floor(positionPlayer.top);
             player.style.top = positionPlayer.top + -100 + "px";
-            if (num < 100) {
+            if (numTop < 100) {
                 player.style.top = 0;
             }
             break;
         case "bottom":
-            var num = Math.floor(positionPlayer.bottom);
+            var numBottom = Math.floor(positionPlayer.bottom);
             player.style.top = positionPlayer.top + 100 + "px";
-            if (num > 300) {
+            if (numBottom > 300) {
                 player.style.top = 78 + "%";
             }
             break;
