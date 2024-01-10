@@ -1,3 +1,5 @@
+"use strict";
+/*Seção de Variáveis e Constantes*/
 const body = document.querySelector("body");
 const initialGame = document.querySelector(".initial-game");
 const player = document.querySelector("#player");
@@ -8,13 +10,12 @@ const bullet = document.querySelector(".bullet");
 const gameBoard = document.querySelector(".game-board");
 const botoes = document.querySelector(".botoes");
 const shield = document.querySelector(".shield");
-const positionPlayer = player.getBoundingClientRect();
-const positionEnemy01 = enemy01.getBoundingClientRect();
-const positionEnemy02 = enemy02.getBoundingClientRect();
-const positionEnemy03 = enemy03.getBoundingClientRect();
-const positionGameBoard = gameBoard.getBoundingClientRect();
-const positionBody = body.getBoundingClientRect();
-var vidaAtual = 3;
+let vidaAtual = 3;
+let numUnidade_Kills = 0;
+let numDezena_Kills = 0;
+let numCentena_Kills = 0;
+let numUnidade_KillsM_Kills = 0;
+/* ========================== */
 function colisao() {
     const positionBody = body.getBoundingClientRect();
     const positionPlayer = player.getBoundingClientRect();
@@ -147,10 +148,6 @@ function move(direct) {
             break;
     }
 }
-let numUnidade_Score = 0;
-let numDezena_Score = 0;
-let numCentena_Score = 0;
-let numUnidade_ScoreM_Score = 0;
 function score() {
     const score = document.querySelector(".score");
     numUnidade_Score++;
@@ -242,10 +239,6 @@ function enemyAnimations03() {
     }
     randomAnimation();
 }
-let numUnidade_Kills = 0;
-let numDezena_Kills = 0;
-let numCentena_Kills = 0;
-let numUnidade_KillsM_Kills = 0;
 function kill() {
     const positionBullet = bullet.getBoundingClientRect();
     const positionEnemy01 = enemy01.getBoundingClientRect();
