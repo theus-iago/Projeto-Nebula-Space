@@ -78,38 +78,73 @@ function colisao() {
         player.style.animation = "";
     }
 }
-function moverLeft() {
+/*function moveToLeft() {
     let positionPlayer = player.getBoundingClientRect();
-    let num = parseInt(positionPlayer.left);
+    let num = Math.floor(positionPlayer.left);
     positionPlayer.left < 100;
     player.style.left = positionPlayer.left + -100 + "px";
     if (num < 100) {
         player.style.left = 0;
     }
 }
-function moverRight() {
+function moveToRight() {
     let positionPlayer = player.getBoundingClientRect();
-    let num = parseInt(positionPlayer.right);
+    let num = Math.floor(positionPlayer.right);
     player.style.left = positionPlayer.left + 100 + "px";
     if (num > 300) {
         player.style.left = 78 + "%";
     }
 }
-function moverTop() {
+function moveToTop() {
     let positionPlayer = player.getBoundingClientRect();
-    let num = parseInt(positionPlayer.top);
+    let num = Math.floor(positionPlayer.top);
     positionPlayer.top < 100;
     player.style.top = positionPlayer.top + -100 + "px";
     if (num < 100) {
         player.style.top = 0;
     }
 }
-function moverBottom() {
+function moveToBottom() {
     let positionPlayer = player.getBoundingClientRect();
-    let num = parseInt(positionPlayer.bottom);
+    let num = Math.floor(positionPlayer.bottom);
     player.style.top = positionPlayer.top + 100 + "px";
     if (num > 300) {
         player.style.top = 78 + "%";
+    }
+}*/
+function move(direct) {
+    let positionPlayer = player.getBoundingClientRect();
+    switch (direct) {
+        case "left":
+            var num = Math.floor(positionPlayer.left);
+            positionPlayer.left < 100;
+            player.style.left = positionPlayer.left + -100 + "px";
+            if (num < 100) {
+                player.style.left = 0;
+            }
+            break;
+        case "right":
+            var num = Math.floor(positionPlayer.right);
+            player.style.left = positionPlayer.left + 100 + "px";
+            if (num > 300) {
+                player.style.left = 78 + "%";
+            }
+            break;
+        case "top":
+            var num = Math.floor(positionPlayer.top);
+            positionPlayer.top < 100;
+            player.style.top = positionPlayer.top + -100 + "px";
+            if (num < 100) {
+                player.style.top = 0;
+            }
+            break;
+        case "bottom":
+            var num = Math.floor(positionPlayer.bottom);
+            player.style.top = positionPlayer.top + 100 + "px";
+            if (num > 300) {
+                player.style.top = 78 + "%";
+            }
+            break;
     }
 }
 let numUnidade_Score = 0;
