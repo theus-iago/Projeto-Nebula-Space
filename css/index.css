@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url("../images/fundo.jfif");
+    /*background-image: url("../images/fundo.jfif");
     background-repeat: no-repeat;
     background-size: 300% 300%;
-    background-size: bottom center;
-    background-position: top center;
+    background-position: top center;*/
+    background: url("../images/fundo.jfif") no-repeat 300% 300% / top center;
     height: 100vh;
     overflow: hidden;
     display: flex;
