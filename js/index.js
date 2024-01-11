@@ -10,6 +10,7 @@ const bullet = document.querySelector(".bullet");
 const gameBoard = document.querySelector(".game-board");
 const botoes = document.querySelector(".botoes");
 const shield = document.querySelector(".shield");
+
 let vidaAtual = 3;
 let numUnidade_Score = 0;
 let numDezena_Score = 0;
