@@ -423,6 +423,7 @@ botaoShield.addEventListener("click", function () {
         player.style.top = playerPosition.top;
         player.style.left = playerPosition.left;
         player.style.backgroundColor = "#62ceffe2";
+        player.style.boxShadow = "2px 10px 26px rgb(51,162,254)";
         player.style.backgroundSize = "70% 70%";
         player.style.outline = "5px solid #008cff";
         player.style.opacity = "70%";
@@ -433,6 +434,7 @@ botaoShield.addEventListener("click", function () {
         player.style.top = playerPosition.top;
         player.style.left = playerPosition.left;
         player.style.backgroundColor = "#62ceff00";
+        player.style.boxShadow = "none";
         player.style.backgroundSize = "100% 100%";
         player.style.outline = "none";
         player.style.opacity = "100%";
