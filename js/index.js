@@ -12,6 +12,7 @@ const botoes = document.querySelector(".botoes");
 const botaoPlay = document.querySelector("#botaoPlay");
 const botaoSettings = document.querySelector("#botaoSettings");
 const botaoShoot = document.querySelector("#botaoShoot");
+const botaoShield = document.querySelector("#botaoShield");
 const botaoLeft = document.querySelector("#botaoLeft");
 const botaoTop = document.querySelector("#botaoTop");
 const botaoRight = document.querySelector("#botaoRight");
@@ -68,31 +69,35 @@ function colisao() {
             positionPlayer.top > positionEnemy03.bottom + positionGameBoard.top
         )
     ) {
-        vidaAtual--;
-        setTimeout(() => {
-            player.style.animation = "death .6s ease-in-out";
-            console.log(vidaAtual);
-            if (vidaAtual >= 0) {
-                document.getElementsByClassName("lifes")[
-                    vidaAtual
-                ].style.opacity = 0;
-            }
-            if (vidaAtual === 0) {
-                setTimeout(() => {
-                    document.body.style.cssText = "display:block;";
-                    document.querySelector(".game-board").style.display =
-                        "none";
-                    document.querySelector(".botoes").style.display = "none";
-                    document.querySelector(".game-over").style.cssText =
-                        "height:100vh; width:100vw; display:flex; align-items:center; justify-content:center; flex-direction:column;";
-                }, 100);
+        if (player.style.outline == "none") {
+            vidaAtual--;
+            setTimeout(() => {
+                player.style.animation = "death .6s ease-in-out";
+                console.log(vidaAtual);
+                if (vidaAtual >= 0) {
+                    document.getElementsByClassName("lifes")[
+                        vidaAtual
+                    ].style.opacity = 0;
+                }
+                if (vidaAtual === 0) {
+                    setTimeout(() => {
+                        document.body.style.cssText = "display:block;";
+                        document.querySelector(".game-board").style.display =
+                            "none";
+                        document.querySelector(".botoes").style.display =
+                            "none";
+                        document.querySelector(".game-over").style.cssText =
+                            "height:100vh; width:100vw; display:flex; align-items:center; justify-content:center; flex-direction:column;";
+                    }, 100);
 
-                document.body.addEventListener("click", function () {
-                    location.reload();
-                });
-            }
-        }, 100);
-        player.style.animation = "";
+                    document.body.addEventListener("click", function () {
+                        location.reload();
+                    });
+                }
+            }, 100);
+        } else {
+            player.style.animation = "";
+        }
     }
 }
 /**
@@ -410,6 +415,29 @@ botaoShoot.addEventListener("click", function () {
     setTimeout(() => {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
+});
+botaoShield.addEventListener("click", function () {
+    const playerPosition = player.getBoundingClientRect();
+    setTimeout(() => {
+        player.style.top = playerPosition.top;
+        player.style.left = playerPosition.left;
+        player.style.backgroundColor = "#62ceffe2";
+        player.style.backgroundSize = "70% 70%";
+        player.style.outline = "5px solid #008cff";
+        player.style.opacity = "70%";
+        player.style.borderRadius = "50%";
+        botaoShield.style.opacity = "50%";
+    }, 100);
+    setTimeout(() => {
+        player.style.top = playerPosition.top;
+        player.style.left = playerPosition.left;
+        player.style.backgroundColor = "#62ceff00";
+        player.style.backgroundSize = "100% 100%";
+        player.style.outline = "none";
+        player.style.opacity = "100%";
+        player.style.borderRadius = "0%";
+        botaoShield.style.opacity = "100%";
+    }, 10000);
 });
 // Ouvinte de evento para o botão de jogar
 botaoPlay.addEventListener("click", function () {
