@@ -9,6 +9,13 @@ const enemy03 = document.querySelector("#enemy03");
 const bullet = document.querySelector(".bullet");
 const gameBoard = document.querySelector(".game-board");
 const botoes = document.querySelector(".botoes");
+const botaoPlay = document.querySelector("#botaoPlay");
+const botaoSettings = document.querySelector("#botaoSettings");
+const botaoShoot = document.querySelector("#botaoShoot");
+const botaoLeft = document.querySelector("#botaoLeft");
+const botaoTop = document.querySelector("#botaoTop");
+const botaoRight = document.querySelector("#botaoRight");
+const botaoBottom = document.querySelector("#botaoBottom");
 const shield = document.querySelector(".shield");
 
 let vidaAtual = 3;
@@ -85,40 +92,6 @@ function colisao() {
         player.style.animation = "";
     }
 }
-/*function moveToLeft() {
-    let positionPlayer = player.getBoundingClientRect();
-    let num = Math.floor(positionPlayer.left);
-    positionPlayer.left < 100;
-    player.style.left = positionPlayer.left + -100 + "px";
-    if (num < 100) {
-        player.style.left = 0;
-    }
-}
-function moveToRight() {
-    let positionPlayer = player.getBoundingClientRect();
-    let num = Math.floor(positionPlayer.right);
-    player.style.left = positionPlayer.left + 100 + "px";
-    if (num > 300) {
-        player.style.left = 78 + "%";
-    }
-}
-function moveToTop() {
-    let positionPlayer = player.getBoundingClientRect();
-    let num = Math.floor(positionPlayer.top);
-    positionPlayer.top < 100;
-    player.style.top = positionPlayer.top + -100 + "px";
-    if (num < 100) {
-        player.style.top = 0;
-    }
-}
-function moveToBottom() {
-    let positionPlayer = player.getBoundingClientRect();
-    let num = Math.floor(positionPlayer.bottom);
-    player.style.top = positionPlayer.top + 100 + "px";
-    if (num > 300) {
-        player.style.top = 78 + "%";
-    }
-}*/
 function move(direct) {
     let positionPlayer = player.getBoundingClientRect();
     switch (direct) {
@@ -152,6 +125,18 @@ function move(direct) {
             break;
     }
 }
+botaoLeft.addEventListener("click", function () {
+    move("left");
+});
+botaoTop.addEventListener("click", function () {
+    move("top");
+});
+botaoRight.addEventListener("click", function () {
+    move("right");
+});
+botaoBottom.addEventListener("click", function () {
+    move("bottom");
+});
 function score() {
     const score = document.querySelector(".score");
     numUnidade_Score++;
@@ -244,6 +229,12 @@ function enemyAnimations03() {
     randomAnimation();
 }
 function kill() {
+    /**
+     * Objetivos *
+     * Capturar o movinento e o posicionamento da bala (bullet) e dos asteroids (enemy01,enemy02,enemy03)
+     * Armazenar os dados capturados em constantes
+     * Checar colisões entre a bala (bullet) e os asteroids (enemy)
+     */
     const positionBullet = bullet.getBoundingClientRect();
     const positionEnemy01 = enemy01.getBoundingClientRect();
     const positionEnemy02 = enemy02.getBoundingClientRect();
@@ -260,8 +251,6 @@ function kill() {
             positionBullet.top > positionEnemy01.bottom + positionGameBoard.top
         )
     ) {
-        /*setTimeout(() => shield.appendChild(document.querySelector("#player")),400);
-      setTimeout(() => player.style.cssText = "top:0%; left:0%;",500);*/
         setTimeout(
             () => (enemy01.style.animation = "death .6s ease-in-out"),
             100
@@ -390,7 +379,10 @@ function kill() {
             numUnidade_KillsM_Kills + "";
     }
 }
-function shoot() {
+botaoShoot.addEventListener("click", function () {
+    /*
+     *Cada setTimeout representa a velocídade de transicao entre cada frame da bala
+     */
     setTimeout(() => {
         bullet.style.cssText = "display:block; top:0%; opacity:100%;";
     }, 100);
@@ -403,14 +395,8 @@ function shoot() {
     setTimeout(() => {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
-    /*if(bullet.style.display=='block') {
-      bullet.style.display = "none";
-      if(bullet.style.display == 'none') {
-          bullet.style.display = "block";
-      }
-    }*/
-}
-function jogar() {
+});
+botaoPlay.addEventListener("click", function () {
     initialGame.style.display = "none";
     gameBoard.style.display = "block";
     body.style.animation = "background 4s ease-in-out";
@@ -421,4 +407,4 @@ function jogar() {
     setInterval(kill, 40);
     setInterval(colisao, 290);
     setInterval(score, 260);
-}
+});
