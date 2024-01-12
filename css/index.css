@@ -152,24 +152,24 @@ button:active {
 }
 #player {
     background-image: url("../images/player.png");
+    background-color:#62ceff00;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position:center center;
+    outline:none;
+    opacity:100%;
+    border-radius:0%;
     transition: all 0.2s;
     left: 50%;
     top: 50%;
 }
-/*.shield {
-  background-color:blue;
-  height:100px;
-  width:100px;
-  bottom: 50px;
-    right: 40px;
-    transition: all 0.4s;
-    left: 50%;
-    top: 50%;
-    transition: all 0.2s;
-    position:absolute;
-}*/
+/**
+background-color:#62ceffe2;
+background-size: 70% 70%;
+outline:5px solid #008cff;
+opacity:70%;
+border-radius:50%;
+*/
 @keyframes death {
     0% {
         opacity: 100%;
@@ -280,7 +280,7 @@ button:active {
 }
 .shootButton {
     background-color: rgb(224, 0, 0);
-    border: 1px solid black;
+    border: 2px outset black;
     border-radius: 50%;
     height: 80px;
     width: 80px;
@@ -291,12 +291,18 @@ button:active {
 .shootButton > img {
     width: 40px;
 }
+.shieldButton {
+    background-color: rgb(0,123,224);
+    border: 2px outset black;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .bullet {
-    background-image: linear-gradient(
-        to bottom,
-        rgb(108, 21, 255),
-        rgb(21, 32, 255)
-    );
+background-color: #008cff;
     border-radius: 25%;
     height: 12px;
     width: 12px;
