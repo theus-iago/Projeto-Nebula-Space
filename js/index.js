@@ -416,6 +416,7 @@ botaoShoot.addEventListener("click", function () {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
 });
+// Ouvinte de evento para o botão de ativar o escudo
 botaoShield.addEventListener("click", function () {
     const playerPosition = player.getBoundingClientRect();
     setTimeout(() => {
