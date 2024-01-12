@@ -19,7 +19,7 @@
                 <h1>Nebula-Space</h1>
                 <br />
                 <div class="botoesHeader">
-                    <button onclick="jogar()" id="botaoPlay">Play</button>
+                    <button id="botaoPlay">Play</button>
                     <button id="botaoSettings">Settings</button>
                 </div>
                 <footer>
@@ -72,17 +72,12 @@
         </div>
         <div class="botoes">
             <div class="angulos">
-                <div
-                    class="botao"
-                    id="botaoLeft"
-                    onclick="move('left')"
-                    onmousedown="move('left')"
-                ></div>
-                <div class="botao" id="botaoRight" onclick="move('right')"></div>
-                <div class="botao" id="botaoTop" onclick="move('top')"></div>
-                <div class="botao" id="botaoBottom" onclick="move('bottom')"></div>
+                <div class="botao" id="botaoLeft"></div>
+                <div class="botao" id="botaoRight"></div>
+                <div class="botao" id="botaoTop"></div>
+                <div class="botao" id="botaoBottom"></div>
             </div>
-            <div class="shootButton" onclick="shoot()" id="botaoShoot">
+            <div class="shootButton" id="botaoShoot">
                 <img src="images/fogo.png" alt="fire" />
             </div>
         </div>
