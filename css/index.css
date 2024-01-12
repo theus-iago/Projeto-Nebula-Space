@@ -52,7 +52,7 @@ body {
 }
 .initial-game > header > footer {
     height: 100%;
-    font-size:1em;
+    font-size: 1em;
     display: flex;
     align-items: end;
     justify-content: end;
@@ -87,7 +87,7 @@ button {
     padding: 2px;
     height: 50px;
     width: 100px;
-    font-size:1em;
+    font-size: 1em;
     transition: all 0.8s;
 }
 button:hover {
@@ -152,13 +152,13 @@ button:active {
 }
 #player {
     background-image: url("../images/player.png");
-    background-color:#62ceff00;
+    background-color: #62ceff00;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position:center center;
-    outline:none;
-    opacity:100%;
-    border-radius:0%;
+    background-position: center center;
+    outline: none;
+    opacity: 100%;
+    border-radius: 0%;
     transition: all 0.2s;
     left: 50%;
     top: 50%;
@@ -231,7 +231,7 @@ border-radius:50%;
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
-    height: 180px;
+    height: 220px;
     width: 100%;
     display: none;
     align-items: center;
@@ -250,7 +250,7 @@ border-radius:50%;
     margin: 2px;
     opacity: 0;
 }
-.angulos {
+.botoesDirect {
     height: 180px;
     width: 180px;
     /*background-color:rgba(128, 128, 128, 0.63);*/
@@ -262,6 +262,15 @@ border-radius:50%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.botoesPower {
+    height: 180px;
+    width: 180px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
 }
 #botaoTop {
     grid-column: 2;
@@ -280,33 +289,38 @@ border-radius:50%;
 }
 .shootButton {
     background-color: rgb(224, 0, 0);
-    border: 2px outset black;
+    border: 2px solid black;
     border-radius: 50%;
     height: 80px;
     width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
 }
 .shootButton > img {
     width: 40px;
 }
 .shieldButton {
-    background-color: rgb(0,123,224);
-    border: 2px outset black;
+    background-color: rgb(0, 123, 224);
+    border: 2px solid black;
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    opacity:50%;
+    height: 98px;
+    width: 98px;
+    opacity: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-column: 2;
+    grid-row: 2;
 }
 .shieldButton > img {
     width: 40px;
 }
 .bullet {
-background-color: #008cff;
+    background-color: rgb(224, 0, 0);
+    box-shadow: 2px 10px 30px rgb(255, 42, 42);
     border-radius: 25%;
     height: 12px;
     width: 12px;
