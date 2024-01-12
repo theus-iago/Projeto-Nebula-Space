@@ -302,6 +302,9 @@ border-radius:50%;
     align-items: center;
     justify-content: center;
 }
+.shieldButton > img {
+    width: 40px;
+}
 .bullet {
 background-color: #008cff;
     border-radius: 25%;
