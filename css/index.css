@@ -297,6 +297,7 @@ border-radius:50%;
     border-radius: 50%;
     height: 80px;
     width: 80px;
+    opacity:50%;
     display: flex;
     align-items: center;
     justify-content: center;
