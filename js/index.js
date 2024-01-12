@@ -28,7 +28,10 @@ let numUnidade_Kills = 0;
 let numDezena_Kills = 0;
 let numCentena_Kills = 0;
 let numUnidade_KillsM_Kills = 0;
-
+/**
+ * Trata da detecção de colisões entre o jogador e os inimigos.
+ * Caso uma colisão seja detectada diminui o número de vidas do jogador e aciona o fim do jogo caso as vidas cheguem a zero.
+ */
 function colisao() {
     const positionBody = body.getBoundingClientRect();
     const positionPlayer = player.getBoundingClientRect();
@@ -92,6 +95,11 @@ function colisao() {
         player.style.animation = "";
     }
 }
+/**
+ * Move o jogador na direção especificada de acordo com os limites da game-board do jogo.
+ * Garante que o jogador não saia dos limites da game-board.
+ * @param {string} direct - direção que o jogador deve se mover.
+ */
 function move(direct) {
     let positionPlayer = player.getBoundingClientRect();
     switch (direct) {
@@ -125,6 +133,7 @@ function move(direct) {
             break;
     }
 }
+// Ouvintes de eventos para os botões de movimentação do jogador
 botaoLeft.addEventListener("click", function () {
     move("left");
 });
@@ -137,6 +146,10 @@ botaoRight.addEventListener("click", function () {
 botaoBottom.addEventListener("click", function () {
     move("bottom");
 });
+/**
+ * Gerencia o mecanismo de pontuação, atualizando a exibição da pontuação conforme o jogo avança
+ * Calcula e exibi a potuação com base em unidades,dezenas,centenas e milhares.
+ */
 function score() {
     const score = document.querySelector(".score");
     numUnidade_Score++;
@@ -165,6 +178,10 @@ function score() {
             numUnidade_ScoreM_Score + "";
     }
 }
+/**
+ * Dispara o método que sorteia o nome das animações.
+ * Dsitribui o nome sorteado das animações para cada inimigo.
+ */
 function enemyAnimations01() {
     enemy01.style.animation = "2s infinite ease-in-out";
     function randomAnimation() {
@@ -228,13 +245,13 @@ function enemyAnimations03() {
     }
     randomAnimation();
 }
+/**
+ * Trata da detecção de colisões entre a bala e os inimigos.
+ * Caso uma colisão seja detectada aumenta o número de mortes dos inimigos.
+ * Gerencia o mecanismo de pontuação de mortes, atualizando a exibição da pontuação conforme o número de mortes aumenta.
+ * Calcula e exibi a potuação com base em unidades,dezenas,centenas e milhares.
+ */
 function kill() {
-    /**
-     * Objetivos *
-     * Capturar o movinento e o posicionamento da bala (bullet) e dos asteroids (enemy01,enemy02,enemy03)
-     * Armazenar os dados capturados em constantes
-     * Checar colisões entre a bala (bullet) e os asteroids (enemy)
-     */
     const positionBullet = bullet.getBoundingClientRect();
     const positionEnemy01 = enemy01.getBoundingClientRect();
     const positionEnemy02 = enemy02.getBoundingClientRect();
@@ -379,10 +396,8 @@ function kill() {
             numUnidade_KillsM_Kills + "";
     }
 }
+// Ouvinte de evento para o botão de atirar
 botaoShoot.addEventListener("click", function () {
-    /*
-     *Cada setTimeout representa a velocídade de transicao entre cada frame da bala
-     */
     setTimeout(() => {
         bullet.style.cssText = "display:block; top:0%; opacity:100%;";
     }, 100);
@@ -396,6 +411,7 @@ botaoShoot.addEventListener("click", function () {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
 });
+// Ouvinte de evento para o botão de jogar
 botaoPlay.addEventListener("click", function () {
     initialGame.style.display = "none";
     gameBoard.style.display = "block";
