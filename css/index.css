@@ -263,18 +263,18 @@ button:active {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
-#top {
+#botaoTop {
     grid-column: 2;
 }
-#left {
+#botaoLeft {
     grid-column: 1;
     grid-row: 2;
 }
-#right {
+#botaoRight {
     grid-column: 3;
     grid-row: 2;
 }
-#bottom {
+#botaoBottom {
     grid-column: 2;
     grid-row: 3;
 }
