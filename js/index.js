@@ -70,6 +70,7 @@ function colisao() {
         )
     ) {
         if (player.style.outline == "none") {
+      console.log("bateu")
             vidaAtual--;
             setTimeout(() => {
                 player.style.animation = "death .6s ease-in-out";
@@ -447,6 +448,7 @@ botaoPlay.addEventListener("click", function () {
     initialGame.style.display = "none";
     gameBoard.style.display = "block";
     body.style.animation = "background 4s ease-in-out";
+    player.style.outline = "none";
     botoes.style.display = "flex";
     setInterval(enemyAnimations01, 2000);
     setInterval(enemyAnimations02, 2000);
