@@ -265,7 +265,7 @@ border-radius:50%;
 }
 .botoesPower {
     height: 180px;
-    width: 180px;
+    width: 150px;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -291,8 +291,8 @@ border-radius:50%;
     background-color: rgb(224, 0, 0);
     border: 2px solid black;
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,7 +300,7 @@ border-radius:50%;
     grid-row: 1;
 }
 .shootButton > img {
-    width: 40px;
+    width: 30px;
 }
 .shieldButton {
     background-color: rgb(0, 123, 224);
