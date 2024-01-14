@@ -230,7 +230,7 @@ button:active {
     position: absolute;
     top: -500px;
     animation: shield01 10s infinite ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
