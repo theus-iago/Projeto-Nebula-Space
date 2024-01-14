@@ -18,6 +18,7 @@ const botaoTop = document.querySelector("#botaoTop");
 const botaoRight = document.querySelector("#botaoRight");
 const botaoBottom = document.querySelector("#botaoBottom");
 const shield = document.querySelector(".shield");
+const shieldIcon = document.querySelector("#shieldIcon");
 
 let vidaAtual = 3;
 let numUnidade_Score = 0;
@@ -417,6 +418,7 @@ botaoShoot.addEventListener("click", function () {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
 });
+if(botaoShield.style.opacity == 100+"%") {
 // Ouvinte de evento para o botão de ativar o escudo
 botaoShield.addEventListener("click", function () {
     const playerPosition = player.getBoundingClientRect();
@@ -443,6 +445,7 @@ botaoShield.addEventListener("click", function () {
         botaoShield.style.opacity = "100%";
     }, 10000);
 });
+}
 // Ouvinte de evento para o botão de jogar
 botaoPlay.addEventListener("click", function () {
     initialGame.style.display = "none";
