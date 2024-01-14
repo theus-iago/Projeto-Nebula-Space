@@ -17,7 +17,6 @@ const botaoLeft = document.querySelector("#botaoLeft");
 const botaoTop = document.querySelector("#botaoTop");
 const botaoRight = document.querySelector("#botaoRight");
 const botaoBottom = document.querySelector("#botaoBottom");
-const shield = document.querySelector(".shield");
 const shieldIcon = document.querySelector("#shieldIcon");
 
 let vidaAtual = 3;
@@ -71,7 +70,7 @@ function colisao() {
         )
     ) {
         if (player.style.outline == "none") {
-      console.log("bateu")
+            console.log("bateu");
             vidaAtual--;
             setTimeout(() => {
                 player.style.animation = "death .6s ease-in-out";
@@ -100,6 +99,25 @@ function colisao() {
         } else {
             player.style.animation = "";
         }
+    }
+}
+function colisaoIcone() {
+    const positionPlayer = player.getBoundingClientRect();
+    const positionShieldIcon = shieldIcon.getBoundingClientRect();
+    const positionGameBoard = gameBoard.getBoundingClientRect();
+    if (
+        !(
+            positionPlayer.right <
+                positionShieldIcon.left + positionGameBoard.left ||
+            positionPlayer.left >
+                positionShieldIcon.right + positionGameBoard.left ||
+            positionPlayer.bottom <
+                positionShieldIcon.top + positionGameBoard.top ||
+            positionPlayer.top >
+                positionShieldIcon.bottom + positionGameBoard.top
+        )
+    ) {
+        botaoShield.style.opacity = 100;
     }
 }
 /**
@@ -418,21 +436,22 @@ botaoShoot.addEventListener("click", function () {
         bullet.style.cssText = "top: 0%; opacity: 0%; display:none;";
     }, 500);
 });
-if(botaoShield.style.opacity == 100+"%") {
 // Ouvinte de evento para o botão de ativar o escudo
 botaoShield.addEventListener("click", function () {
     const playerPosition = player.getBoundingClientRect();
-    setTimeout(() => {
-        player.style.top = playerPosition.top;
-        player.style.left = playerPosition.left;
-        player.style.backgroundColor = "#62ceffe2";
-        player.style.boxShadow = "2px 10px 26px rgb(51,162,254)";
-        player.style.backgroundSize = "70% 70%";
-        player.style.outline = "5px solid #008cff";
-        player.style.opacity = "70%";
-        player.style.borderRadius = "50%";
-        botaoShield.style.opacity = "50%";
-    }, 100);
+    if (botaoShield.style.opacity == 100) {
+        setTimeout(() => {
+            player.style.top = playerPosition.top;
+            player.style.left = playerPosition.left;
+            player.style.backgroundColor = "#62ceffe2";
+            player.style.boxShadow = "2px 10px 26px rgb(51,162,254)";
+            player.style.backgroundSize = "70% 70%";
+            player.style.outline = "5px solid #008cff";
+            player.style.opacity = "70%";
+            player.style.borderRadius = "50%";
+            botaoShield.style.opacity = "50%";
+        }, 100);
+    }
     setTimeout(() => {
         player.style.top = playerPosition.top;
         player.style.left = playerPosition.left;
@@ -442,10 +461,9 @@ botaoShield.addEventListener("click", function () {
         player.style.outline = "none";
         player.style.opacity = "100%";
         player.style.borderRadius = "0%";
-        botaoShield.style.opacity = "100%";
+        botaoShield.style.opacity = "50%";
     }, 10000);
 });
-}
 // Ouvinte de evento para o botão de jogar
 botaoPlay.addEventListener("click", function () {
     initialGame.style.display = "none";
@@ -459,4 +477,5 @@ botaoPlay.addEventListener("click", function () {
     setInterval(kill, 40);
     setInterval(colisao, 290);
     setInterval(score, 260);
+    setInterval(colisaoIcone, 300);
 });
