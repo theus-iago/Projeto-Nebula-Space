@@ -270,6 +270,11 @@ function enemyAnimations03() {
     }
     randomAnimation();
 }
+function shieldLeft() {
+    const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
+    const lefts = ["0%", "25%", "50%", "75%", "90%"];
+    shieldIcon.style.left = lefts[random(0, lefts.length)];
+}
 /**
  * Trata da detecção de colisões entre a bala e os inimigos.
  * Caso uma colisão seja detectada aumenta o número de mortes dos inimigos.
@@ -471,11 +476,12 @@ botaoPlay.addEventListener("click", function () {
     body.style.animation = "background 4s ease-in-out";
     player.style.outline = "none";
     botoes.style.display = "flex";
+    setInterval(kill, 40);
+    setInterval(score, 260);
+    setInterval(colisao, 290);
+    setInterval(colisaoIcone, 300);
     setInterval(enemyAnimations01, 2000);
     setInterval(enemyAnimations02, 2000);
     setInterval(enemyAnimations03, 2000);
-    setInterval(kill, 40);
-    setInterval(colisao, 290);
-    setInterval(score, 260);
-    setInterval(colisaoIcone, 300);
+    setInterval(shieldLeft, 10000);
 });
