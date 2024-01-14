@@ -162,13 +162,6 @@ button:active {
     left: 50%;
     top: 50%;
 }
-/**
-background-color:#62ceffe2;
-background-size: 70% 70%;
-outline:5px solid #008cff;
-opacity:70%;
-border-radius:50%;
-*/
 @keyframes death {
     0% {
         opacity: 100%;
@@ -190,20 +183,8 @@ border-radius:50%;
     background: url("../images/meteoro.png") no-repeat 100% / cover;
     transition: all 2s;
 }
-#enemy01 {
-    border-radius: 28%;
-    height: 90px;
-    width: 90px;
-    top: -1800px;
-    left: 50%;
-}
-#enemy02 {
-    border-radius: 28%;
-    height: 90px;
-    width: 90px;
-    top: -1800px;
-    left: 50%;
-}
+#enemy01,
+#enemy02,
 #enemy03 {
     border-radius: 28%;
     height: 90px;
@@ -227,6 +208,27 @@ border-radius:50%;
     100% {
         display: none;
     }
+}
+.icon {
+    transition: all 0.8s;
+}
+#shieldIcon {
+    background-image: url("../images/escudo.png");
+    background-color: rgb(0, 123, 224);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% 60%;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow:2px 10px 26px rgb(51,162,254);
+    height: 70px;
+    width: 70px;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
@@ -287,7 +289,11 @@ border-radius:50%;
     grid-row: 3;
 }
 .shootButton {
+    background-image: url("../images/fogo.png");
     background-color: rgb(224, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
     border: 2px solid black;
     border-radius: 50%;
     height: 60px;
@@ -298,24 +304,22 @@ border-radius:50%;
     grid-column: 1;
     grid-row: 1;
 }
-.shootButton > img {
-    width: 30px;
-}
 .shieldButton {
+    background-image: url("../images/escudo.png");
     background-color: rgb(0, 123, 224);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% 60%;
     border: 2px solid black;
     border-radius: 50%;
     height: 98px;
     width: 98px;
-    opacity: 100%;
+    opacity: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 2;
     grid-row: 2;
-}
-.shieldButton > img {
-    width: 40px;
 }
 .bullet {
     background-color: rgb(224, 0, 0);
