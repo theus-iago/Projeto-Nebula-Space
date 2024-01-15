@@ -119,12 +119,12 @@ function colisaoIcone() {
                 positionShieldIcon.bottom + positionGameBoard.top
         )
     ) {
-      shieldIcon.style.opacity = "0%";
-      numShield++;
-      shieldNum.innerHTML = numShield + "";
-      botaoShield.style.opacity = "100%";
+        shieldIcon.style.opacity = "0%";
+        numShield++;
+        shieldNum.innerHTML = numShield + "";
+        botaoShield.style.opacity = "100%";
     }
-      shieldIcon.style.opacity = "100%";
+    shieldIcon.style.opacity = "100%";
 }
 /**
  * Move o jogador na direção especificada de acordo com os limites da game-board do jogo.
@@ -450,19 +450,21 @@ botaoShoot.addEventListener("click", function () {
 // Ouvinte de evento para o botão de ativar o escudo
 botaoShield.addEventListener("click", function () {
     const playerPosition = player.getBoundingClientRect();
-    if (numShield > 0 && botaoShield.style.opacity == "100%") {
+    if (numShield > 0) {
         setTimeout(() => {
-            player.style.top = playerPosition.top;
-            player.style.left = playerPosition.left;
-            player.style.backgroundColor = "#62ceffe2";
-            player.style.boxShadow = "2px 10px 26px rgb(51,162,254)";
-            player.style.backgroundSize = "70% 70%";
-            player.style.outline = "5px solid #008cff";
-            player.style.opacity = "70%";
-            player.style.borderRadius = "50%";
-            numShield--;
-            shieldNum.innerHTML = numShield + "";
-            botaoShield.style.opacity = "50%";
+            if (botaoShield.style.opacity == "100%") {
+                player.style.top = playerPosition.top;
+                player.style.left = playerPosition.left;
+                player.style.backgroundColor = "#62ceffe2";
+                player.style.boxShadow = "2px 10px 26px rgb(51,162,254)";
+                player.style.backgroundSize = "70% 70%";
+                player.style.outline = "5px solid #008cff";
+                player.style.opacity = "70%";
+                player.style.borderRadius = "50%";
+                botaoShield.style.opacity = "50%";
+                numShield--;
+                shieldNum.innerHTML = numShield + "";
+            }
         }, 100);
     }
     setTimeout(() => {
@@ -474,7 +476,13 @@ botaoShield.addEventListener("click", function () {
         player.style.outline = "none";
         player.style.opacity = "100%";
         player.style.borderRadius = "0%";
-        botaoShield.style.opacity = "50%";
+        if (numShield <= 0) {
+            numShield = 0;
+            shieldNum.innerHTML = numShield + "";
+            botaoShield.style.opacity = "50%";
+        } else {
+            botaoShield.style.opacity = "100%";
+        }
     }, 10000);
 });
 // Ouvinte de evento para o botão de jogar
