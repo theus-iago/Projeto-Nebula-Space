@@ -135,28 +135,28 @@ function move(direct) {
     let positionPlayer = player.getBoundingClientRect();
     switch (direct) {
         case "left":
-            var numLeft = Math.floor(positionPlayer.left);
+            const numLeft = Math.floor(positionPlayer.left);
             player.style.left = positionPlayer.left + -100 + "px";
             if (numLeft < 100) {
                 player.style.left = 0;
             }
             break;
         case "right":
-            var numRight = Math.floor(positionPlayer.right);
+            const numRight = Math.floor(positionPlayer.right);
             player.style.left = positionPlayer.left + 100 + "px";
             if (numRight > 300) {
                 player.style.left = 78 + "%";
             }
             break;
         case "top":
-            var numTop = Math.floor(positionPlayer.top);
+            const numTop = Math.floor(positionPlayer.top);
             player.style.top = positionPlayer.top + -100 + "px";
             if (numTop < 100) {
                 player.style.top = 0;
             }
             break;
         case "bottom":
-            var numBottom = Math.floor(positionPlayer.bottom);
+            const numBottom = Math.floor(positionPlayer.bottom);
             player.style.top = positionPlayer.top + 100 + "px";
             if (numBottom > 300) {
                 player.style.top = 78 + "%";
@@ -227,7 +227,8 @@ function enemyAnimations01() {
             "enemy06",
             "enemy07",
             "enemy08",
-            "enemy09"
+            "enemy09",
+            "enemy10"
         ];
         enemy01.style.animationName =
             animationsName[random(0, animationsName.length)];
@@ -244,7 +245,8 @@ function enemyAnimations02() {
         "enemy06",
         "enemy07",
         "enemy08",
-        "enemy09"
+        "enemy09",
+        "enemy10"
     ];
     enemy02.style.animation = "2s infinite ease-in-out";
     function randomAnimation() {
@@ -269,7 +271,8 @@ function enemyAnimations03() {
             "enemy06",
             "enemy07",
             "enemy08",
-            "enemy09"
+            "enemy09",
+            "enemy10"
         ];
         enemy03.style.animationName =
             animationsName[random(0, animationsName.length)];
@@ -497,5 +500,5 @@ botaoPlay.addEventListener("click", function () {
     setInterval(enemyAnimations01, 2000);
     setInterval(enemyAnimations02, 2000);
     setInterval(enemyAnimations03, 2000);
-    setInterval(shieldLeft, 10000);
+    setInterval(shieldLeft, 12000);
 });
