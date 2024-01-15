@@ -163,6 +163,40 @@ function move(direct) {
             }
             break;
     }
+    /**
+     * Teste de correção de movimentação
+     * let positionGameBoard = window.getComputedStyle(gameBoard);
+    let positionPlayer = window.getComputedStyle(player);
+    switch (direct) {
+        case "left":
+            const numLeft = parseInt(positionPlayer.left);
+            player.style.left = numLeft + -100 + "px";
+            if (numLeft < parseInt(positionGameBoard.width)) {
+                player.style.left = 0;
+            }
+            break;
+        case "right":
+            const numRight = parseInt(positionPlayer.right);
+            player.style.left = numRight + 100 + "px";
+            if (numRight > parseInt(positionGameBoard.width)) {
+                player.style.left = 100;
+            }
+            break;
+        case "top":
+            const numTop = parseInt(positionPlayer.top);
+            player.style.top = numTop + -100 + "px";
+            if (numTop < parseInt(positionGameBoard.height)) {
+                player.style.top = 0;
+            }
+            break;
+        case "bottom":
+            const numBottom = parseInt(positionPlayer.bottom);
+            player.style.top = numBottom + 100 + "px";
+            if (numBottom > parseInt(positionGameBoard.height)) {
+                player.style.top = 100;
+            }
+            break;
+    }*/
 }
 // Ouvintes de eventos para os botões de movimentação do jogador
 botaoLeft.addEventListener("click", function () {
