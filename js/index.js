@@ -18,8 +18,10 @@ const botaoTop = document.querySelector("#botaoTop");
 const botaoRight = document.querySelector("#botaoRight");
 const botaoBottom = document.querySelector("#botaoBottom");
 const shieldIcon = document.querySelector("#shieldIcon");
+const shieldNum = document.querySelector(".shieldNum");
 
 let vidaAtual = 3;
+let numShield = 0;
 let numUnidade_Score = 0;
 let numDezena_Score = 0;
 let numCentena_Score = 0;
@@ -117,8 +119,12 @@ function colisaoIcone() {
                 positionShieldIcon.bottom + positionGameBoard.top
         )
     ) {
-        botaoShield.style.opacity = 100;
+      shieldIcon.style.opacity = "0%";
+      numShield++;
+      shieldNum.innerHTML = numShield + "";
+      botaoShield.style.opacity = "100%";
     }
+      shieldIcon.style.opacity = "100%";
 }
 /**
  * Move o jogador na direção especificada de acordo com os limites da game-board do jogo.
@@ -444,7 +450,7 @@ botaoShoot.addEventListener("click", function () {
 // Ouvinte de evento para o botão de ativar o escudo
 botaoShield.addEventListener("click", function () {
     const playerPosition = player.getBoundingClientRect();
-    if (botaoShield.style.opacity == 100) {
+    if (numShield > 0 && botaoShield.style.opacity == "100%") {
         setTimeout(() => {
             player.style.top = playerPosition.top;
             player.style.left = playerPosition.left;
@@ -454,6 +460,8 @@ botaoShield.addEventListener("click", function () {
             player.style.outline = "5px solid #008cff";
             player.style.opacity = "70%";
             player.style.borderRadius = "50%";
+            numShield--;
+            shieldNum.innerHTML = numShield + "";
             botaoShield.style.opacity = "50%";
         }, 100);
     }
@@ -479,9 +487,9 @@ botaoPlay.addEventListener("click", function () {
     setInterval(kill, 40);
     setInterval(score, 260);
     setInterval(colisao, 290);
-    setInterval(colisaoIcone, 300);
-    setInterval(enemyAnimations01, 2000);
+    setInterval(colisaoIcone, 800);
+    /*setInterval(enemyAnimations01, 2000);
     setInterval(enemyAnimations02, 2000);
-    setInterval(enemyAnimations03, 2000);
+    setInterval(enemyAnimations03, 2000);*/
     setInterval(shieldLeft, 10000);
 });
