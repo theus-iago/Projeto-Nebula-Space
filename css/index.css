@@ -228,10 +228,7 @@ button:active {
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 50%;
-    top: 40%;
-    /* animation: shield01 6s infinite ease-in-out;
-    animation-delay: 2s;*/
+    top: -1800px;
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
