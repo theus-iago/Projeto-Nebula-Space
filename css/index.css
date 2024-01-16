@@ -228,9 +228,10 @@ button:active {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -500px;
-    animation: shield01 6s infinite ease-in-out;
-    animation-delay: 2s;
+    left: 50%;
+    top: 40%;
+    /* animation: shield01 6s infinite ease-in-out;
+    animation-delay: 2s;*/
 }
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
