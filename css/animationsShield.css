@@ -1,23 +1,30 @@
 @keyframes shield01 {
-  0%{
-    top: -500px;
-  }
-  25%{
-    top: 0%;
-  }
-  40%{
-    top:25%;
-  }
-  50%{
-    top:50%;
-  }
-  75%{
-    top:75%;
-  }
-  85%{
-    top:100%;
-  }
-  100%{
-    top: 125%;
-  }
+    0% {
+        top: -500px;
+        opacity: 100%;
+    }
+    25% {
+        top: 0%;
+        opacity: 0%;
+    }
+    40% {
+        top: 25%;
+        opacity: 100%;
+    }
+    50% {
+        top: 50%;
+        opacity: 0%;
+    }
+    75% {
+        top: 75%;
+        opacity: 100%;
+    }
+    85% {
+        top: 100%;
+        opacity: 0%;
+    }
+    100% {
+        top: 125%;
+        opacity: 100%;
+    }
 }
