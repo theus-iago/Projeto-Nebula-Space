@@ -257,16 +257,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const random = (min, max) =>
                 Math.floor(Math.random() * (max - min) + min);
             const animationsName = [
-                "enemy01",
                 "enemy02",
-                "enemy03",
-                "enemy04",
-                "enemy05",
-                "enemy06",
-                "enemy07",
-                "enemy08",
+                "enemy10",
+                "enemy01",
                 "enemy09",
-                "enemy10"
+                "enemy03",
+                "enemy05",
+                "enemy04",
+                "enemy07",
+                "enemy06",
+                "enemy08"
             ];
             enemy01.style.animationName =
                 animationsName[random(0, animationsName.length)];
@@ -275,16 +275,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function enemyAnimations02() {
         const animationsName = [
-            "enemy01",
-            "enemy02",
             "enemy03",
             "enemy04",
-            "enemy05",
             "enemy06",
-            "enemy07",
+            "enemy05",
+            "enemy10",
+            "enemy02",
             "enemy08",
+            "enemy07",
             "enemy09",
-            "enemy10"
+            "enemy01"
         ];
         enemy02.style.animation = "2s infinite ease-in-out";
         function randomAnimation() {
@@ -301,16 +301,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const random = (min, max) =>
                 Math.floor(Math.random() * (max - min) + min);
             const animationsName = [
-                "enemy01",
                 "enemy02",
+                "enemy10",
                 "enemy03",
-                "enemy04",
-                "enemy05",
-                "enemy06",
-                "enemy07",
                 "enemy08",
-                "enemy09",
-                "enemy10"
+                "enemy05",
+                "enemy01",
+                "enemy07",
+                "enemy04",
+                "enemy06",
+                "enemy09"
             ];
             enemy03.style.animationName =
                 animationsName[random(0, animationsName.length)];
