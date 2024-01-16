@@ -107,6 +107,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function animationShield() {
+        shieldIcon.style.animation = "shield01 5s infinite ease-in-out";
+        shieldIcon.style.animationDelay = "2s";
+        setTimeout(() => (shieldIcon.style.opacity = "0%"), 100);
+        setTimeout(() => (shieldIcon.style.opacity = "100%"), 200);
+        setTimeout(() => (shieldIcon.style.opacity = "0%"), 300);
+        setTimeout(() => (shieldIcon.style.opacity = "100%"), 400);
+        setTimeout(() => (shieldIcon.style.opacity = "0%"), 500);
+        setTimeout(() => (shieldIcon.style.opacity = "100%"), 600);
+    }
     function colisaoIcone() {
         const positionPlayer = player.getBoundingClientRect();
         const positionShieldIcon = shieldIcon.getBoundingClientRect();
@@ -123,6 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     positionShieldIcon.bottom + positionGameBoard.top
             )
         ) {
+            setTimeout(
+                () => (shieldIcon.style.animation = "death .6s ease-in-out"),
+                600
+            );
+            shieldIcon.style.animation = "";
             shieldIcon.style.opacity = "0%";
             numShield++;
             shieldNum.innerHTML = numShield + "";
@@ -550,10 +565,11 @@ document.addEventListener("DOMContentLoaded", function () {
         setInterval(kill, 40);
         setInterval(score, 260);
         setInterval(colisao, 290);
-        setInterval(colisaoIcone, 700);
+        setInterval(colisaoIcone, 40);
         setInterval(enemyAnimations01, 2000);
         setInterval(enemyAnimations02, 2000);
         setInterval(enemyAnimations03, 2000);
-        setInterval(shieldLeft, 12000);
+        setInterval(animationShield, 5000);
+        setInterval(shieldLeft, 7000);
     });
 });
