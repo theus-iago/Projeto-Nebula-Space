@@ -36,12 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function retomarjogo() {
         if (isPaused) {
-            return (isPaused = false);
+            enemy01.style.animationPlayState = "running";
+            enemy02.style.animationPlayState = "running";
+            enemy03.style.animationPlayState = "running";
+            shieldIcon.style.animationPlayState = "running";
+            isPaused = false;
         }
     }
     function pausarjogo() {
         if (!isPaused) {
-            return (isPaused = true);
+            enemy01.style.animationPlayState = "paused";
+            enemy02.style.animationPlayState = "paused";
+            enemy03.style.animationPlayState = "paused";
+            shieldIcon.style.animationPlayState = "paused";
+            isPaused = true;
         }
     }
     /**
@@ -301,46 +309,50 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isPaused) {
             enemy01.style.animation = "2s infinite ease-in-out";
             function randomAnimation() {
-                const random = (min, max) =>
-                    Math.floor(Math.random() * (max - min) + min);
-                const animationsName = [
-                    "enemy02",
-                    "enemy10",
-                    "enemy01",
-                    "enemy09",
-                    "enemy03",
-                    "enemy05",
-                    "enemy04",
-                    "enemy07",
-                    "enemy06",
-                    "enemy08"
-                ];
-                enemy01.style.animationName =
-                    animationsName[random(0, animationsName.length)];
+                if (!isPaused) {
+                    const random = (min, max) =>
+                        Math.floor(Math.random() * (max - min) + min);
+                    const animationsName = [
+                        "enemy02",
+                        "enemy10",
+                        "enemy01",
+                        "enemy09",
+                        "enemy03",
+                        "enemy05",
+                        "enemy04",
+                        "enemy07",
+                        "enemy06",
+                        "enemy08"
+                    ];
+                    enemy01.style.animationName =
+                        animationsName[random(0, animationsName.length)];
+                }
             }
             randomAnimation();
         }
     }
     function enemyAnimations02() {
         if (!isPaused) {
-            const animationsName = [
-                "enemy03",
-                "enemy04",
-                "enemy06",
-                "enemy05",
-                "enemy10",
-                "enemy02",
-                "enemy08",
-                "enemy07",
-                "enemy09",
-                "enemy01"
-            ];
             enemy02.style.animation = "2s infinite ease-in-out";
             function randomAnimation() {
-                const random = (min, max) =>
-                    Math.floor(Math.random() * (max - min) + min);
-                enemy02.style.animationName =
-                    animationsName[random(0, animationsName.length)];
+                if (!isPaused) {
+                    const random = (min, max) =>
+                        Math.floor(Math.random() * (max - min) + min);
+                    const animationsName = [
+                        "enemy03",
+                        "enemy04",
+                        "enemy06",
+                        "enemy05",
+                        "enemy10",
+                        "enemy02",
+                        "enemy08",
+                        "enemy07",
+                        "enemy09",
+                        "enemy01"
+                    ];
+                    enemy02.style.animationName =
+                        animationsName[random(0, animationsName.length)];
+                }
             }
             randomAnimation();
         }
@@ -349,22 +361,24 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isPaused) {
             enemy03.style.animation = "2s infinite ease-in-out";
             function randomAnimation() {
-                const random = (min, max) =>
-                    Math.floor(Math.random() * (max - min) + min);
-                const animationsName = [
-                    "enemy02",
-                    "enemy10",
-                    "enemy03",
-                    "enemy08",
-                    "enemy05",
-                    "enemy01",
-                    "enemy07",
-                    "enemy04",
-                    "enemy06",
-                    "enemy09"
-                ];
-                enemy03.style.animationName =
-                    animationsName[random(0, animationsName.length)];
+                if (!isPaused) {
+                    const random = (min, max) =>
+                        Math.floor(Math.random() * (max - min) + min);
+                    const animationsName = [
+                        "enemy02",
+                        "enemy10",
+                        "enemy03",
+                        "enemy08",
+                        "enemy05",
+                        "enemy01",
+                        "enemy07",
+                        "enemy04",
+                        "enemy06",
+                        "enemy09"
+                    ];
+                    enemy03.style.animationName =
+                        animationsName[random(0, animationsName.length)];
+                }
             }
             randomAnimation();
         }
