@@ -8,9 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const enemy03 = document.querySelector("#enemy03");
     const bullet = document.querySelector(".bullet");
     const gameBoard = document.querySelector(".game-board");
+    const quest = document.querySelector(".quest");
     const botoes = document.querySelector(".botoes");
     const botaoPlay = document.querySelector("#botaoPlay");
     const botaoSettings = document.querySelector("#botaoSettings");
+    const botaoReset = document.querySelector("#buttonReset");
+    const botaoYes = document.querySelector("#yes");
+    const botaoNo = document.querySelector("#no");
     const botaoStop = document.querySelector("#buttonStop");
     const botaoShoot = document.querySelector("#botaoShoot");
     const botaoShield = document.querySelector("#botaoShield");
@@ -597,20 +601,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     botaoShield.style.opacity = 0.5;
                 }, 100);
                 setTimeout(() => {
-                    player.style.top = playerPosition.top;
-                    player.style.left = playerPosition.left;
-                    player.style.backgroundColor = "#62ceff00";
-                    player.style.boxShadow = "none";
-                    player.style.backgroundSize = "100% 100%";
-                    player.style.outline = "none";
-                    player.style.opacity = 1;
-                    player.style.borderRadius = "0%";
-                    if (numShield <= 0) {
-                        numShield = 0;
-                        shieldNum.innerHTML = numShield + "";
-                        botaoShield.style.opacity = 0.5;
-                    } else {
-                        botaoShield.style.opacity = 1;
+                    if (!isPaused) {
+                        player.style.top = playerPosition.top;
+                        player.style.left = playerPosition.left;
+                        player.style.backgroundColor = "#62ceff00";
+                        player.style.boxShadow = "none";
+                        player.style.backgroundSize = "100% 100%";
+                        player.style.outline = "none";
+                        player.style.opacity = 1;
+                        player.style.borderRadius = "0%";
+                        if (numShield <= 0) {
+                            numShield = 0;
+                            shieldNum.innerHTML = numShield + "";
+                            botaoShield.style.opacity = 0.5;
+                        } else {
+                            botaoShield.style.opacity = 1;
+                        }
                     }
                 }, 10000);
             }
@@ -622,6 +628,17 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             retomarjogo();
         }
+    });
+    botaoReset.addEventListener("click", function () {
+        isPaused = true;
+        quest.style.display = "grid";
+        botaoYes.addEventListener("click", function () {
+            location.reload();
+        });
+        botaoNo.addEventListener("click", function () {
+            isPaused = false;
+            quest.style.display = "none";
+        });
     });
     // Ouvinte de evento para o botão de jogar
     botaoPlay.addEventListener("click", function () {
