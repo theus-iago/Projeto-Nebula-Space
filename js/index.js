@@ -624,32 +624,42 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     botaoStop.addEventListener("click", function () {
-      if(!isReseted) {
-        if (isPaused == false) {
-            pausarjogo();
-        } else {
-            retomarjogo();
+        if (!isReseted) {
+            if (isPaused == false) {
+                pausarjogo();
+            } else {
+                retomarjogo();
+            }
         }
-      }
     });
     botaoReset.addEventListener("click", function () {
-      if(!isReseted) {
-        isReseted = true;
-        quest.style.display = "grid";
-        pausarjogo();
-        botaoYes.addEventListener("click", function () {
-            location.reload();
-        });
-        botaoNo.addEventListener("click", function () {
-            isPaused = false;
+        if (!isReseted) {
+            isReseted = true;
+            player.style.display = "none";
+            enemy01.style.display = "none";
+            enemy02.style.display = "none";
+            enemy03.style.display = "none";
+            shieldIcon.style.display = "none";
+            quest.style.display = "grid";
+            pausarjogo();
+            botaoYes.addEventListener("click", function () {
+                location.reload();
+            });
+            botaoNo.addEventListener("click", function () {
+                isPaused = false;
+                player.style.display = "block";
+                enemy01.style.display = "block";
+                enemy02.style.display = "block";
+                enemy03.style.display = "block";
+                shieldIcon.style.display = "flex";
+                quest.style.display = "none";
+                retomarjogo();
+            });
+        } else {
+            isReseted = false;
             quest.style.display = "none";
             retomarjogo();
-        });
-      }else {
-        isReseted = false
-        quest.style.display = "none";
-        retomarjogo();
-      }
+        }
     });
     // Ouvinte de evento para o botão de jogar
     botaoPlay.addEventListener("click", function () {
