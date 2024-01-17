@@ -273,6 +273,28 @@ button:active {
     grid-template-columns: 1fr 1fr;
     gap: 0px;
 }
+.botoesControl {
+    height: 100%;
+    width: 50%;
+    margin: 8px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+#buttonReset {
+    background-image: url("../images/botao-reset.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
+#buttonStop {
+    background-image: url("../images/botao-pause.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
 #botaoTop {
     grid-column: 2;
 }
