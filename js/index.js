@@ -657,6 +657,11 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         } else {
             isReseted = false;
+            player.style.display = "block";
+            enemy01.style.display = "block";
+            enemy02.style.display = "block";
+            enemy03.style.display = "block";
+            shieldIcon.style.display = "flex";
             quest.style.display = "none";
             retomarjogo();
         }
