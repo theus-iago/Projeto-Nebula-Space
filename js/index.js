@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let numCentena_Kills = 0;
     let numUnidade_KillsM_Kills = 0;
     let isPaused = false;
+    let isReseted = false;
 
     function retomarjogo() {
         if (isPaused) {
@@ -623,22 +624,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     botaoStop.addEventListener("click", function () {
+      if(!isReseted) {
         if (isPaused == false) {
             pausarjogo();
         } else {
             retomarjogo();
         }
+      }
     });
     botaoReset.addEventListener("click", function () {
-        isPaused = true;
+      if(!isReseted) {
+        isReseted = true;
         quest.style.display = "grid";
+        pausarjogo();
         botaoYes.addEventListener("click", function () {
             location.reload();
         });
         botaoNo.addEventListener("click", function () {
             isPaused = false;
             quest.style.display = "none";
+            retomarjogo();
         });
+      }else {
+        isReseted = false
+        quest.style.display = "none";
+        retomarjogo();
+      }
     });
     // Ouvinte de evento para o botão de jogar
     botaoPlay.addEventListener("click", function () {
