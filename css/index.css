@@ -150,6 +150,24 @@ button:active {
     width: 100px;
     position: absolute;
 }
+.quest {
+    background-color: rgba(128, 128, 128, 0.63);
+    border-radius: 8px;
+    height: 100px;
+    width: 100px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.quest > h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
 #player {
     background-image: url("../images/player.png");
     background-color: #62ceff00;
