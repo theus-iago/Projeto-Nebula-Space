@@ -120,13 +120,15 @@ button:active {
     justify-content: end;
 }
 .score,
-.kills {
+.kills,
+.coins {
     margin: 5px;
     padding: 3px;
     font-family: "Pixelify Sans", sans-serif;
 }
 .score > span,
-.kills > span {
+.kills > span,
+.coins > span {
     margin: 2px;
 }
 .life {
@@ -138,10 +140,12 @@ button:active {
     width: 50px;
     transition: all 0.4s;
 }
-.game-kills {
+.game-kills,
+.game-coins {
     display: flex;
 }
-.game-kills > span {
+.game-kills > span,
+.game-coins {
     margin: 2px;
 }
 .personagem,
