@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let vidaAtual = 3;
     let numShield = 0;
     let numCoin = localStorage.getItem("Coins");
-    localStorage.setItem("Coins", numCoin);
     let numUnidade_Score = 0;
     let numDezena_Score = 0;
     let numCentena_Score = 0;
@@ -49,6 +48,16 @@ document.addEventListener("DOMContentLoaded", function () {
             shieldIcon.style.animationPlayState = "paused";
             coinIcon.style.animationPlayState = "paused";
             isPaused = true;
+        }
+    }
+    function retomarjogo() {
+        if (isPaused) {
+            enemy01.style.animationPlayState = "running";
+            enemy02.style.animationPlayState = "running";
+            enemy03.style.animationPlayState = "running";
+            shieldIcon.style.animationPlayState = "running";
+            coinIcon.style.animationPlayState = "running";
+            isPaused = false;
         }
     }
     /**
@@ -99,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     vidaAtual--;
                     setTimeout(() => {
                         player.style.animation = "death .6s ease-in-out";
-                        console.log(vidaAtual);
                         if (vidaAtual >= 0) {
                             document.getElementsByClassName("lifes")[
                                 vidaAtual
@@ -211,15 +219,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     600
                 );
                 coinIcon.style.animation = "";
-                coinIcon.style.opacity = "0%";
-                numCoin++;
-                localStorage.setItem("Coins", numCoin);
+                if (gameBoard.style.display != "none") {
+                    numCoin++;
+                    localStorage.setItem("Coins", numCoin);
+                }
             }
         }
     }
     function localCoin() {
-        var resultCoin = parseInt(localStorage.getItem("Coins"));
-        coinNum.innerHTML = resultCoin.toString();
+        if (!isPaused) {
+            var resultCoin = localStorage.getItem("Coins");
+            coinNum.innerHTML = resultCoin;
+        }
     }
     /**
      * Move o jogador na direção especificada de acordo com os limites da game-board do jogo.
@@ -680,35 +691,41 @@ document.addEventListener("DOMContentLoaded", function () {
     botaoReset.addEventListener("click", function () {
         if (!isReseted) {
             isReseted = true;
+            isPaused = true;
+            pausarjogo();
             player.style.display = "none";
             enemy01.style.display = "none";
             enemy02.style.display = "none";
             enemy03.style.display = "none";
             shieldIcon.style.display = "none";
+            coinIcon.style.display = "none";
             quest.style.display = "grid";
-            pausarjogo();
             botaoYes.addEventListener("click", function () {
                 location.reload();
             });
             botaoNo.addEventListener("click", function () {
+                isReseted = false;
                 isPaused = false;
+                retomarjogo();
                 player.style.display = "block";
                 enemy01.style.display = "block";
                 enemy02.style.display = "block";
                 enemy03.style.display = "block";
                 shieldIcon.style.display = "flex";
+                coinIcon.style.display = "flex";
                 quest.style.display = "none";
-                retomarjogo();
             });
         } else {
             isReseted = false;
+            isPaused = false;
+            retomarjogo();
             player.style.display = "block";
             enemy01.style.display = "block";
             enemy02.style.display = "block";
             enemy03.style.display = "block";
             shieldIcon.style.display = "flex";
+            coinIcon.style.display = "flex";
             quest.style.display = "none";
-            retomarjogo();
         }
     });
     // Ouvinte de evento para o botão de jogar
@@ -731,6 +748,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setInterval(animationShield, 5000);
             setInterval(animationCoin, 5000);
             setInterval(shieldLeft, 7000);
+            setInterval(coinLeft, 7000);
         }
     });
 });
