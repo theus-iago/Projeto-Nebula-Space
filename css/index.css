@@ -115,10 +115,6 @@ button:active {
     align-items: end;
     flex-direction: column;
 }
-.game-score {
-    display: flex;
-    justify-content: end;
-}
 .score,
 .kills,
 .coins {
@@ -140,6 +136,7 @@ button:active {
     width: 50px;
     transition: all 0.4s;
 }
+.game-score,
 .game-kills,
 .game-coins {
     display: flex;
@@ -246,6 +243,21 @@ button:active {
     border: 2px solid black;
     border-radius: 50%;
     box-shadow: 2px 10px 26px rgb(51, 162, 254);
+    height: 70px;
+    width: 70px;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -1800px;
+}
+#coinIcon {
+    background-image: url("../images/coin.png");
+    background-size: 70% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
     height: 70px;
     width: 70px;
     opacity: 100%;
