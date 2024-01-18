@@ -26,10 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const coinIcon = document.querySelector("#coinIcon");
     const shieldNum = document.querySelector(".shieldNum");
     const coinNum = document.querySelector(".coinNum");
-    localStorage.setItem("Coins", 0);
     let vidaAtual = 3;
     let numShield = 0;
-    let numCoin = 0;
     let numUnidade_Score = 0;
     let numDezena_Score = 0;
     let numCentena_Score = 0;
@@ -42,16 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let isPaused = false;
     let isReseted = false;
 
-    function retomarjogo() {
-        if (isPaused) {
-            enemy01.style.animationPlayState = "running";
-            enemy02.style.animationPlayState = "running";
-            enemy03.style.animationPlayState = "running";
-            shieldIcon.style.animationPlayState = "running";
-            coinIcon.style.animationPlayState = "running";
-            isPaused = false;
-        }
-    }
     function pausarjogo() {
         if (!isPaused) {
             enemy01.style.animationPlayState = "paused";
@@ -222,13 +210,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     600
                 );
                 coinIcon.style.animation = "";
-                shieldIcon.style.opacity = "0%";
+                coinIcon.style.opacity = "0%";
                 numCoin++;
                 localStorage.setItem("Coins", numCoin);
-                let resultCoin = parseInt(localStorage.getItem("Coins"));
-                coinNum.innerHTML = resultCoin + "";
             }
         }
+    }
+    function localCoin() {
+      var resultCoin = parseInt(localStorage.getItem("Coins"));
+      coinNum.innerHTML = resultCoin.toString();
     }
     /**
      * Move o jogador na direção especificada de acordo com os limites da game-board do jogo.
@@ -728,6 +718,7 @@ document.addEventListener("DOMContentLoaded", function () {
         player.style.outline = "none";
         botoes.style.display = "flex";
         if (!isPaused) {
+            setInterval(localCoin, 40);
             setInterval(kill, 40);
             setInterval(score, 260);
             setInterval(colisao, 290);
