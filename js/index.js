@@ -28,11 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const coinNum = document.querySelector(".coinNum");
     let vidaAtual = 3;
     let numShield = 0;
+    let numCoin = localStorage.getItem("Coins");
+    localStorage.setItem("Coins", numCoin);
     let numUnidade_Score = 0;
     let numDezena_Score = 0;
     let numCentena_Score = 0;
     let numUnidade_ScoreM_Score = 0;
-
     let numUnidade_Kills = 0;
     let numDezena_Kills = 0;
     let numCentena_Kills = 0;
@@ -217,8 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     function localCoin() {
-      var resultCoin = parseInt(localStorage.getItem("Coins"));
-      coinNum.innerHTML = resultCoin.toString();
+        var resultCoin = parseInt(localStorage.getItem("Coins"));
+        coinNum.innerHTML = resultCoin.toString();
     }
     /**
      * Move o jogador na direção especificada de acordo com os limites da game-board do jogo.
