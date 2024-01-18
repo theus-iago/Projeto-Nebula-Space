@@ -23,10 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const botaoRight = document.querySelector("#botaoRight");
     const botaoBottom = document.querySelector("#botaoBottom");
     const shieldIcon = document.querySelector("#shieldIcon");
+    const coinIcon = document.querySelector("#coinIcon");
     const shieldNum = document.querySelector(".shieldNum");
-
+    const coinNum = document.querySelector(".coinNum");
+    localStorage.setItem("Coins", 0);
     let vidaAtual = 3;
     let numShield = 0;
+    let numCoin = 0;
     let numUnidade_Score = 0;
     let numDezena_Score = 0;
     let numCentena_Score = 0;
@@ -45,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             enemy02.style.animationPlayState = "running";
             enemy03.style.animationPlayState = "running";
             shieldIcon.style.animationPlayState = "running";
+            coinIcon.style.animationPlayState = "running";
             isPaused = false;
         }
     }
@@ -54,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             enemy02.style.animationPlayState = "paused";
             enemy03.style.animationPlayState = "paused";
             shieldIcon.style.animationPlayState = "paused";
+            coinIcon.style.animationPlayState = "paused";
             isPaused = true;
         }
     }
@@ -102,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 )
             ) {
                 if (player.style.outline == "none") {
-                    console.log("bateu");
                     vidaAtual--;
                     setTimeout(() => {
                         player.style.animation = "death .6s ease-in-out";
@@ -153,7 +157,19 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => (shieldIcon.style.opacity = "100%"), 600);
         }
     }
-    function colisaoIcone() {
+    function animationCoin() {
+        if (!isPaused) {
+            coinIcon.style.animation = "coin01 5s infinite ease-in-out";
+            coinIcon.style.animationDelay = "5s";
+            setTimeout(() => (coinIcon.style.opacity = "0%"), 100);
+            setTimeout(() => (coinIcon.style.opacity = "100%"), 200);
+            setTimeout(() => (coinIcon.style.opacity = "0%"), 300);
+            setTimeout(() => (coinIcon.style.opacity = "100%"), 400);
+            setTimeout(() => (coinIcon.style.opacity = "0%"), 500);
+            setTimeout(() => (coinIcon.style.opacity = "100%"), 600);
+        }
+    }
+    function colisaoIconeShield() {
         if (!isPaused) {
             const positionPlayer = player.getBoundingClientRect();
             const positionShieldIcon = shieldIcon.getBoundingClientRect();
@@ -182,6 +198,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 botaoShield.style.opacity = 1;
             }
             shieldIcon.style.opacity = 1;
+        }
+    }
+    function colisaoIconeCoin() {
+        if (!isPaused) {
+            const positionPlayer = player.getBoundingClientRect();
+            const positionCoinIcon = coinIcon.getBoundingClientRect();
+            const positionGameBoard = gameBoard.getBoundingClientRect();
+            if (
+                !(
+                    positionPlayer.right <
+                        positionCoinIcon.left + positionGameBoard.left ||
+                    positionPlayer.left >
+                        positionCoinIcon.right + positionGameBoard.left ||
+                    positionPlayer.bottom <
+                        positionCoinIcon.top + positionGameBoard.top ||
+                    positionPlayer.top >
+                        positionCoinIcon.bottom + positionGameBoard.top
+                )
+            ) {
+                setTimeout(
+                    () => (coinIcon.style.animation = "death .6s ease-in-out"),
+                    600
+                );
+                coinIcon.style.animation = "";
+                shieldIcon.style.opacity = "0%";
+                numCoin++;
+                localStorage.setItem("Coins", numCoin);
+                let resultCoin = parseInt(localStorage.getItem("Coins"));
+                coinNum.innerHTML = resultCoin + "";
+            }
         }
     }
     /**
@@ -394,6 +440,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 Math.floor(Math.random() * (max - min) + min);
             const lefts = ["0%", "25%", "50%", "75%", "90%"];
             shieldIcon.style.left = lefts[random(0, lefts.length)];
+        }
+    }
+    function coinLeft() {
+        if (!isPaused) {
+            const random = (min, max) =>
+                Math.floor(Math.random() * (max - min) + min);
+            const lefts = ["80%", "75%", "25%", "50%", "10%"];
+            coinIcon.style.left = lefts[random(0, lefts.length)];
         }
     }
     /**
@@ -677,11 +731,13 @@ document.addEventListener("DOMContentLoaded", function () {
             setInterval(kill, 40);
             setInterval(score, 260);
             setInterval(colisao, 290);
-            setInterval(colisaoIcone, 40);
+            setInterval(colisaoIconeShield, 40);
+            setInterval(colisaoIconeCoin, 40);
             setInterval(enemyAnimations01, 2000);
             setInterval(enemyAnimations02, 2000);
             setInterval(enemyAnimations03, 2000);
             setInterval(animationShield, 5000);
+            setInterval(animationCoin, 5000);
             setInterval(shieldLeft, 7000);
         }
     });
