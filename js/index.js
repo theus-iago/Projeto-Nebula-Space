@@ -41,6 +41,7 @@ let isReseted = false;
 
 function pausarjogo() {
     if (!isPaused) {
+        body.style.animationPlayState = "paused";
         enemy01.style.animationPlayState = "paused";
         enemy02.style.animationPlayState = "paused";
         enemy03.style.animationPlayState = "paused";
