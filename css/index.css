@@ -134,11 +134,16 @@ button:active {
     justify-content: space-between;
 }
 .shop-game > .content > main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    overflow-x: auto;
 }
-.shop-game > .content > main > section {
+.shop-game > .content > main > .secoes {
+    display: flex;
+    padding-left: 15px;
+}
+.shop-game > .content > main > .secoes > section {
     background-color: #4300ef;
     border: 2px solid black;
     border-radius: 12px;
@@ -147,23 +152,23 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 5px;
 }
-.shop-game > .content > main > section > .skin {
+.shop-game > .content > main > .secoes > section > .skin {
     background-color: #4300ef;
-    border: 2px solid black;
-    border-radius: 12px;
-    height: 220px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.shop-game > .content > main > section > .preco {
+.shop-game > .content > main > .secoes > section > .preco {
     background-color: #4300ef;
-    border: 2px solid black;
-    border-radius: 12px;
-    height: 220px;
-    width: 150px;
+    border-top: 2px solid black;
+    height: 100px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
