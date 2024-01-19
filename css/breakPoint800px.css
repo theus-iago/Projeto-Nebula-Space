@@ -1,0 +1,164 @@
+.botoes {
+    background-color: rgba(128, 128, 128, 0.63);
+    height: 220px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 3px;
+    padding-top: 0px;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+}
+.botao {
+    background-color: rgb(186, 0, 0);
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    opacity: 0;
+}
+.botoesDirect {
+    height: 180px;
+    width: 180px;
+    /*background-color:rgba(128, 128, 128, 0.63);*/
+    border-radius: 10px;
+    background-image: url("../images/botoes.png");
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    background-position: center center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.botoesPower {
+    height: 180px;
+    width: 150px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+}
+.areaControls {
+    height: 100%;
+    width: 130px;
+    display: flex;
+    align-items: start;
+}
+.botoesControl {
+    background-color: #1e1e1e;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 50px;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+#buttonReset {
+    background-image: url("../images/botao-reset.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
+.buttonConfirm {
+    background-color: #0c062b;
+    color: white;
+    border: 2px solid #4300ef;
+    border-radius: 6px;
+    margin: 6px;
+    padding: 2px;
+    height: 50px;
+    width: 100px;
+    font-size: 1em;
+    font-family: "Pixelify Sans", sans-serif;
+    transition: all 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonConfirm:hover {
+    border-color: white;
+    scale: 0.9;
+}
+.buttonConfirm:active {
+    border-color: yellow;
+    scale: 1;
+}
+#buttonStop {
+    background-image: url("../images/botao-pause.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+}
+#botaoTop {
+    grid-column: 2;
+}
+#botaoLeft {
+    grid-column: 1;
+    grid-row: 2;
+}
+#botaoRight {
+    grid-column: 3;
+    grid-row: 2;
+}
+#botaoBottom {
+    grid-column: 2;
+    grid-row: 3;
+}
+.shootButton {
+    background-image: url("../images/fogo.png");
+    background-color: rgb(224, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+.shieldButton {
+    background-image: url("../images/escudo.png");
+    background-color: rgb(0, 123, 224);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% 60%;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 88px;
+    width: 88px;
+    opacity: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+.shieldNum {
+    background-color: #4493ff;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    font-family: "Pixelify Sans", sans-serif;
+}
