@@ -52,6 +52,7 @@ function pausarjogo() {
 }
 function retomarjogo() {
     if (isPaused) {
+        body.style.animationPlayState = "running";
         enemy01.style.animationPlayState = "running";
         enemy02.style.animationPlayState = "running";
         enemy03.style.animationPlayState = "running";
