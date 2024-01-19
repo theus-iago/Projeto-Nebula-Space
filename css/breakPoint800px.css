@@ -1,5 +1,5 @@
 .botoes {
-    background-color: rgb(93,8,255);
+    background-color: #1e1e1e;
     height: 220px;
     width: 100%;
     display: none;
@@ -15,14 +15,14 @@
 }
 .botao {
     background-color: rgb(186, 0, 0);
-    height: 50px;
-    width: 50px;
+    height: 90px;
+    width: 90px;
     margin: 2px;
     opacity: 0;
 }
 .botoesDirect {
-    height: 180px;
-    width: 180px;
+    height: 220px;
+    width: 220px;
     /*background-color:rgba(128, 128, 128, 0.63);*/
     border-radius: 10px;
     background-image: url("../images/botoes.png");
@@ -34,9 +34,9 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 .botoesPower {
-    height: 180px;
-    width: 150px;
-    border-radius: 10px;
+    height: 360px;
+    width: 300px;
+    border-radius: 20px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -63,8 +63,15 @@
     background-image: url("../images/botao-reset.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35px;
-    width: 35px;
+    height: 70px;
+    width: 70px;
+}
+#buttonStop {
+    background-image: url("../images/botao-pause.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
 }
 .buttonConfirm {
     background-color: #0c062b;
@@ -73,9 +80,9 @@
     border-radius: 6px;
     margin: 6px;
     padding: 2px;
-    height: 50px;
-    width: 100px;
-    font-size: 1em;
+    height: 100px;
+    width: 200px;
+    font-size: 1.2em;
     font-family: "Pixelify Sans", sans-serif;
     transition: all 0.8s;
     display: flex;
@@ -89,13 +96,6 @@
 .buttonConfirm:active {
     border-color: yellow;
     scale: 1;
-}
-#buttonStop {
-    background-image: url("../images/botao-pause.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 35px;
-    width: 35px;
 }
 #botaoTop {
     grid-column: 2;
@@ -120,8 +120,8 @@
     background-size: 70% 70%;
     border: 2px solid black;
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
+    height: 120px;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,8 +136,8 @@
     background-size: 60% 60%;
     border: 2px solid black;
     border-radius: 50%;
-    height: 88px;
-    width: 88px;
+    height: 176px;
+    width: 176px;
     opacity: 50%;
     position: relative;
     display: flex;
@@ -150,8 +150,8 @@
     background-color: #4493ff;
     border: 1px solid black;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 50px;
+    width: 50px;
     padding: 5px;
     color: white;
     display: flex;
