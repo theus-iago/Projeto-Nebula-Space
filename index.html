@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--O breakPoint ideal do jogo é  de 500×700-->
         <link rel="stylesheet" href="css/index.css" />
-        <link
+        <!--<link
             rel="stylesheet"
             href="css/breakPoint800px.css"
             media="screen and (width>=800px)"
         />
         <link rel="stylesheet" href="css/animationsEnemy.css" />
         <link rel="stylesheet" href="css/animationsShield.css" />
-        <link rel="stylesheet" href="css/animationsCoin.css" />
+        <link rel="stylesheet" href="css/animationsCoin.css" />-->
         <link
             rel="shortcut icon"
             type="image/x-icon"
@@ -20,11 +20,11 @@
         />
         <title>Nebula Space</title>
         <script src="js/index.js" defer></script>
-        <script src="js/colisoes.js" defer></script>
+        <!--<script src="js/colisoes.js" defer></script>
         <script src="js/randons.js" defer></script>
         <script src="js/animacoes.js" defer></script>
         <script src="js/movimentacao.js" defer></script>
-        <script src="js/botoes.js" defer></script>
+        <script src="js/botoes.js" defer></script>-->
     </head>
     <body>
         <div class="initial-game">
@@ -46,7 +46,30 @@
             </header>
         </div>
         <div class="settings-game"></div>
-        <div class="shop-game"></div>
+        <div class="shop-game">
+            <div class="content">
+                <header>
+                    <div class="tituloCoin">
+                        <img
+                            src="images/coin.png"
+                            alt="coin"
+                            width="50"
+                            class="Coin-Logo"
+                        />
+                        <h2 class="resultCoins">0</h2>
+                    </div>
+                </header>
+                <main>
+                  <section>
+                    <div class="preco">
+                      <img src="images/coin.png" alt="coin">
+                      <h2>0</h2>
+                    </div>
+                  </section>
+                </main>
+                <footer></footer>
+            </div>
+        </div>
         <div class="game-board">
             <div class="quest">
                 <h2>Deseja voltar ao Menu Inicial?</h2>
@@ -134,7 +157,7 @@
                             src="images/meteoro.png"
                             alt="meteoro"
                             width="50"
-                            class="Score-Logo"
+                            class="Kill-Logo"
                         />
                         <h2 class="resultKills"></h2>
                     </div>
