@@ -36,7 +36,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: scroll;
-    display: grid;
+    display: none;
     grid-template-rows: 1fr 1fr 1fr;
 }
 .initial-game > header {
@@ -98,6 +98,39 @@ button:hover {
 button:active {
     border-color: yellow;
     scale: 1;
+}
+.shop-game {
+    background: url("../images/fundo.jpg") no-repeat 100% 100% / cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 2px 2px black;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.content {
+    background-color:rgba(128, 128, 128, 0.63);
+    border-radius:8px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 2px 2px black;
+    height: 600px;
+    width: 90vw;
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+} 
+.settings-game {
+    background: url("../images/fundo.jpg") no-repeat 100% 100% / cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 2px 2px black;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .game-board {
     height: 100%;
