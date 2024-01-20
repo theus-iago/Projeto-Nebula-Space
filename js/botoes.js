@@ -140,3 +140,9 @@ botaoPlay.addEventListener("click", function () {
         setInterval(coinLeft, 7000);
     }
 });
+
+botaoShop.addEventListener("click", function () {
+    initialGame.style.display = "none";
+    gameBoard.style.display = "none";
+    shopGame.style.display = "grid";
+});
