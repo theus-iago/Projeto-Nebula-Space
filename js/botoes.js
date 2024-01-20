@@ -125,7 +125,6 @@ botaoPlay.addEventListener("click", function () {
     player.style.outline = "none";
     botoes.style.display = "flex";
     if (!isPaused) {
-        setInterval(localCoin, 40);
         setInterval(kill, 40);
         setInterval(score, 260);
         setInterval(colisao, 290);
