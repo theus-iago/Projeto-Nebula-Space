@@ -401,7 +401,6 @@ button:active {
 }
 
 #player {
-    background-image: url("../images/skin01.png");
     background-color: #62ceff00;
     background-repeat: no-repeat;
     background-size: 100% 100%;
