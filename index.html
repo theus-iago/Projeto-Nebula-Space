@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--O breakPoint ideal do jogo é  de 500×700-->
         <link rel="stylesheet" href="css/index.css" />
-        <!--<link
+        <link
             rel="stylesheet"
             href="css/breakPoint800px.css"
             media="screen and (width>=800px)"
         />
         <link rel="stylesheet" href="css/animationsEnemy.css" />
         <link rel="stylesheet" href="css/animationsShield.css" />
-        <link rel="stylesheet" href="css/animationsCoin.css" />-->
+        <link rel="stylesheet" href="css/animationsCoin.css" />
         <link
             rel="shortcut icon"
             type="image/x-icon"
@@ -20,11 +20,11 @@
         />
         <title>Nebula Space</title>
         <script src="js/index.js" defer></script>
-        <!--<script src="js/colisoes.js" defer></script>
+        <script src="js/colisoes.js" defer></script>
         <script src="js/randons.js" defer></script>
         <script src="js/animacoes.js" defer></script>
         <script src="js/movimentacao.js" defer></script>
-        <script src="js/botoes.js" defer></script>-->
+        <script src="js/botoes.js" defer></script>
     </head>
     <body>
         <div class="initial-game">
@@ -54,62 +54,61 @@
                         <img
                             src="images/coin.png"
                             alt="coin"
-                            width="50"
+                            width="40"
                             class="Coin-Logo"
                         />
-                        <h2 class="resultCoins">0</h2>
+                        <h2 id="coinNum">0</h2>
                     </div>
                 </header>
                 <hr />
                 <main>
                     <div class="secoes">
-                        <section>
+                        <section id="skinPadrao">
                             <div class="skin" id="skin01"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                            <div class="preco" id="precoPadrao">
+                                <h2>padrao</h2>
                             </div>
                         </section>
                         <section>
                             <div class="skin" id="skin02"></div>
                             <div class="preco">
                                 <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                                <h2>100</h2>
                             </div>
                         </section>
                         <section>
                             <div class="skin" id="skin03"></div>
                             <div class="preco">
                                 <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                                <h2>180</h2>
                             </div>
                         </section>
                         <section>
                             <div class="skin" id="skin04"></div>
                             <div class="preco">
                                 <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                                <h2>220</h2>
                             </div>
                         </section>
                         <section>
                             <div class="skin" id="skin05"></div>
                             <div class="preco">
                                 <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                                <h2>250</h2>
                             </div>
                         </section>
                         <section>
                             <div class="skin" id="skin06"></div>
                             <div class="preco">
                                 <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                                <h2>300</h2>
                             </div>
                         </section>
                         <section>
                             <div class="skin" id="skin07"></div>
                             <div class="preco">
                                 <img src="images/coin.png" alt="coin" />
-                                <h2>0</h2>
+                                <h2>330</h2>
                             </div>
                         </section>
                     </div>
@@ -161,7 +160,7 @@
                 <div class="game-coins">
                     <img src="images/coin.png" alt="coin" width="50" />
                     <h2 class="coins">
-                        <span class="coinNum">0</span>
+                        <span id="coinNum">0</span>
                     </h2>
                 </div>
             </div>
