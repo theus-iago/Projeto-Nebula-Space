@@ -141,6 +141,17 @@ button:active {
     overflow-x: auto;
     padding: 5px;
 }
+.shop-game > .content > main::-webkit-scrollbar {
+    height: 7px;
+    width: 12px;
+}
+.shop-game > .content > main::-webkit-scrollbar-thumb {
+    background-color: #1e1e1e;
+    border-radius: 3px;
+}
+.shop-game > .content > main::-webkit-scrollbar-track {
+    background-color: dimgray;
+}
 .shop-game > .content > main > .secoes {
     width: 100%;
     display: flex;
@@ -149,7 +160,59 @@ button:active {
 #skinPadrao {
     border: 5px solid #1e1e1e;
 }
-.shop-game > .content > main > .secoes > section {
+#skPadrao, #sk02, #sk03, #sk04, #sk05, #sk06, #sk07 {
+  display:none;
+}
+#skPadrao:checked ~ #skinPadrao {
+    border: 5px solid blue;
+}
+#skPadrao:checked ~ #skinPadrao > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+#sk02:checked ~ #skin02 {
+    border: 5px solid blue;
+}
+#sk02:checked ~ #skin02 > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+#sk03:checked ~ #skin03 {
+    border: 5px solid blue;
+}
+#sk03:checked ~ #skin03 > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+#sk04:checked ~ #skin04 {
+    border: 5px solid blue;
+}
+#sk04:checked ~ #skin04 > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+#sk05:checked ~ #skin05 {
+    border: 5px solid blue;
+}
+#sk05:checked ~ #skin05 > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+#sk06:checked ~ #skin06 {
+    border: 5px solid blue;
+}
+#sk06:checked ~ #skin06 > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+#sk07:checked ~ #skin07 {
+    border: 5px solid blue;
+}
+#sk07:checked ~ #skin07 > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
+.shop-game > .content > main > .secoes > label {
     border: 5px solid #0fbd48;
     border-radius: 12px;
     height: 220px;
@@ -162,11 +225,11 @@ button:active {
     margin: 6px;
     transition: all 0.4s;
 }
-.shop-game > .content > main > .secoes > section:hover {
+.shop-game > .content > main > .secoes > label:hover {
     transform: scale(1.2);
     margin: 12px;
 }
-.shop-game > .content > main > .secoes > section > .skin {
+.skin {
     background-color: #000000b3;
     background-repeat: no-repeat;
     background-size: 70% 70%;
@@ -179,30 +242,37 @@ button:active {
 }
 #skin01 {
     background-image: url("../images/skin01.png");
+    background-repeat: no-repeat;
 }
 #skin02 {
     background-image: url("../images/skin02.png");
+    background-repeat: no-repeat;
 }
 #skin03 {
     background-image: url("../images/skin03.png");
+    background-repeat: no-repeat;
 }
 #skin04 {
     background-image: url("../images/skin04.png");
+    background-repeat: no-repeat;
 }
 #skin05 {
     background-image: url("../images/skin05.png");
+    background-repeat: no-repeat;
 }
 #skin06 {
     background-image: url("../images/skin06.png");
+    background-repeat: no-repeat;
 }
 #skin07 {
     background-image: url("../images/skin07.png");
+    background-repeat: no-repeat;
 }
-.shop-game > .content > main > .secoes > section > #precoPadrao {
+.shop-game > .content > main > .secoes > label > #precoPadrao {
     background-color: #1e1e1e;
     border-top: 5px solid #1e1e1e;
 }
-.shop-game > .content > main > .secoes > section > .preco {
+.shop-game > .content > main > .secoes > label > .preco {
     background-color: #0fbd48;
     border-top: 5px solid #0fbd48;
     height: 100px;
