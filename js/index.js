@@ -10,6 +10,7 @@ const gameBoard = document.querySelector(".game-board");
 const quest = document.querySelector(".quest");
 const botoes = document.querySelector(".botoes");
 const botaoPlay = document.querySelector("#botaoPlay");
+const botaoShop = document.querySelector("#botaoShop");
 const botaoSettings = document.querySelector("#botaoSettings");
 const botaoReset = document.querySelector("#buttonReset");
 const botaoYes = document.querySelector("#yes");
