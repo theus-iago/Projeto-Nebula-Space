@@ -38,34 +38,76 @@ var radio05 = document.getElementById("sk05");
 var radio06 = document.getElementById("sk06");
 var radio07 = document.getElementById("sk07");
 function checkRadio() {
- if(radioPadrao.checked) {
-   console.log("Radio marcado: " + radioPadrao.value);
-  player.style.backgroundImage = `url('../images/${radioPadrao.value}.png')`;
- }
- if(radio02.checked) {
-   console.log("Radio marcado: " + radio02.value);
-  player.style.backgroundImage = `url('../images/${radio02.value}.png')`;
- }
- if(radio03.checked) {
-   console.log("Radio marcado: " + radio03.value);
-   player.style.backgroundImage = `url('../images/${radio03.value}.png')`;
- }
- if(radio04.checked) {
-   console.log("Radio marcado: " + radio04.value);
-  player.style.backgroundImage = `url('../images/${radio04.value}.png')`;
- }
- if(radio05.checked) {
-   console.log("Radio marcado: " + radio05.value);
-  player.style.backgroundImage = `url('../images/${radio05.value}.png')`;
- }
- if(radio06.checked) {
-   console.log("Radio marcado: " + radio06.value);
-  player.style.backgroundImage = `url('../images/${radio06.value}.png')`;
- }
- if(radio07.checked) {
-   console.log("Radio marcado: " + radio07.value);
-  player.style.backgroundImage = `url('../images/${radio07.value}.png')`;
- }
+    if (radioPadrao.checked) {
+        console.log("Radio marcado: " + radioPadrao.value);
+        player.style.backgroundImage = `url('../images/skin01.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin01.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin01.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin01.png";
+    }
+    if (radio02.checked) {
+        console.log("Radio marcado: " + radio02.value);
+        player.style.backgroundImage = `url('../images/${radio02.value}.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin02.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin02.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin02.png";
+    }
+    if (radio03.checked) {
+        console.log("Radio marcado: " + radio03.value);
+        player.style.backgroundImage = `url('../images/${radio03.value}.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin03.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin03.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin03.png";
+    }
+    if (radio04.checked) {
+        console.log("Radio marcado: " + radio04.value);
+        player.style.backgroundImage = `url('../images/${radio04.value}.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin04.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin04.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin04.png";
+    }
+    if (radio05.checked) {
+        console.log("Radio marcado: " + radio05.value);
+        player.style.backgroundImage = `url('../images/${radio05.value}.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin05.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin05.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin05.png";
+    }
+    if (radio06.checked) {
+        console.log("Radio marcado: " + radio06.value);
+        player.style.backgroundImage = `url('../images/${radio06.value}.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin06.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin06.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin06.png";
+    }
+    if (radio07.checked) {
+        console.log("Radio marcado: " + radio07.value);
+        player.style.backgroundImage = `url('../images/${radio07.value}.png')`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin07.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin07.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin07.png";
+    }
 }
 let vidaAtual = 3;
 let numShield = 0;
@@ -324,4 +366,4 @@ function kill() {
         }
     }
 }
-setInterval(checkRadio,2000);
+setInterval(checkRadio, 40);
