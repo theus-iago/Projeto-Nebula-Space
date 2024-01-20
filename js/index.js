@@ -8,11 +8,13 @@ const enemy03 = document.querySelector("#enemy03");
 const bullet = document.querySelector(".bullet");
 const gameBoard = document.querySelector(".game-board");
 const shopGame = document.querySelector(".shop-game");
+const settingsGame = document.querySelector(".settings-game");
 const quest = document.querySelector(".quest");
 const botoes = document.querySelector(".botoes");
 const botaoPlay = document.querySelector("#botaoPlay");
 const botaoShop = document.querySelector("#botaoShop");
 const botaoSettings = document.querySelector("#botaoSettings");
+const botaoBack = document.querySelector("#backButton");
 const botaoReset = document.querySelector("#buttonReset");
 const botaoYes = document.querySelector("#yes");
 const botaoNo = document.querySelector("#no");
@@ -68,11 +70,21 @@ function retomarjogo() {
 function localCoin() {
     if (!isPaused) {
         var resultCoin = localStorage.getItem("Coins");
+        if (resultCoin == "") {
+            coinNum01.innerHTML = "0";
+            coinNum02.innerHTML = "0";
+        }
         coinNum01.innerHTML = resultCoin;
         coinNum02.innerHTML = resultCoin;
     }
 }
 setInterval(localCoin, 40);
+function back() {
+    initialGame.style.display = "grid";
+    gameBoard.style.display = "none";
+    shopGame.style.display = "none";
+    settingsGame.style.display = "none";
+}
 /**
  * Gerencia o mecanismo de pontuação, atualizando a exibição da pontuação conforme o jogo avança
  * Calcula e exibi a potuação com base em unidades,dezenas,centenas e milhares.
