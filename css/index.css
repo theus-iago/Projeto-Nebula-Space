@@ -122,7 +122,7 @@ button:active {
     grid-column: 2;
     grid-row: 2;
     display: grid;
-    grid-template-rows: 60px 2px 1fr 60px;
+    grid-template-rows: 60px 2px 1fr 2px 60px;
 }
 .content > hr {
     background-color: white;
