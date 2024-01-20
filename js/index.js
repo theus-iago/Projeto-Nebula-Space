@@ -7,6 +7,7 @@ const enemy02 = document.querySelector("#enemy02");
 const enemy03 = document.querySelector("#enemy03");
 const bullet = document.querySelector(".bullet");
 const gameBoard = document.querySelector(".game-board");
+const shopGame = document.querySelector(".shop-game");
 const quest = document.querySelector(".quest");
 const botoes = document.querySelector(".botoes");
 const botaoPlay = document.querySelector("#botaoPlay");
