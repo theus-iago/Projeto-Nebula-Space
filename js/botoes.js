@@ -145,3 +145,6 @@ botaoShop.addEventListener("click", function () {
     gameBoard.style.display = "none";
     shopGame.style.display = "grid";
 });
+botaoBack.addEventListener("click", function() {
+  back();
+})
