@@ -112,6 +112,7 @@ function checkRadio() {
             "../images/skin07.png";
     }*/
 }
+checkbox();
 let vidaAtual = 3;
 let numShield = 0;
 let numCoin = localStorage.getItem("Coins");
@@ -369,4 +370,3 @@ function kill() {
         }
     }
 }
-checkRadio();
