@@ -26,7 +26,8 @@ const botaoBottom = document.querySelector("#botaoBottom");
 const shieldIcon = document.querySelector("#shieldIcon");
 const coinIcon = document.querySelector("#coinIcon");
 const shieldNum = document.querySelector(".shieldNum");
-const coinNum = document.querySelector("#coinNum");
+const coinNum01 = document.querySelector("#coinNum01");
+const coinNum02 = document.querySelector("#coinNum02");
 let vidaAtual = 3;
 let numShield = 0;
 let numCoin = localStorage.getItem("Coins");
@@ -67,9 +68,11 @@ function retomarjogo() {
 function localCoin() {
     if (!isPaused) {
         var resultCoin = localStorage.getItem("Coins");
-        coinNum.innerHTML = resultCoin;
+        coinNum01.innerHTML = resultCoin;
+        coinNum02.innerHTML = resultCoin;
     }
 }
+setInterval(localCoin, 40);
 /**
  * Gerencia o mecanismo de pontuação, atualizando a exibição da pontuação conforme o jogo avança
  * Calcula e exibi a potuação com base em unidades,dezenas,centenas e milhares.
