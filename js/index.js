@@ -39,8 +39,8 @@ var radio06 = document.getElementById("sk06");
 var radio07 = document.getElementById("sk07");
 function checkRadio() {
     if (radioPadrao.checked) {
-        console.log("Radio marcado: " + radioPadrao.value);
-        player.style.backgroundImage = `url('../images/${radioPadrao.value}.png')`;
+        alert("Radio marcado: " + radioPadrao.value);
+        player.style.cssText = `background-image:url('../images/${radioPadrao.value}.png');`;
         document.getElementsByClassName(
             "lifes"
         )[0].src = `../images/${radioPadrao.value}.png`;
