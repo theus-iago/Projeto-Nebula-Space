@@ -40,8 +40,8 @@ var radio07 = document.getElementById("sk07");
 function checkRadio() {
     if (radioPadrao.checked) {
         alert("Radio marcado: " + radioPadrao.value);
-        player.style.cssText = `background-image:url('../images/${radioPadrao.value}.png');`;
-        document.getElementsByClassName(
+        player.style.cssText = "background-image:url('../images/skin01.png');";
+        /*document.getElementsByClassName(
             "lifes"
         )[0].src = `../images/${radioPadrao.value}.png`;
         document.getElementsByClassName(
@@ -49,9 +49,9 @@ function checkRadio() {
         )[1].src = `../images/${radioPadrao.value}.png`;
         document.getElementsByClassName(
             "lifes"
-        )[2].src = `../images/${radioPadrao.value}.png`;
+        )[2].src = `../images/${radioPadrao.value}.png`;*/
     }
-    if (radio02.checked) {
+    /*if (radio02.checked) {
         console.log("Radio marcado: " + radio02.value);
         player.style.cssText = `background-image:url('../images/${radio02.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
@@ -110,7 +110,7 @@ function checkRadio() {
             "../images/skin07.png";
         document.getElementsByClassName("lifes")[2].src =
             "../images/skin07.png";
-    }
+    }*/
 }
 let vidaAtual = 3;
 let numShield = 0;
