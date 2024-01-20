@@ -30,6 +30,43 @@ const coinIcon = document.querySelector("#coinIcon");
 const shieldNum = document.querySelector(".shieldNum");
 const coinNum01 = document.querySelector("#coinNum01");
 const coinNum02 = document.querySelector("#coinNum02");
+var radioPadrao = document.getElementById("skPadrao");
+var radio02 = document.getElementById("sk02");
+var radio03 = document.getElementById("sk03");
+var radio04 = document.getElementById("sk04");
+var radio05 = document.getElementById("sk05");
+var radio06 = document.getElementById("sk06");
+var radio07 = document.getElementById("sk07");
+function checkRadio() {
+ if(radioPadrao.checked) {
+   console.log("Radio marcado: " + radioPadrao.value);
+  player.style.backgroundImage = `url('../images/${radioPadrao.value}.png')`;
+ }
+ if(radio02.checked) {
+   console.log("Radio marcado: " + radio02.value);
+  player.style.backgroundImage = `url('../images/${radio02.value}.png')`;
+ }
+ if(radio03.checked) {
+   console.log("Radio marcado: " + radio03.value);
+   player.style.backgroundImage = `url('../images/${radio03.value}.png')`;
+ }
+ if(radio04.checked) {
+   console.log("Radio marcado: " + radio04.value);
+  player.style.backgroundImage = `url('../images/${radio04.value}.png')`;
+ }
+ if(radio05.checked) {
+   console.log("Radio marcado: " + radio05.value);
+  player.style.backgroundImage = `url('../images/${radio05.value}.png')`;
+ }
+ if(radio06.checked) {
+   console.log("Radio marcado: " + radio06.value);
+  player.style.backgroundImage = `url('../images/${radio06.value}.png')`;
+ }
+ if(radio07.checked) {
+   console.log("Radio marcado: " + radio07.value);
+  player.style.backgroundImage = `url('../images/${radio07.value}.png')`;
+ }
+}
 let vidaAtual = 3;
 let numShield = 0;
 let numCoin = localStorage.getItem("Coins");
@@ -287,3 +324,4 @@ function kill() {
         }
     }
 }
+setInterval(checkRadio,2000);
