@@ -108,7 +108,6 @@ button:active {
     text-shadow: 1px 2px 2px black;
     height: 100vh;
     width: 100vw;
-    overflow: scroll;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -119,7 +118,7 @@ button:active {
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 1px 2px 2px black;
     height: 600px;
-    width: 90vw;
+    width: 100vw;
     grid-column: 2;
     grid-row: 2;
     display: grid;
@@ -134,39 +133,78 @@ button:active {
     justify-content: space-between;
 }
 .shop-game > .content > main {
+    width: 100%;
     display: grid;
-    place-content: center;
+    align-items: center;
+    justify-content: start;
     overflow: hidden;
     overflow-x: auto;
+    padding: 5px;
 }
 .shop-game > .content > main > .secoes {
+    width: 100%;
     display: flex;
-    padding-left: 15px;
+    padding: 5px;
+}
+#skinPadrao {
+    border: 5px solid #1e1e1e;
 }
 .shop-game > .content > main > .secoes > section {
-    background-color: #4300ef;
-    border: 2px solid black;
+    border: 5px solid #0fbd48;
     border-radius: 12px;
     height: 220px;
-    width: 150px;
+    width: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 5px;
+    margin: 6px;
+    transition: all 0.4s;
+}
+.shop-game > .content > main > .secoes > section:hover {
+    transform: scale(1.2);
+    margin: 12px;
 }
 .shop-game > .content > main > .secoes > section > .skin {
-    background-color: #4300ef;
+    background-color: #000000b3;
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+#skin01 {
+    background-image: url("../images/skin01.png");
+}
+#skin02 {
+    background-image: url("../images/skin02.png");
+}
+#skin03 {
+    background-image: url("../images/skin03.png");
+}
+#skin04 {
+    background-image: url("../images/skin04.png");
+}
+#skin05 {
+    background-image: url("../images/skin05.png");
+}
+#skin06 {
+    background-image: url("../images/skin06.png");
+}
+#skin07 {
+    background-image: url("../images/skin07.png");
+}
+.shop-game > .content > main > .secoes > section > #precoPadrao {
+    background-color: #1e1e1e;
+    border-top: 5px solid #1e1e1e;
+}
 .shop-game > .content > main > .secoes > section > .preco {
-    background-color: #4300ef;
-    border-top: 2px solid black;
+    background-color: #0fbd48;
+    border-top: 5px solid #0fbd48;
     height: 100px;
     width: 100%;
     display: flex;
