@@ -21,33 +21,33 @@ function checkRadio() {
     }
     if (radio02.checked) {
         console.log("Radio marcado: " + radio02.value);
-        player.style.backgroundImage = `url('./images/skin02.png');`;
+        player.style.backgroundImage = `url('./images/${radio02.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
-            "./images/skin02.png";
+            `./images/${radio02.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
-            "./images/skin02.png";
+            `./images/${radio02.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            "./images/skin02.png";
+            `./images/${radio02.value}.png`;
     }
     if (radio03.checked) {
         console.log("Radio marcado: " + radio03.value);
-        player.style.backgroundImage = `url('images/skin03.png');`;
+        player.style.backgroundImage = `url('images/${radio03.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
-            "images/skin03.png";
+            `images/${radio03.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
-            "images/skin03.png";
+            `images/${radio03.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            "images/skin03.png";
+            `images/${radio03.value}.png`;
     }
     if (radio04.checked) {
         console.log("Radio marcado: " + radio04.value);
         player.style.backgroundImage = `url('./images/${radio04.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
-            "./images/skin04.png";
+            `./images/${radio04.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
-            "./images/skin04.png";
+            `./images/${radio04.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            "./images/skin04.png";
+            `./images/${radio04.value}.png`;
     }
     if (radio05.checked) {
         console.log("Radio marcado: " + radio05.value);
@@ -73,11 +73,11 @@ function checkRadio() {
         console.log("Radio marcado: " + radio07.value);
         player.style.backgroundImage = `url('./images/${radio07.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
-            "./images/skin07.png";
+            `./images/${radio07.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
-            "./images/skin07.png";
+            `./images/${radio07.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            "./images/skin07.png";
+            `./images/${radio07.value}.png`;
     }
 }
 radioPadrao.addEventListener("change", checkRadio);
