@@ -8,7 +8,7 @@ const radio07 = document.querySelector("#sk07");
 function checkRadio() {
     if (radioPadrao.checked) {
       console.log("Radio marcado: " + radioPadrao.value);
-        player.style.backgroundImage = `url('./images/${radioPadrao.value}.png');`;
+        player.style.cssText = `background-image: url('./images/${radioPadrao.value}.png');`;
         document.getElementsByClassName(
             "lifes"
         )[0].src = `./images/${radioPadrao.value}.png`;
@@ -21,7 +21,7 @@ function checkRadio() {
     }
     if (radio02.checked) {
         console.log("Radio marcado: " + radio02.value);
-        player.style.backgroundImage = `url('./images/${radio02.value}.png');`;
+        player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
             `./images/${radio02.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
@@ -31,7 +31,7 @@ function checkRadio() {
     }
     if (radio03.checked) {
         console.log("Radio marcado: " + radio03.value);
-        player.style.backgroundImage = `url('images/${radio03.value}.png');`;
+        player.style.cssText = `background-image: url('images/${radio03.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
             `images/${radio03.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
@@ -41,7 +41,7 @@ function checkRadio() {
     }
     if (radio04.checked) {
         console.log("Radio marcado: " + radio04.value);
-        player.style.backgroundImage = `url('./images/${radio04.value}.png');`;
+        player.style.cssText = `background-image: url('./images/${radio04.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
             `./images/${radio04.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
@@ -51,7 +51,7 @@ function checkRadio() {
     }
     if (radio05.checked) {
         console.log("Radio marcado: " + radio05.value);
-        player.style.backgroundImage = `url('./images/${radio05.value}.png')`;
+        player.style.cssText = `background-image: url('./images/${radio05.value}.png')`;
         document.getElementsByClassName("lifes")[0].src =
             `./images/${radio05.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
