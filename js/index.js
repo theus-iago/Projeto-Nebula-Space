@@ -11,6 +11,7 @@ const shopGame = document.querySelector(".shop-game");
 const settingsGame = document.querySelector(".settings-game");
 const questBack = document.querySelector("#questBack");
 const questShop = document.querySelector("#questShop");
+const tituloShop = document.querySelector("#tituloShop");
 const botoes = document.querySelector(".botoes");
 const botaoPlay = document.querySelector("#botaoPlay");
 const botaoShop = document.querySelector("#botaoShop");
