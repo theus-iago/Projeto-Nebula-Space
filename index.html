@@ -1,268 +1,300 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--O breakPoint ideal do jogo é  de 500×700-->
-        <link rel="stylesheet" href="css/index.css" />
-        <link
-            rel="stylesheet"
-            href="css/breakPoint800px.css"
-            media="screen and (width>=800px)"
-        />
-        <link rel="stylesheet" href="css/animationsEnemy.css" />
-        <link rel="stylesheet" href="css/animationsShield.css" />
-        <link rel="stylesheet" href="css/animationsCoin.css" />
-        <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="images/NebulaSpace-logo.jpg"
-        />
-        <title>Nebula Space</title>
-        <script src="js/index.js" defer></script>
-        <script src="js/colisoes.js" defer></script>
-        <script src="js/randons.js" defer></script>
-        <script src="js/animacoes.js" defer></script>
-        <script src="js/movimentacao.js" defer></script>
-        <script src="js/botoes.js" defer></script>
-    </head>
-    <body>
-        <div class="initial-game">
-            <header>
-                <h1>Nebula-Space</h1>
-                <br />
-                <div class="botoesHeader">
-                    <button id="botaoPlay">Play</button>
-                    <button id="botaoSettings">Settings</button>
-                    <button id="botaoShop">Shop</button>
-                </div>
-                <footer>
-                    <p>
-                        <a href="https://github.com/theus-iago" target="_blank">
-                            &copyIago_developer
-                        </a>
-                    </p>
-                </footer>
-            </header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--O breakPoint ideal do jogo é  de 500×700-->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/breakPoint800px.css" media="screen and (width>=800px)" />
+  <link rel="stylesheet" href="css/animationsEnemy.css" />
+  <link rel="stylesheet" href="css/animationsShield.css" />
+  <link rel="stylesheet" href="css/animationsCoin.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/NebulaSpace-logo.jpg" />
+  <title>Nebula Space</title>
+  <script src="js/index.js" defer></script>
+  <script src="js/colisoes.js" defer></script>
+  <script src="js/randons.js" defer></script>
+  <script src="js/animacoes.js" defer></script>
+  <script src="js/movimentacao.js" defer></script>
+  <script src="js/botoes.js" defer></script>
+</head>
+
+<body>
+  <div class="initial-game">
+    <header>
+      <h1>Nebula-Space</h1>
+      <br />
+      <div class="botoesHeader">
+        <button id="botaoPlay">Play</button>
+        <button id="botaoSettings">Settings</button>
+        <button id="botaoShop">Shop</button>
+      </div>
+      <footer>
+        <p>
+          <a href="https://github.com/theus-iago" target="_blank">
+            &copyIago_developer
+          </a>
+        </p>
+      </footer>
+    </header>
+  </div>
+  <div class="settings-game"></div>
+  <div class="shop-game">
+    <div class="content">
+      <header>
+        <h1>Shop</h1>
+        <div class="tituloCoin">
+          <img src="images/coin.png" alt="coin" width="40" class="Coin-Logo" />
+          <h2 class="resultCoins" id="coinNum01">0</h2>
         </div>
-        <div class="settings-game"></div>
-        <div class="shop-game">
-            <div class="content">
-                <header>
-                    <h1>Shop</h1>
-                    <div class="tituloCoin">
-                        <img
-                            src="images/coin.png"
-                            alt="coin"
-                            width="40"
-                            class="Coin-Logo"
-                        />
-                        <h2 class="resultCoins" id="coinNum01">0</h2>
-                    </div>
-                </header>
-                <hr />
-                <main>
-                    <div class="secoes">
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="skPadrao"
-                            value="skin01"
-                            checked
-                        />
-                        <label for="skPadrao" id="skinPadrao">
-                            <div class="skin" id="skin01"></div>
-                            <div class="preco" id="precoPadrao">
-                                <h2>Nebula</h2>
-                            </div>
-                        </label>
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="sk02"
-                            value="skin02"
-                        />
-                        <label for="sk02" id="skin02">
-                            <div class="skin" id="skin02"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>100</h2>
-                            </div>
-                        </label>
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="sk03"
-                            value="skin03"
-                        />
-                        <label for="sk03" id="skin03">
-                            <div class="skin" id="skin03"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>180</h2>
-                            </div>
-                        </label>
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="sk04"
-                            value="skin04"
-                        />
-                        <label for="sk04" id="skin04">
-                            <div class="skin" id="skin04"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>220</h2>
-                            </div>
-                        </label>
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="sk05"
-                            value="skin05"
-                        />
-                        <label for="sk05" id="skin05">
-                            <div class="skin" id="skin05"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>250</h2>
-                            </div>
-                        </label>
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="sk06"
-                            value="skin06"
-                        />
-                        <label for="sk06" id="skin06">
-                            <div class="skin" id="skin06"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>300</h2>
-                            </div>
-                        </label>
-                        <input
-                            type="radio"
-                            name="skPadrao"
-                            id="sk07"
-                            value="skin07"
-                        />
-                        <label for="sk07" id="skin07">
-                            <div class="skin" id="skin07"></div>
-                            <div class="preco">
-                                <img src="images/coin.png" alt="coin" />
-                                <h2>330</h2>
-                            </div>
-                        </label>
-                    </div>
-                </main>
-                <hr />
-                <footer>
-                    <button id="backButton">Back</button>
-                </footer>
+      </header>
+      <hr />
+      <main>
+        <div class="secoes">
+          <input type="radio" name="skPadrao" id="skPadrao" value="skin01" checked />
+          <label for="skPadrao" id="skinPadrao">
+            <div class="skin" id="skin01"></div>
+            <div class="preco" id="precoPadrao">
+              <h2>Nebula</h2>
             </div>
+          </label>
+          <input type="radio" name="skPadrao" id="sk02" value="skin02" />
+          <label for="sk02" id="skin02">
+            <div class="skin" id="skin02"></div>
+            <div class="preco">
+              <img src="images/coin.png" alt="coin" />
+              <h2>100</h2>
+            </div>
+          </label>
+          <input type="radio" name="skPadrao" id="sk03" value="skin03" />
+          <label for="sk03" id="skin03">
+            <div class="skin" id="skin03"></div>
+            <div class="preco">
+              <img src="images/coin.png" alt="coin" />
+              <h2>180</h2>
+            </div>
+          </label>
+          <input type="radio" name="skPadrao" id="sk04" value="skin04" />
+          <label for="sk04" id="skin04">
+            <div class="skin" id="skin04"></div>
+            <div class="preco">
+              <img src="images/coin.png" alt="coin" />
+              <h2>220</h2>
+            </div>
+          </label>
+          <input type="radio" name="skPadrao" id="sk05" value="skin05" />
+          <label for="sk05" id="skin05">
+            <div class="skin" id="skin05"></div>
+            <div class="preco">
+              <img src="images/coin.png" alt="coin" />
+              <h2>250</h2>
+            </div>
+          </label>
+          <input type="radio" name="skPadrao" id="sk06" value="skin06" />
+          <label for="sk06" id="skin06">
+            <div class="skin" id="skin06"></div>
+            <div class="preco">
+              <img src="images/coin.png" alt="coin" />
+              <h2>300</h2>
+            </div>
+          </label>
+          <input type="radio" name="skPadrao" id="sk07" value="skin07" />
+          <label for="sk07" id="skin07">
+            <div class="skin" id="skin07"></div>
+            <div class="preco">
+              <img src="images/coin.png" alt="coin" />
+              <h2>330</h2>
+            </div>
+          </label>
         </div>
-        <div class="game-board">
-            <div class="quest">
-                <h2>Deseja voltar ao Menu Inicial?</h2>
-                <div class="options">
-                    <div class="buttonConfirm" id="no">Não</div>
-                    <div class="buttonConfirm" id="yes">Sim</div>
-                </div>
-            </div>
-            <div class="life">
-                <img src="images/skin01.png" alt="playerLife" class="lifes" />
-                <img src="images/skin01.png" alt="playerLife" class="lifes" />
-                <img src="images/skin01.png" alt="playerLife" class="lifes" />
-            </div>
-            <div class="gameFrame">
-                <div class="game-score">
-                    <h2
-                        style="
+      </main>
+      <hr />
+      <footer>
+        <button id="backButton">Back</button>
+      </footer>
+    </div>
+  </div>
+  <div class="game-board">
+    <div class="quest">
+      <h2>Deseja voltar ao Menu Inicial?</h2>
+      <div class="options">
+        <div class="buttonConfirm" id="no">Não</div>
+        <div class="buttonConfirm" id="yes">Sim</div>
+      </div>
+    </div>
+    <div class="life">
+      <img src="images/skin01.png" alt="playerLife" class="lifes" />
+      <img src="images/skin01.png" alt="playerLife" class="lifes" />
+      <img src="images/skin01.png" alt="playerLife" class="lifes" />
+    </div>
+    <div class="gameFrame">
+      <div class="game-score">
+        <h2 style="
                             margin: 6px;
                             font-family: &quot;Pixelify Sans&quot;, sans-serif;
-                        "
-                    >
-                        S
-                    </h2>
-                    <h2 class="score">
-                        <span class="numUnidade_ScoreM_Score">0</span
-                        ><span class="numCentena_Score">0</span
-                        ><span class="numDezena_Score">0</span
-                        ><span class="numUnidade_Score">0</span>
-                    </h2>
-                </div>
-                <div class="game-kills">
-                    <img src="images/meteoro.png" alt="kill" width="50" />
-                    <h2 class="kills">
-                        <span class="numUnidade_KillsM_Kills">0</span
-                        ><span class="numCentena_Kills">0</span
-                        ><span class="numDezena_Kills">0</span
-                        ><span class="numUnidade_Kills">0</span>
-                    </h2>
-                </div>
-                <div class="game-coins">
-                    <img src="images/coin.png" alt="coin" width="50" />
-                    <h2 class="coins">
-                        <span id="coinNum02">0</span>
-                    </h2>
-                </div>
-            </div>
-            <div class="personagem" id="player"><div class="bullet"></div></div>
-            <div class="icon" id="shieldIcon"></div>
-            <div class="icon" id="coinIcon"></div>
-            <div class="enemy" id="enemy01"></div>
-            <div class="enemy" id="enemy02"></div>
-            <div class="enemy" id="enemy03"></div>
+                        ">
+          S
+        </h2>
+        <h2 class="score">
+          <span class="numUnidade_ScoreM_Score">0</span><span class="numCentena_Score">0</span><span
+                                                                                                                                  class="numDezena_Score">0</span><span
+                                                                                                                                  class="numUnidade_Score">0</span>
+        </h2>
+      </div>
+      <div class="game-kills">
+        <img src="images/meteoro.png" alt="kill" width="50" />
+        <h2 class="kills">
+          <span class="numUnidade_KillsM_Kills">0</span><span class="numCentena_Kills">0</span><span
+                                                                                                                                  class="numDezena_Kills">0</span><span
+                                                                                                                                  class="numUnidade_Kills">0</span>
+        </h2>
+      </div>
+      <div class="game-coins">
+        <img src="images/coin.png" alt="coin" width="50" />
+        <h2 class="coins">
+          <span id="coinNum02">0</span>
+        </h2>
+      </div>
+    </div>
+    <div class="personagem" id="player">
+      <div class="bullet"></div>
+    </div>
+    <div class="icon" id="shieldIcon"></div>
+    <div class="icon" id="coinIcon"></div>
+    <div class="enemy" id="enemy01"></div>
+    <div class="enemy" id="enemy02"></div>
+    <div class="enemy" id="enemy03"></div>
+  </div>
+  <div class="botoes">
+    <div class="botoesDirect">
+      <div class="botao" id="botaoLeft"></div>
+      <div class="botao" id="botaoRight"></div>
+      <div class="botao" id="botaoTop"></div>
+      <div class="botao" id="botaoBottom"></div>
+    </div>
+    <div class="areaControls">
+      <div class="botoesControl">
+        <div class="controlButton" id="buttonReset"></div>
+        <div class="controlButton" id="buttonStop"></div>
+      </div>
+    </div>
+    <div class="botoesPower">
+      <div class="shieldButton" id="botaoShield">
+        <div class="shieldNum">0</div>
+      </div>
+      <div class="shootButton" id="botaoShoot"></div>
+    </div>
+  </div>
+  <div class="game-over">
+    <div class="results">
+      <div class="scoreResult">
+        <div class="tituloScore">
+          <h1 class="Score-Logo">S</h1>
+          <h2 class="resultScore"></h2>
         </div>
-        <div class="botoes">
-            <div class="botoesDirect">
-                <div class="botao" id="botaoLeft"></div>
-                <div class="botao" id="botaoRight"></div>
-                <div class="botao" id="botaoTop"></div>
-                <div class="botao" id="botaoBottom"></div>
-            </div>
-            <div class="areaControls">
-                <div class="botoesControl">
-                    <div class="controlButton" id="buttonReset"></div>
-                    <div class="controlButton" id="buttonStop"></div>
-                </div>
-            </div>
-            <div class="botoesPower">
-                <div class="shieldButton" id="botaoShield">
-                    <div class="shieldNum">0</div>
-                </div>
-                <div class="shootButton" id="botaoShoot"></div>
-            </div>
+      </div>
+      <div class="killResult">
+        <div class="tituloKill">
+          <img src="images/meteoro.png" alt="meteoro" width="50" class="Kill-Logo" />
+          <h2 class="resultKills"></h2>
         </div>
-        <div class="game-over">
-            <div class="results">
-                <div class="scoreResult">
-                    <div class="tituloScore">
-                        <h1 class="Score-Logo">S</h1>
-                        <h2 class="resultScore"></h2>
-                    </div>
-                </div>
-                <div class="killResult">
-                    <div class="tituloKill">
-                        <img
-                            src="images/meteoro.png"
-                            alt="meteoro"
-                            width="50"
-                            class="Kill-Logo"
-                        />
-                        <h2 class="resultKills"></h2>
-                    </div>
-                </div>
-            </div>
-            <section class="message">
-                <div class="header">
-                    <div class="titulo">
-                        <h1>Game-Over</h1>
-                    </div>
-                </div>
-                <p>Toque em Qualquer lugar da tela para voltar ao Menu</p>
-            </section>
+      </div>
+    </div>
+    <section class="message">
+      <div class="header">
+        <div class="titulo">
+          <h1>Game-Over</h1>
         </div>
-    </body>
+      </div>
+      <p>Toque em Qualquer lugar da tela para voltar ao Menu</p>
+    </section>
+  </div>
+</body>
+<script>
+  function checkRadio() {
+const radioPadrao = document.querySelector("#skPadrao");
+const radio02 = document.querySelector("#sk02");
+const radio03 = document.querySelector("#sk03");
+const radio04 = document.querySelector("#sk04");
+const radio05 = document.querySelector("#sk05");
+const radio06 = document.querySelector("#sk06");
+const radio07 = document.querySelector("#sk07");
+    if (radioPadrao.checked) {
+        player.style.backgroundImage = `url('../images/${radioPadrao.value}.png');`;
+        document.getElementsByClassName(
+            "lifes"
+        )[0].src = `../images/${radioPadrao.value}.png`;
+        document.getElementsByClassName(
+            "lifes"
+        )[1].src = `../images/${radioPadrao.value}.png`;
+        document.getElementsByClassName(
+            "lifes"
+        )[2].src = `../images/${radioPadrao.value}.png`;
+    }
+    if (radio02.checked) {
+        console.log("Radio marcado: " + radio02.value);
+        player.style.cssText = `background-image:url('../images/${radio02.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin02.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin02.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin02.png";
+    }
+    if (radio03.checked) {
+        console.log("Radio marcado: " + radio03.value);
+        player.style.cssText = `background-image:url('../images/${radio03.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin03.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin03.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin03.png";
+    }
+    if (radio04.checked) {
+        console.log("Radio marcado: " + radio04.value);
+        player.style.cssText = `background-image:url('../images/${radio04.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin04.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin04.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin04.png";
+    }
+    if (radio05.checked) {
+        console.log("Radio marcado: " + radio05.value);
+        player.style.cssText = `background-image:url('../images/${radio05.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin05.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin05.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin05.png";
+    }
+    if (radio06.checked) {
+        console.log("Radio marcado: " + radio06.value);
+        player.style.cssText = `background-image:url('../images/${radio06.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin06.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin06.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin06.png";
+    }
+    if (radio07.checked) {
+        console.log("Radio marcado: " + radio07.value);
+        player.style.cssText = `background-image:url('../images/${radio07.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            "../images/skin07.png";
+        document.getElementsByClassName("lifes")[1].src =
+            "../images/skin07.png";
+        document.getElementsByClassName("lifes")[2].src =
+            "../images/skin07.png";
+    }
+    alert(player.style.backgroundImage)
+}
+setInterval(checkRadio,100);
+</script>
+
 </html>
