@@ -166,55 +166,6 @@ button:active {
 #sk07 {
     display: none;
 }
-#skPadrao:checked ~ #skinPadrao {
-    border: 5px solid #1e1e1e;
-}
-#skPadrao:checked ~ #skinPadrao > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
-#sk02:checked ~ #skin02 {
-    border: 5px solid #1e1e1e;
-}
-#sk02:checked ~ #skin02 > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
-#sk03:checked ~ #skin03 {
-    border: 5px solid #1e1e1e;
-}
-#sk03:checked ~ #skin03 > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
-#sk04:checked ~ #skin04 {
-    border: 5px solid #1e1e1e;
-}
-#sk04:checked ~ #skin04 > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
-#sk05:checked ~ #skin05 {
-    border: 5px solid #1e1e1e;
-}
-#sk05:checked ~ #skin05 > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
-#sk06:checked ~ #skin06 {
-    border: 5px solid #1e1e1e;
-}
-#sk06:checked ~ #skin06 > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
-#sk07:checked ~ #skin07 {
-    border: 5px solid #1e1e1e;
-}
-#sk07:checked ~ #skin07 > .preco {
-    background-color: #1e1e1e;
-    border-top: 5px solid #1e1e1e;
-}
 .shop-game > .content > main > .secoes > label {
     border: 5px solid #0fbd48;
     border-radius: 12px;
