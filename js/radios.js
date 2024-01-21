@@ -43,7 +43,9 @@ function checkRadio() {
       document.getElementsByClassName("preco")[0].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skinPadrao.style.cssText = "border: 5px solid #0fbd48;";
     }
-    if (radio02.checked) {
+    if (radio02.checked && localStorage.getItem('skin02') == "bloqueada") {
+            buySkin02();
+    }else if(radio02.checked && localStorage.getItem('skin02') == "desbloqueada"){
         document.getElementsByClassName("preco")[1].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin02.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
@@ -53,13 +55,14 @@ function checkRadio() {
             `./images/${radio02.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio02.value}.png`;
-            buySkin02();
-    }else {
+        img02.style.display = "none";
+        preco02.innerHTML = "Cyber";
+      }else {
       document.getElementsByClassName("preco")[1].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skin02.style.cssText = "border: 5px solid #0fbd48;";
       questShop.style.display = "none";
     }
-    if (radio03.checked) {
+    if (radio03.checked  && localStorage.getItem('skin03') == "desbloqueada") {
         document.getElementsByClassName("preco")[2].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin03.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('images/${radio03.value}.png');`;
@@ -73,7 +76,7 @@ function checkRadio() {
       document.getElementsByClassName("preco")[2].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skin03.style.cssText = "border: 5px solid #0fbd48;";
     }
-    if (radio04.checked) {
+    if (radio04.checked  && localStorage.getItem('skin04') == "desbloqueada") {
         document.getElementsByClassName("preco")[3].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin04.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio04.value}.png');`;
@@ -87,7 +90,7 @@ function checkRadio() {
       document.getElementsByClassName("preco")[3].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skin04.style.cssText = "border: 5px solid #0fbd48;";
     }
-    if (radio05.checked) {
+    if (radio05.checked  && localStorage.getItem('skin05') == "desbloqueada") {
         document.getElementsByClassName("preco")[4].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin05.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio05.value}.png')`;
@@ -101,7 +104,7 @@ function checkRadio() {
       document.getElementsByClassName("preco")[4].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skin05.style.cssText = "border: 5px solid #0fbd48;";
     }
-    if (radio06.checked) {
+    if (radio06.checked  && localStorage.getItem('skin06') == "desbloqueada") {
         document.getElementsByClassName("preco")[5].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin06.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio06.value}.png');`;
@@ -115,7 +118,7 @@ function checkRadio() {
       document.getElementsByClassName("preco")[5].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skin06.style.cssText = "border: 5px solid #0fbd48;";
     }
-    if (radio07.checked) {
+    if (radio07.checked  && localStorage.getItem('skin07') == "desbloqueada") {
         document.getElementsByClassName("preco")[6].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin07.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio07.value}.png');`;
