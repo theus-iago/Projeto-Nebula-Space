@@ -37,11 +37,18 @@ var radio04 = document.getElementById("sk04");
 var radio05 = document.getElementById("sk05");
 var radio06 = document.getElementById("sk06");
 var radio07 = document.getElementById("sk07");
+radioPadrao.addEventListener("change", checkRadio);
+radio02.addEventListener("change", checkRadio);
+radio03.addEventListener("change", checkRadio);
+radio04.addEventListener("change", checkRadio);
+radio05.addEventListener("change", checkRadio);
+radio06.addEventListener("change", checkRadio);
+radio07.addEventListener("change", checkRadio);
 function checkRadio() {
     if (radioPadrao.checked) {
         alert("Radio marcado: " + radioPadrao.value);
         player.style.cssText = "background-image:url('../images/skin01.png');";
-        /*document.getElementsByClassName(
+        document.getElementsByClassName(
             "lifes"
         )[0].src = `../images/${radioPadrao.value}.png`;
         document.getElementsByClassName(
@@ -49,9 +56,9 @@ function checkRadio() {
         )[1].src = `../images/${radioPadrao.value}.png`;
         document.getElementsByClassName(
             "lifes"
-        )[2].src = `../images/${radioPadrao.value}.png`;*/
+        )[2].src = `../images/${radioPadrao.value}.png`;
     }
-    /*if (radio02.checked) {
+    if (radio02.checked) {
         console.log("Radio marcado: " + radio02.value);
         player.style.cssText = `background-image:url('../images/${radio02.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
@@ -110,7 +117,7 @@ function checkRadio() {
             "../images/skin07.png";
         document.getElementsByClassName("lifes")[2].src =
             "../images/skin07.png";
-    }*/
+    }
 }
 checkRadio();
 let vidaAtual = 3;
