@@ -53,9 +53,11 @@ function checkRadio() {
             `./images/${radio02.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio02.value}.png`;
+            buySkin02();
     }else {
       document.getElementsByClassName("preco")[1].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skin02.style.cssText = "border: 5px solid #0fbd48;";
+      questShop.style.display = "none";
     }
     if (radio03.checked) {
         document.getElementsByClassName("preco")[2].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
