@@ -83,36 +83,36 @@ function checkRadio() {
     }
     if (radio05.checked) {
         console.log("Radio marcado: " + radio05.value);
-        player.style.cssText = `background-image:url('./images/${radio05.value}.png');`;
+        player.style.backgroundImage = `url('./images/${radio05.value}.png')`;
         document.getElementsByClassName("lifes")[0].src =
-            "./images/skin05.png";
+            `./images/${radio05.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
-            "./images/skin05.png";
+            `./images/${radio05.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            "./images/skin05.png";
+            `./images/${radio05.value}.png`;
     }
     if (radio06.checked) {
         console.log("Radio marcado: " + radio06.value);
         player.style.cssText = `background-image:url('./images/${radio06.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
-            "./images/skin06.png";
+            `./images/${radio06.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
-            "./images/skin06.png";
+            `./images/${radio06.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            "./images/skin06.png";
+            `./images/${radio06.value}.png`;
     }
     if (radio07.checked) {
         console.log("Radio marcado: " + radio07.value);
-        player.style.cssText = `background-image:url('./images/${radio07.value}.png');`;
+        player.style.cssText = `background-image:url('../images/${radio07.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
-            "./images/skin07.png";
+            "../images/skin07.png";
         document.getElementsByClassName("lifes")[1].src =
-            "./images/skin07.png";
+            "../images/skin07.png";
         document.getElementsByClassName("lifes")[2].src =
-            "./images/skin07.png";
+            "../images/skin07.png";
     }
 }
-
+setInterval(checkRadio,400);
 radioPadrao.addEventListener("change", checkRadio);
 radio02.addEventListener("change", checkRadio);
 radio03.addEventListener("change", checkRadio);
