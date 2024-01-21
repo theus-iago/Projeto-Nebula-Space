@@ -1,4 +1,11 @@
 "use strict";
+localStorage.setItem('skinPadrao', "bloqueada");
+localStorage.setItem('skin02', "bloqueada");
+localStorage.setItem('skin03', "bloqueada");
+localStorage.setItem('skin04', "bloqueada");
+localStorage.setItem('skin05', "bloqueada");
+localStorage.setItem('skin06', "bloqueada");
+localStorage.setItem('skin07', "bloqueada");
 const body = document.querySelector("body");
 const initialGame = document.querySelector(".initial-game");
 const player = document.querySelector("#player");
