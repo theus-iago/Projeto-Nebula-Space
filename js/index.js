@@ -39,16 +39,17 @@ const radio06 = document.querySelector("#sk06");
 const radio07 = document.querySelector("#sk07");
 function checkRadio() {
     if (radioPadrao.checked) {
+      console.log("Radio marcado: " + radioPadrao.value);
         player.style.backgroundImage = `url('./images/${radioPadrao.value}.png');`;
         document.getElementsByClassName(
             "lifes"
-        )[0].src = `../images/${radioPadrao.value}.png`;
+        )[0].src = `./images/${radioPadrao.value}.png`;
         document.getElementsByClassName(
             "lifes"
-        )[1].src = `../images/${radioPadrao.value}.png`;
+        )[1].src = `./images/${radioPadrao.value}.png`;
         document.getElementsByClassName(
             "lifes"
-        )[2].src = `../images/${radioPadrao.value}.png`;
+        )[2].src = `./images/${radioPadrao.value}.png`;
     }
     if (radio02.checked) {
         console.log("Radio marcado: " + radio02.value);
