@@ -30,13 +30,6 @@ const coinIcon = document.querySelector("#coinIcon");
 const shieldNum = document.querySelector(".shieldNum");
 const coinNum01 = document.querySelector("#coinNum01");
 const coinNum02 = document.querySelector("#coinNum02");
-const radioPadrao = document.getElementById("skPadrao");
-const radio02 = document.getElementById("sk02");
-const radio03 = document.getElementById("sk03");
-const radio04 = document.getElementById("sk04");
-const radio05 = document.getElementById("sk05");
-const radio06 = document.getElementById("sk06");
-const radio07 = document.getElementById("sk07");
 /*radioPadrao.addEventListener("change", checkRadio);
 radio02.addEventListener("change", checkRadio);
 radio03.addEventListener("change", checkRadio);
@@ -44,82 +37,7 @@ radio04.addEventListener("change", checkRadio);
 radio05.addEventListener("change", checkRadio);
 radio06.addEventListener("change", checkRadio);
 radio07.addEventListener("change", checkRadio);*/
-function checkRadio() {
-    if (radioPadrao.checked) {
-        var vradio = radioPadrao.value;
-        player.style.backgroundImage = `urlbackground-image:url('../images/${vradio}.png');`;
-        document.getElementsByClassName(
-            "lifes"
-        )[0].src = `../images/${radioPadrao.value}.png`;
-        document.getElementsByClassName(
-            "lifes"
-        )[1].src = `../images/${radioPadrao.value}.png`;
-        document.getElementsByClassName(
-            "lifes"
-        )[2].src = `../images/${radioPadrao.value}.png`;
-    }
-    /*if (radio02.checked) {
-        console.log("Radio marcado: " + radio02.value);
-        player.style.cssText = `background-image:url('../images/${radio02.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            "../images/skin02.png";
-        document.getElementsByClassName("lifes")[1].src =
-            "../images/skin02.png";
-        document.getElementsByClassName("lifes")[2].src =
-            "../images/skin02.png";
-    }
-    if (radio03.checked) {
-        console.log("Radio marcado: " + radio03.value);
-        player.style.cssText = `background-image:url('../images/${radio03.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            "../images/skin03.png";
-        document.getElementsByClassName("lifes")[1].src =
-            "../images/skin03.png";
-        document.getElementsByClassName("lifes")[2].src =
-            "../images/skin03.png";
-    }
-    if (radio04.checked) {
-        console.log("Radio marcado: " + radio04.value);
-        player.style.cssText = `background-image:url('../images/${radio04.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            "../images/skin04.png";
-        document.getElementsByClassName("lifes")[1].src =
-            "../images/skin04.png";
-        document.getElementsByClassName("lifes")[2].src =
-            "../images/skin04.png";
-    }
-    if (radio05.checked) {
-        console.log("Radio marcado: " + radio05.value);
-        player.style.cssText = `background-image:url('../images/${radio05.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            "../images/skin05.png";
-        document.getElementsByClassName("lifes")[1].src =
-            "../images/skin05.png";
-        document.getElementsByClassName("lifes")[2].src =
-            "../images/skin05.png";
-    }
-    if (radio06.checked) {
-        console.log("Radio marcado: " + radio06.value);
-        player.style.cssText = `background-image:url('../images/${radio06.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            "../images/skin06.png";
-        document.getElementsByClassName("lifes")[1].src =
-            "../images/skin06.png";
-        document.getElementsByClassName("lifes")[2].src =
-            "../images/skin06.png";
-    }
-    if (radio07.checked) {
-        console.log("Radio marcado: " + radio07.value);
-        player.style.cssText = `background-image:url('../images/${radio07.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            "../images/skin07.png";
-        document.getElementsByClassName("lifes")[1].src =
-            "../images/skin07.png";
-        document.getElementsByClassName("lifes")[2].src =
-            "../images/skin07.png";
-    }*/
-}
-setInterval(checkRadio,5000);
+alert(player.style.backgroundImage);
 let vidaAtual = 3;
 let numShield = 0;
 let numCoin = localStorage.getItem("Coins");
