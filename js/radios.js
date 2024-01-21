@@ -61,7 +61,7 @@ function checkRadio() {
     }
     if (radio06.checked) {
         console.log("Radio marcado: " + radio06.value);
-        player.style.backgroundImage = `url('./images/${radio06.value}.png');`;
+        player.style.cssText = `background-image: url('./images/${radio06.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
             `./images/${radio06.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
@@ -71,7 +71,7 @@ function checkRadio() {
     }
     if (radio07.checked) {
         console.log("Radio marcado: " + radio07.value);
-        player.style.backgroundImage = `url('./images/${radio07.value}.png');`;
+        player.style.cssText = `background-image: url('./images/${radio07.value}.png');`;
         document.getElementsByClassName("lifes")[0].src =
             `./images/${radio07.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
