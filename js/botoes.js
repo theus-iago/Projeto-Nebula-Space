@@ -88,7 +88,7 @@ botaoReset.addEventListener("click", function () {
         enemy03.style.display = "none";
         shieldIcon.style.display = "none";
         coinIcon.style.display = "none";
-        quest.style.display = "grid";
+        questBack.style.display = "grid";
         botaoYes.addEventListener("click", function () {
             location.reload();
         });
@@ -102,7 +102,7 @@ botaoReset.addEventListener("click", function () {
             enemy03.style.display = "block";
             shieldIcon.style.display = "flex";
             coinIcon.style.display = "flex";
-            quest.style.display = "none";
+            questBack.style.display = "none";
         });
     } else {
         isReseted = false;
@@ -114,7 +114,7 @@ botaoReset.addEventListener("click", function () {
         enemy03.style.display = "block";
         shieldIcon.style.display = "flex";
         coinIcon.style.display = "flex";
-        quest.style.display = "none";
+        questBack.style.display = "none";
     }
 });
 // Ouvinte de evento para o botão de jogar
