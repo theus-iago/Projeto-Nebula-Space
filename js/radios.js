@@ -6,7 +6,7 @@ const radio05 = document.querySelector("#sk05");
 const radio06 = document.querySelector("#sk06");
 const radio07 = document.querySelector("#sk07");
 function checkRadio() {
-  /*switch(value) {
+  switch(value) {
     case radioPadrao.value:
       player.style.backgroundImage = `url('./images/${radioPadrao.value}.png');`;
         document.getElementsByClassName(
@@ -91,8 +91,8 @@ function checkRadio() {
             "lifes"
         )[2].src = `./images/${radio07.value}.png`;
       break;
-  }*/
-    if (radioPadrao.checked) {
+  }
+  /*  if (radioPadrao.checked) {
       console.log("Radio marcado: " + radioPadrao.value);
         player.style.backgroundImage = `url('./images/${radioPadrao.value}.png');`;
         document.getElementsByClassName(
@@ -164,7 +164,7 @@ function checkRadio() {
             "../images/skin07.png";
         document.getElementsByClassName("lifes")[2].src =
             "../images/skin07.png";
-    }
+    }*/
 }
 radioPadrao.addEventListener("change", checkRadio);
 radio02.addEventListener("change", checkRadio);
