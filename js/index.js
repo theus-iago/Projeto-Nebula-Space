@@ -37,7 +37,6 @@ radio04.addEventListener("change", checkRadio);
 radio05.addEventListener("change", checkRadio);
 radio06.addEventListener("change", checkRadio);
 radio07.addEventListener("change", checkRadio);*/
-alert(player.style.backgroundImage);
 let vidaAtual = 3;
 let numShield = 0;
 let numCoin = localStorage.getItem("Coins");
