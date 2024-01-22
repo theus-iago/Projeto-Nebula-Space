@@ -4,8 +4,7 @@ function buySkin02() {
   tituloShop.innerHTML = `Deseja mesmo comprar a skin Cyber?`;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 100) {
-      numCoin = parseInt(localStorage.getItem('Coins')) - 100;
-      localStorage.setItem('Coins', numCoin);
+      numCoin - 100;
       skin02State = "desbloqueada";
       localStorage.setItem('skin02', skin02State);
     }else {
@@ -22,8 +21,7 @@ function buySkin03() {
   tituloShop.innerHTML = `Deseja mesmo comprar a skin Stronger?`;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 180) {
-      numCoin = parseInt(localStorage.getItem('Coins')) - 180;
-      localStorage.setItem('Coins', numCoin);
+      numCoin - 180;
       skin03State = "desbloqueada";
       localStorage.setItem('skin03', skin03State);
     }else {
@@ -40,8 +38,7 @@ function buySkin04() {
   tituloShop.innerHTML = `Deseja mesmo comprar a skin Slinder?`;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 220) {
-      numCoin = parseInt(localStorage.getItem('Coins')) - 220;
-      localStorage.setItem('Coins', numCoin);
+      numCoin - 220;
       skin04State = "desbloqueada";
       localStorage.setItem('skin04', skin04State);
     }else {
@@ -58,8 +55,7 @@ function buySkin05() {
   tituloShop.innerHTML = `Deseja mesmo comprar a skin Slinder?`;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 250) {
-      numCoin = parseInt(localStorage.getItem('Coins')) - 250;
-      localStorage.setItem('Coins', numCoin);
+      numCoin - 250;
       skin05State = "desbloqueada";
       localStorage.setItem('skin05', skin05State);
     }else {
@@ -76,8 +72,7 @@ function buySkin06() {
   tituloShop.innerHTML = `Deseja mesmo comprar a skin Treck?`;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 300) {
-      numCoin = parseInt(localStorage.getItem('Coins')) - 300;
-      localStorage.setItem('Coins', numCoin);
+      numCoin - 300;
       skin06State = "desbloqueada";
       localStorage.setItem('skin06', skin06State);
     }else {
@@ -94,8 +89,7 @@ function buySkin07() {
   tituloShop.innerHTML = `Deseja mesmo comprar a skin Flamp?`;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 330) {
-      numCoin = parseInt(localStorage.getItem('Coins')) - 330;
-      localStorage.setItem('Coins', numCoin);
+      numCoin - 330;
       skin07State = "desbloqueada";
       localStorage.setItem('skin07', skin07State);
     }else {
