@@ -53,6 +53,8 @@ const preco04 = document.querySelector("#preco04");
 const preco05 = document.querySelector("#preco05");
 const preco06 = document.querySelector("#preco06");
 const preco07 = document.querySelector("#preco07");
+const block = "bloqueado";
+const unlock = "desbloqueado";
 
 let vidaAtual = 3;
 let numShield = 0;
