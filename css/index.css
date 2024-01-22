@@ -158,13 +158,13 @@ button:active {
     padding: 5px;
 }
 #skPadrao,
-#sk02,
+#sk02eno
 #sk03,
 #sk04,
 #sk05,
 #sk06,
 #sk07 {
-    
+    display: none;
 }
 .shop-game > .content > main > .secoes > label {
     border: 5px solid #0fbd48;
