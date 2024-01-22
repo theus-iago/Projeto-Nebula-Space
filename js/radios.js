@@ -25,7 +25,7 @@ document.getElementsByClassName("preco")[0].style.cssText = "background-color: #
         document.getElementsByClassName(
             "lifes"
         )[2].src = `./images/${radioPadrao.value}.png`;
-function checkRadio() {
+function checkRadioPadrao() {
     if (radioPadrao.checked) {
     document.getElementsByClassName("preco")[0].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skinPadrao.style.cssText = "border: 5px solid #1e1e1e;";
@@ -43,6 +43,8 @@ function checkRadio() {
       document.getElementsByClassName("preco")[0].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
       skinPadrao.style.cssText = "border: 5px solid #0fbd48;";
     }
+}
+function checkRadio02() {
     if (radio02.checked && localStorage.getItem('skin02') == "bloqueada") {
             buySkin02();
     }else if(radio02.checked == true && localStorage.getItem('skin02') == "desbloqueada"){
@@ -63,6 +65,8 @@ function checkRadio() {
       skin02.style.cssText = "border: 5px solid #0fbd48;";
       questShop.style.display = "none";
     }
+}
+function checkRadio03() {
     if (radio03.checked && localStorage.getItem('skin03') == "bloqueada") {
             buySkin03();
     }else if(radio03.checked == true && localStorage.getItem('skin03') == "desbloqueada"){
@@ -83,6 +87,8 @@ function checkRadio() {
       skin03.style.cssText = "border: 5px solid #0fbd48;";
       questShop.style.display = "none";
     }
+}
+function checkRadio04() {
     if (radio04.checked && localStorage.getItem('skin04') == "bloqueada") {
             buySkin04();
     }else if(radio04.checked == true && localStorage.getItem('skin04') == "desbloqueada"){
@@ -103,6 +109,8 @@ function checkRadio() {
       skin04.style.cssText = "border: 5px solid #0fbd48;";
       questShop.style.display = "none";
     }
+}
+function checkRadio05() {
     if (radio05.checked && localStorage.getItem('skin05') == "bloqueada") {
             buySkin05();
     }else if(radio05.checked == true && localStorage.getItem('skin05') == "desbloqueada"){
@@ -123,6 +131,8 @@ function checkRadio() {
       skin05.style.cssText = "border: 5px solid #0fbd48;";
       questShop.style.display = "none";
     }
+}
+function checkRadio06() {
     if (radio06.checked && localStorage.getItem('skin06') == "bloqueada") {
             buySkin06();
     }else if(radio06.checked == true && localStorage.getItem('skin06') == "desbloqueada"){
@@ -143,6 +153,8 @@ function checkRadio() {
       skin06.style.cssText = "border: 5px solid #0fbd48;";
       questShop.style.display = "none";
     }
+}
+function checkRadio07() {
     if (radio07.checked && localStorage.getItem('skin07') == "bloqueada") {
             buySkin07();
     }else if(radio07.checked == true && localStorage.getItem('skin07') == "desbloqueada"){
@@ -164,10 +176,10 @@ function checkRadio() {
       questShop.style.display = "none";
     }
 }
-radioPadrao.addEventListener("change", checkRadio);
-radio02.addEventListener("change", checkRadio);
-radio03.addEventListener("change", checkRadio);
-radio04.addEventListener("change", checkRadio);
-radio05.addEventListener("change", checkRadio);
-radio06.addEventListener("change", checkRadio);
-radio07.addEventListener("change", checkRadio);
+radioPadrao.addEventListener("change", checkRadioPadrao);
+radio02.addEventListener("change", checkRadio02);
+radio03.addEventListener("change", checkRadio03);
+radio04.addEventListener("change", checkRadio04);
+radio05.addEventListener("change", checkRadio05);
+radio06.addEventListener("change", checkRadio06);
+radio07.addEventListener("change", checkRadio07);
