@@ -45,7 +45,8 @@ function checkRadio() {
     }
     if (radio02.checked && localStorage.getItem('skin02') == "bloqueada") {
             buySkin02();
-    }else if(radio02.checked && localStorage.getItem('skin02') == "desbloqueada"){
+    }else if(radio02.checked == true && localStorage.getItem('skin02') == unlock){
+      alert("foi!")
         document.getElementsByClassName("preco")[1].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin02.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
