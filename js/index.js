@@ -51,7 +51,7 @@ const unlock = "desbloqueado";
 
 let vidaAtual = 3;
 let numShield = 0;
-let numCoin = localStorage.getItem("Coins");
+let numCoin = parseInt(localStorage.getItem("Coins"));
 let skinPadraoState = localStorage.getItem('skinPadrao');
 let skin02State = localStorage.getItem('skin02');
 let skin03State = localStorage.getItem('skin03');
