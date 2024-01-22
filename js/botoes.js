@@ -89,10 +89,10 @@ botaoReset.addEventListener("click", function () {
         shieldIcon.style.display = "none";
         coinIcon.style.display = "none";
         questBack.style.display = "grid";
-        botaoYes.addEventListener("click", function () {
+        botaoYesBack.addEventListener("click", function () {
             location.reload();
         });
-        botaoNo.addEventListener("click", function () {
+        botaoNoBack.addEventListener("click", function () {
             isReseted = false;
             isPaused = false;
             retomarjogo();
