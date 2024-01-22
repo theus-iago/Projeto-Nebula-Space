@@ -29,17 +29,25 @@ function checkRadioPadrao() {
             "lifes"
         )[2].src = `./images/${radioPadrao.value}.png`;
     }else if(radioPadrao.checked == false) {
-      document.getElementsByClassName("preco")[0].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skinPadrao.style.cssText = "border: 5px solid #0fbd48;";
+      document.getElementsByClassName("preco")[0].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skinPadrao.style.cssText = "border: 5px solid blue;";
     }
 }
-setInterval(checkRadioPadrao,30);
-function checkRadio02() {
-    if (radio02.checked == true && localStorage.getItem('skin02') == "bloqueada") {
-            buySkin02();
-    }
-    if(radio02.checked == true && localStorage.getItem('skin02') == "desbloqueada"){
-      alert("foi!")
+function checkRadioPadrao02() {
+    if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == false){
+        document.getElementsByClassName("preco")[1].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin02.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio02.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio02.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio02.value}.png`;
+        img02.style.display = "none";
+        preco02.innerHTML = "Cyber";
+      }
+    if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == true){
         document.getElementsByClassName("preco")[1].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin02.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
@@ -51,19 +59,51 @@ function checkRadio02() {
             `./images/${radio02.value}.png`;
         img02.style.display = "none";
         preco02.innerHTML = "Cyber";
-      }else {
-      document.getElementsByClassName("preco")[1].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skin02.style.cssText = "border: 5px solid #0fbd48;";
-      questShop.style.display = "none";
-    }
+      }
 }
-setInterval(checkRadio02, 30);
-function checkRadio03() {
-    if (radio03.checked == true && localStorage.getItem('skin03') == "bloqueada") {
-            buySkin03();
-    }
-    if(radio03.checked == true && localStorage.getItem('skin03') == "desbloqueada"){
-      alert("foi!")
+function checkRadioPadrao02() {
+    if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == false){
+        document.getElementsByClassName("preco")[1].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin02.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio02.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio02.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio02.value}.png`;
+        img02.style.display = "none";
+        preco02.innerHTML = "Cyber";
+      }
+    if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == true){
+        document.getElementsByClassName("preco")[1].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
+      skin02.style.cssText = "border: 5px solid #1e1e1e;";
+        player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio02.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio02.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio02.value}.png`;
+        img02.style.display = "none";
+        preco02.innerHTML = "Cyber";
+      }
+}
+function checkRadioPadrao03() {
+    if(localStorage.getItem('skin03') == "desbloqueada" && radio03.checked == false){
+        document.getElementsByClassName("preco")[2].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin03.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio03.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio03.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio03.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio03.value}.png`;
+        img03.style.display = "none";
+        preco03.innerHTML = "Slicky";
+      }
+    if(localStorage.getItem('skin03') == "desbloqueada" && radio03.checked == true){
         document.getElementsByClassName("preco")[2].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin03.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio03.value}.png');`;
@@ -74,20 +114,24 @@ function checkRadio03() {
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio03.value}.png`;
         img03.style.display = "none";
-        preco03.innerHTML = "Stronger";
-      }else {
-      document.getElementsByClassName("preco")[2].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skin03.style.cssText = "border: 5px solid #0fbd48;";
-      questShop.style.display = "none";
-    }
+        preco03.innerHTML = "Slicky";
+      }
 }
-setInterval(checkRadio03, 30);
-function checkRadio04() {
-    if (radio04.checked == true && localStorage.getItem('skin04') == "bloqueada") {
-            buySkin04();
-    }
-    if(radio04.checked == true && localStorage.getItem('skin04') == "desbloqueada"){
-      alert("foi!")
+function checkRadioPadrao04() {
+    if(localStorage.getItem('skin04') == "desbloqueada" && radio04.checked == false){
+        document.getElementsByClassName("preco")[3].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin04.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio04.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio04.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio04.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio04.value}.png`;
+        img04.style.display = "none";
+        preco04.innerHTML = "Treck";
+      }
+    if(localStorage.getItem('skin04') == "desbloqueada" && radio04.checked == true){
         document.getElementsByClassName("preco")[3].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin04.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio04.value}.png');`;
@@ -98,20 +142,24 @@ function checkRadio04() {
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio04.value}.png`;
         img04.style.display = "none";
-        preco04.innerHTML = "Slinder";
-      }else {
-      document.getElementsByClassName("preco")[3].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skin04.style.cssText = "border: 5px solid #0fbd48;";
-      questShop.style.display = "none";
-    }
+        preco04.innerHTML = "Treck";
+      }
 }
-setInterval(checkRadio04, 30);
-function checkRadio05() {
-    if (radio05.checked == true && localStorage.getItem('skin05') == "bloqueada") {
-            buySkin05();
-    }
-    if(radio05.checked == true && localStorage.getItem('skin05') == "desbloqueada"){
-      alert("foi!")
+function checkRadioPadrao05() {
+    if(localStorage.getItem('skin05') == "desbloqueada" && radio05.checked == false){
+        document.getElementsByClassName("preco")[4].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin05.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio05.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio05.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio05.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio05.value}.png`;
+        img05.style.display = "none";
+        preco05.innerHTML = "Dig";
+      }
+    if(localStorage.getItem('skin05') == "desbloqueada" && radio05.checked == true){
         document.getElementsByClassName("preco")[4].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin05.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio05.value}.png');`;
@@ -122,20 +170,24 @@ function checkRadio05() {
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio05.value}.png`;
         img05.style.display = "none";
-        preco05.innerHTML = "Slinder";
-      }else {
-      document.getElementsByClassName("preco")[4].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skin05.style.cssText = "border: 5px solid #0fbd48;";
-      questShop.style.display = "none";
-    }
+        preco05.innerHTML = "Dig";
+      }
 }
-setInterval(checkRadio05, 30);
-function checkRadio06() {
-    if (radio06.checked == true && localStorage.getItem('skin06') == "bloqueada") {
-            buySkin06();
-    }
-    if(radio06.checked == true && localStorage.getItem('skin06') == "desbloqueada"){
-      alert("foi!")
+function checkRadioPadrao06() {
+    if(localStorage.getItem('skin06') == "desbloqueada" && radio06.checked == false){
+        document.getElementsByClassName("preco")[5].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin06.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio06.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio06.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio06.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio06.value}.png`;
+        img06.style.display = "none";
+        preco06.innerHTML = "Phitom";
+      }
+    if(localStorage.getItem('skin06') == "desbloqueada" && radio06.checked == true){
         document.getElementsByClassName("preco")[5].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin06.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio06.value}.png');`;
@@ -146,23 +198,24 @@ function checkRadio06() {
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio06.value}.png`;
         img06.style.display = "none";
-        preco06.innerHTML = "Treck";
-      }else {
-      document.getElementsByClassName("preco")[5].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skin06.style.cssText = "border: 5px solid #0fbd48;";
-      questShop.style.display = "none";
-    }
+        preco06.innerHTML = "Phitom";
+      }
 }
-setInterval(checkRadio06, 30);
-function checkRadio07() {
-    if (radio07.checked == true && localStorage.getItem('skin07') == "bloqueada") {
-      document.getElementsByClassName("preco")[6].style.cssText = "background-color: #0fbd48; border-top: 5px solid #0fbd48;";
-      skin07.style.cssText = "border: 5px solid #0fbd48;";
-      questShop.style.display = "none";
-            buySkin07();
-    }
-    if(radio07.checked == true && localStorage.getItem('skin07') == "desbloqueada"){
-      alert("foi!")
+function checkRadioPadrao07() {
+    if(localStorage.getItem('skin07') == "desbloqueada" && radio07.checked == false){
+        document.getElementsByClassName("preco")[6].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skin07.style.cssText = "border: 5px solid blue;";
+        player.style.cssText = `background-image: url('./images/${radio07.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radio07.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radio07.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radio07.value}.png`;
+        img07.style.display = "none";
+        preco07.innerHTML = "Volks";
+      }
+    if(localStorage.getItem('skin07') == "desbloqueada" && radio07.checked == true){
         document.getElementsByClassName("preco")[6].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
       skin07.style.cssText = "border: 5px solid #1e1e1e;";
         player.style.cssText = `background-image: url('./images/${radio07.value}.png');`;
@@ -173,14 +226,205 @@ function checkRadio07() {
         document.getElementsByClassName("lifes")[2].src =
             `./images/${radio07.value}.png`;
         img07.style.display = "none";
-        preco07.innerHTML = "Treck";
+        preco07.innerHTML = "Volks";
       }
 }
-setInterval(checkRadio07, 30);
-
-
-/*radio03.addEventListener("change", checkRadio03);
-radio04.addEventListener("change", checkRadio04);
-radio05.addEventListener("change", checkRadio05);
-radio06.addEventListener("change", checkRadio06);
-radio07.addEventListener("change", checkRadio07);*/
+setInterval(checkRadioPadrao,30);
+setInterval(checkRadioPadrao02,30);
+setInterval(checkRadioPadrao03,30);
+setInterval(checkRadioPadrao04,30);
+setInterval(checkRadioPadrao05,30);
+setInterval(checkRadioPadrao06,30);
+setInterval(checkRadioPadrao07,30);
+function checkRadio02() {
+  if(radio02.checked) {
+    console.log("selecionado")
+  if(localStorage.getItem('skin02') == "") {
+    localStorage.setItem('skin02', "bloqueada");
+  }
+  if(localStorage.getItem('skin02') == "bloqueada") {
+  questShop.style.display = "grid";
+  questShop.style.top = "8%";
+  tituloShop.innerHTML = `Deseja mesmo comprar a skin Cyber?`;
+  botaoYesShop.addEventListener("click", function() {
+    if(parseInt(localStorage.getItem('Coins')) >= 100 && localStorage.getItem('skin02') == "bloqueada") {
+      alert("skin02 desbloqueada!");
+      numCoin = parseInt(localStorage.getItem('Coins')) - 100;
+      localStorage.setItem('Coins',numCoin);
+      localStorage.setItem('skin02', "desbloqueada");
+      checkRadioPadrao02();
+      questShop.style.display = "none";
+    }else if(parseInt(localStorage.getItem('Coins')) < 100 && localStorage.getItem('skin02') == "bloqueada") {
+      alert("Valor insuficiente!");
+      questShop.style.display = "none";
+    }
+  });
+  botaoNoShop.addEventListener("click", function() {
+    questShop.style.display = "none";
+  });
+  }
+  }
+  }
+function checkRadio03() {
+  if(radio03.checked) {
+    console.log("selecionado")
+  if(localStorage.getItem('skin03') == "") {
+    localStorage.setItem('skin03', "bloqueada");
+  }
+  if(localStorage.getItem('skin03') == "bloqueada") {
+  questShop.style.display = "grid";
+  questShop.style.top = "8%";
+  tituloShop.innerHTML = `Deseja mesmo comprar a skin Slicky?`;
+  botaoYesShop.addEventListener("click", function() {
+    if(parseInt(localStorage.getItem('Coins')) >= 180 && localStorage.getItem('skin03') == "bloqueada") {
+      alert("skin03 desbloqueada!");
+      numCoin = parseInt(localStorage.getItem('Coins')) - 180;
+      localStorage.setItem('Coins',numCoin);
+      localStorage.setItem('skin03', "desbloqueada");
+      checkRadioPadrao03();
+      questShop.style.display = "none";
+    }else if(parseInt(localStorage.getItem('Coins')) < 180 && localStorage.getItem('skin03') == "bloqueada") {
+      alert("Valor insuficiente!");
+      questShop.style.display = "none";
+    }
+  });
+  botaoNoShop.addEventListener("click", function() {
+    questShop.style.display = "none";
+  });
+  }
+  }
+  }
+function checkRadio04() {
+  if(radio04.checked) {
+    console.log("selecionado")
+  if(localStorage.getItem('skin04') == "") {
+    localStorage.setItem('skin04', "bloqueada");
+  }
+  if(localStorage.getItem('skin04') == "bloqueada") {
+  questShop.style.display = "grid";
+  questShop.style.top = "8%";
+  tituloShop.innerHTML = `Deseja mesmo comprar a skin Treck?`;
+  botaoYesShop.addEventListener("click", function() {
+    if(parseInt(localStorage.getItem('Coins')) >= 220 && localStorage.getItem('skin04') == "bloqueada") {
+      alert("skin04 desbloqueada!");
+      numCoin = parseInt(localStorage.getItem('Coins')) - 220;
+      localStorage.setItem('Coins',numCoin);
+      localStorage.setItem('skin04', "desbloqueada");
+      checkRadioPadrao04();
+      questShop.style.display = "none";
+    }else if(parseInt(localStorage.getItem('Coins')) < 220 && localStorage.getItem('skin04') == "bloqueada") {
+      alert("Valor insuficiente!");
+      questShop.style.display = "none";
+    }
+  });
+  botaoNoShop.addEventListener("click", function() {
+    questShop.style.display = "none";
+  });
+  }
+  }
+  }
+function checkRadio05() {
+  if(radio05.checked) {
+    console.log("selecionado")
+  if(localStorage.getItem('skin05') == "") {
+    localStorage.setItem('skin05', "bloqueada");
+  }
+  if(localStorage.getItem('skin05') == "bloqueada") {
+  questShop.style.display = "grid";
+  questShop.style.top = "8%";
+  tituloShop.innerHTML = `Deseja mesmo comprar a skin Dig?`;
+  botaoYesShop.addEventListener("click", function() {
+    if(parseInt(localStorage.getItem('Coins')) >= 250 && localStorage.getItem('skin05') == "bloqueada") {
+      alert("skin05 desbloqueada!");
+      numCoin = parseInt(localStorage.getItem('Coins')) - 250;
+      localStorage.setItem('Coins',numCoin);
+      localStorage.setItem('skin05', "desbloqueada");
+      checkRadioPadrao05();
+      questShop.style.display = "none";
+    }else if(parseInt(localStorage.getItem('Coins')) < 250 && localStorage.getItem('skin05') == "bloqueada") {
+      alert("Valor insuficiente!");
+      questShop.style.display = "none";
+    }
+  });
+  botaoNoShop.addEventListener("click", function() {
+    questShop.style.display = "none";
+  });
+  }
+  }
+  }
+function checkRadio06() {
+  if(radio06.checked) {
+    console.log("selecionado")
+  if(localStorage.getItem('skin06') == "") {
+    localStorage.setItem('skin06', "bloqueada");
+  }
+  if(localStorage.getItem('skin06') == "bloqueada") {
+  questShop.style.display = "grid";
+  questShop.style.top = "8%";
+  tituloShop.innerHTML = `Deseja mesmo comprar a skin Phitom?`;
+  botaoYesShop.addEventListener("click", function() {
+    if(parseInt(localStorage.getItem('Coins')) >= 300 && localStorage.getItem('skin06') == "bloqueada") {
+      alert("skin06 desbloqueada!");
+      numCoin = parseInt(localStorage.getItem('Coins')) - 300;
+      localStorage.setItem('Coins',numCoin);
+      localStorage.setItem('skin06', "desbloqueada");
+      checkRadioPadrao06();
+      questShop.style.display = "none";
+    }else if(parseInt(localStorage.getItem('Coins')) < 300 && localStorage.getItem('skin06') == "bloqueada") {
+      alert("Valor insuficiente!");
+      questShop.style.display = "none";
+    }
+  });
+  botaoNoShop.addEventListener("click", function() {
+    questShop.style.display = "none";
+  });
+  }
+  }
+  }
+function checkRadio07() {
+  if(radio07.checked) {
+    console.log("selecionado")
+  if(localStorage.getItem('skin07') == "") {
+    localStorage.setItem('skin07', "bloqueada");
+  }
+  if(localStorage.getItem('skin07') == "bloqueada") {
+  questShop.style.display = "grid";
+  questShop.style.top = "8%";
+  tituloShop.innerHTML = `Deseja mesmo comprar a skin Volks?`;
+  botaoYesShop.addEventListener("click", function() {
+    if(parseInt(localStorage.getItem('Coins')) >= 330 && localStorage.getItem('skin07') == "bloqueada") {
+      alert("skin07 desbloqueada!");
+      numCoin = parseInt(localStorage.getItem('Coins')) - 330;
+      localStorage.setItem('Coins',numCoin);
+      localStorage.setItem('skin07', "desbloqueada");
+      checkRadioPadrao07();
+      questShop.style.display = "none";
+    }else if(parseInt(localStorage.getItem('Coins')) < 330 && localStorage.getItem('skin07') == "bloqueada") {
+      alert("Valor insuficiente!");
+      questShop.style.display = "none";
+    }
+  });
+  botaoNoShop.addEventListener("click", function() {
+    questShop.style.display = "none";
+  });
+  }
+  }
+  }
+radio02.addEventListener('click', function() {
+  checkRadio02();
+});
+radio03.addEventListener('click', function() {
+  checkRadio03();
+});
+radio04.addEventListener('click', function() {
+  checkRadio04();
+});
+radio05.addEventListener('click', function() {
+  checkRadio05();
+});
+radio06.addEventListener('click', function() {
+  checkRadio06();
+});
+radio07.addEventListener('click', function() {
+  checkRadio07();
+});
