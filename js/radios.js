@@ -282,7 +282,7 @@ function checkRadio02() {
     }else if(parseInt(localStorage.getItem('Coins')) < 100 && localStorage.getItem('skin02') == "bloqueada" && buy02 == true && noBuy02 == false) {
       buy02 = false;
       noBuy02 = true;
-      alert("Valor insuficiente!");
+      
       questShop.style.display = "none";
     }else if(!(questShop.style.display == "grid")) {
       noBuy02 = true;
@@ -315,7 +315,7 @@ function checkRadio03() {
       checkRadioPadrao03();
       questShop.style.display = "none";
     }else if(parseInt(localStorage.getItem('Coins')) < 180 && localStorage.getItem('skin03') == "bloqueada" && buy03 == true && noBuy03 == false) {
-      alert("Valor insuficiente!");
+      
       buy03 = false;
       noBuy03 = true;
       questShop.style.display = "none";
@@ -350,7 +350,7 @@ function checkRadio04() {
       checkRadioPadrao04();
       questShop.style.display = "none";
     }else if(parseInt(localStorage.getItem('Coins')) < 220 && localStorage.getItem('skin04') == "bloqueada" && buy04 == true && noBuy04 == false) {
-      alert("Valor insuficiente!");
+      
       buy04 = false;
       noBuy04 = true;
       questShop.style.display = "none";
@@ -385,7 +385,7 @@ function checkRadio05() {
       checkRadioPadrao05();
       questShop.style.display = "none";
     }else if(parseInt(localStorage.getItem('Coins')) < 250 && localStorage.getItem('skin05') == "bloqueada" && buy05 == true && noBuy05 == false) {
-      alert("Valor insuficiente!");
+      
       buy05 = false;
       noBuy05 = true;
       questShop.style.display = "none";
@@ -420,7 +420,7 @@ function checkRadio06() {
       checkRadioPadrao06();
       questShop.style.display = "none";
     }else if(parseInt(localStorage.getItem('Coins')) < 300 && localStorage.getItem('skin06') == "bloqueada" && buy06 == true && noBuy06 == false) {
-      alert("Valor insuficiente!");
+      
       buy06 = false;
       noBuy06 = true;
       questShop.style.display = "none";
@@ -455,7 +455,7 @@ function checkRadio07() {
       checkRadioPadrao07();
       questShop.style.display = "none";
     }else if(parseInt(localStorage.getItem('Coins')) < 330 && localStorage.getItem('skin07') == "bloqueada" && buy07 == true && noBuy07 == false) {
-      alert("Valor insuficiente!");
+      
       buy07 = false;
       noBuy07 = true;
       questShop.style.display = "none";
