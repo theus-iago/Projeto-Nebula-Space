@@ -160,7 +160,7 @@ function checkRadioPadrao07() {
 function unCheck02() {
   if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == true) {
     document.getElementsByClassName("preco")[1].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
-      skin07.style.cssText = "border: 5px solid #1e1e1e;";
+      skin02.style.cssText = "border: 5px solid #1e1e1e;";
     img02.style.display = "none";
         preco02.innerHTML = "Cyber";
   }else if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == false) {
