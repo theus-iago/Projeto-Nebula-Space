@@ -166,6 +166,20 @@ button:active {
 #sk07 {
     display: none;
 }
+#skPadrao:checked ~ #skinPadrao {
+    border: 5px solid #1e1e1e;
+}
+#skPadrao:checked ~ #skinPadrao > .preco {
+    background-color: #1e1e1e;
+    border-top: 5px solid #1e1e1e;
+}
+#skinPadrao {
+    border: 5px solid blue;
+}
+#skPadrao > .preco {
+    background-color: blue;
+    border-top: 5px solid blue;
+}
 .shop-game > .content > main > .secoes > label {
     border: 5px solid #0fbd48;
     border-radius: 12px;
@@ -352,7 +366,7 @@ button:active {
 }
 
 #player {
-    background-image: url('../images/skin01.png');
+    background-image: url("../images/skin01.png");
     background-color: #62ceff00;
     background-repeat: no-repeat;
     background-size: 100% 100%;
