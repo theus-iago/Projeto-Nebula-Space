@@ -12,28 +12,6 @@ const skin06 = document.querySelector("#skin06");
 const radio06 = document.querySelector("#sk06");
 const skin07 = document.querySelector("#skin07");
 const radio07 = document.querySelector("#sk07");
-radioPadrao.checked = true
-
-function checkRadioPadrao() {
-const positionPlayer = player.getBoundingClientRect();
-    if (radioPadrao.checked) {
-    document.getElementsByClassName("preco")[0].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
-      skinPadrao.style.cssText = "border: 5px solid #1e1e1e;";
-        player.style.cssText = `background-image: url('./images/${radioPadrao.value}.png');`;
-        document.getElementsByClassName(
-            "lifes"
-        )[0].src = `./images/${radioPadrao.value}.png`;
-        document.getElementsByClassName(
-            "lifes"
-        )[1].src = `./images/${radioPadrao.value}.png`;
-        document.getElementsByClassName(
-            "lifes"
-        )[2].src = `./images/${radioPadrao.value}.png`;
-    }else if(radioPadrao.checked == false) {
-      document.getElementsByClassName("preco")[0].style.cssText = "background-color: blue; border-top: 5px solid blue;";
-      skinPadrao.style.cssText = "border: 5px solid blue;";
-    }
-}
 function checkRadioPadrao02() {
   const positionPlayer = player.getBoundingClientRect();
     if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == false){
@@ -178,20 +156,6 @@ function checkRadioPadrao07() {
         img07.style.display = "none";
         preco07.innerHTML = "Volks";
       }
-}
-function unCheckPadrao() {
-  if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == true) {
-    document.getElementsByClassName("preco")[0].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
-      skinPadrao.style.cssText = "border: 5px solid #1e1e1e;";
-    imgPadrao.style.display = "none";
-        precoPadrao.innerHTML = "Nebula";
-  }else if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == false) {
-    document.getElementsByClassName("preco")[0].style.cssText = "background-color: blue; border-top: 5px solid blue;";
-      skinPadrao.style.cssText = "border: 5px solid blue;";
-    imgPadrao.style.display = "none";
-        precoPadrao.innerHTML = "Nebula";
-    
-  }
 }
 function unCheck02() {
   if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == true) {
