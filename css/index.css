@@ -169,7 +169,7 @@ button:active {
 #skPadrao:checked ~ #skinPadrao {
     border: 5px solid #1e1e1e;
 }
-#skPadrao:checked ~ #skinPadrao > .preco {
+#skPadrao:checked ~ #skinPadrao > #precoPadrao {
     background-color: #1e1e1e;
     border-top: 5px solid #1e1e1e;
 }
