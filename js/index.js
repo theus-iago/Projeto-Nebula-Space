@@ -1,4 +1,28 @@
 "use strict";
+if(localStorage.getItem('Coins') == null) {
+localStorage.setItem('Coins', "0");
+}
+if(localStorage.getItem('skinPadrao') == null) {
+localStorage.setItem('skinPadrao', "desbloqueada");
+}
+if(localStorage.getItem('skin02') == null) {
+localStorage.setItem('skin02', "bloqueada");
+}
+if(localStorage.getItem('skin03') == null) {
+localStorage.setItem('skin03', "bloqueada");
+}
+if(localStorage.getItem('skin04') == null) {
+localStorage.setItem('skin04', "bloqueada");
+}
+if(localStorage.getItem('skin05') == null) {
+localStorage.setItem('skin05', "bloqueada");
+}
+if(localStorage.getItem('skin06') == null) {
+localStorage.setItem('skin06', "bloqueada");
+}
+if(localStorage.getItem('skin07') == null) {
+localStorage.setItem('skin07', "bloqueada");
+}
 const body = document.querySelector("body");
 const initialGame = document.querySelector(".initial-game");
 const player = document.querySelector("#player");
