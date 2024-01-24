@@ -582,9 +582,9 @@ button:active {
     scale: 1;
 }
 #yesShop {
-    background-color: green;
+    background-color: #0fbd48;
     color: white;
-    border: 2px solid green;
+    border: 2px solid #0fbd48;
     border-radius: 6px;
     margin: 6px;
     padding: 2px;
