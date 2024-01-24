@@ -581,10 +581,6 @@ button:active {
     border-color: darkred;
     scale: 1;
 }
-#yesShop:hover {
-    border-color: white;
-    scale: 0.9;
-}
 #yesShop {
     background-color: green;
     color: white;
@@ -600,6 +596,10 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#yesShop:hover {
+    border-color: white;
+    scale: 0.9;
 }
 #yesShop:active {
     border-color: darkgreen;
