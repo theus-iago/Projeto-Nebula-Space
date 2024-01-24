@@ -24,6 +24,30 @@ let buy06 = false;
 let noBuy06 = true;
 let buy07 = false;
 let noBuy07 = true;
+function checkRadioPadrao() {
+  const positionPlayer = player.getBoundingClientRect();
+    if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == false){
+        document.getElementsByClassName("preco")[0].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skinPadrao.style.cssText = "border: 5px solid blue;";
+        imgPadrao.style.display = "none";
+        precoPadrao.innerHTML = "Nebula";
+      }
+    if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == true){
+        document.getElementsByClassName("preco")[0].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
+      skinPadrao.style.cssText = "border: 5px solid #1e1e1e;";
+       player.style.top = positionPlayer.top;
+        player.style.left = positionPlayer.left;
+        player.style.cssText = `background-image: url('./images/${radioPadrao.value}.png');`;
+        document.getElementsByClassName("lifes")[0].src =
+            `./images/${radioPadrao.value}.png`;
+        document.getElementsByClassName("lifes")[1].src =
+            `./images/${radioPadrao.value}.png`;
+        document.getElementsByClassName("lifes")[2].src =
+            `./images/${radioPadrao.value}.png`;
+        imgPadrao.style.display = "none";
+        precoPadrao.innerHTML = "Nebula";
+      }
+}
 function checkRadioPadrao02() {
   const positionPlayer = player.getBoundingClientRect();
     if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == false){
@@ -169,6 +193,20 @@ function checkRadioPadrao07() {
         preco07.innerHTML = "Volks";
       }
 }
+function unCheckPadrao() {
+  if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == true) {
+    document.getElementsByClassName("preco")[0].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
+      skinPadrao.style.cssText = "border: 5px solid #1e1e1e;";
+    imgPadrao.style.display = "none";
+        preco02.innerHTML = "Nebula";
+  }else if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == false) {
+    document.getElementsByClassName("preco")[0].style.cssText = "background-color: blue; border-top: 5px solid blue;";
+      skinPadrao.style.cssText = "border: 5px solid blue;";
+    imgPadrao.style.display = "none";
+        precoPadrao.innerHTML = "Nebula";
+    
+  }
+}
 function unCheck02() {
   if(localStorage.getItem('skin02') == "desbloqueada" && radio02.checked == true) {
     document.getElementsByClassName("preco")[1].style.cssText = "background-color: #1e1e1e; border-top: 5px solid #1e1e1e;";
@@ -273,19 +311,17 @@ function checkRadio02() {
   noBuy02 = false;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 100 && localStorage.getItem('skin02') == "bloqueada" && buy02 == true && noBuy02 == false) {
-      alert("skin02 desbloqueada!");
+      alert("skin Cyber desbloqueada!");
       numCoin = parseInt(localStorage.getItem('Coins')) - 100;
       localStorage.setItem('Coins',numCoin);
       localStorage.setItem('skin02', "desbloqueada");
       checkRadioPadrao02();
       questShop.style.display = "none";
-    }else if(parseInt(localStorage.getItem('Coins')) < 100 && localStorage.getItem('skin02') == "bloqueada" && buy02 == true && noBuy02 == false) {
+    }else if(parseInt(localStorage.getItem('Coins')) < 100 && localStorage.getItem('skin02') == "bloqueada" && buy02 == true && noBuy02 == false && radio02.checked == true) {
       buy02 = false;
       noBuy02 = true;
-      
+      alert("Valor insuficiente!");
       questShop.style.display = "none";
-    }else if(!(questShop.style.display == "grid")) {
-      noBuy02 = true;
     }
   });
   botaoNoShop.addEventListener("click", function() {
@@ -308,19 +344,17 @@ function checkRadio03() {
   noBuy03 = false;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 180 && localStorage.getItem('skin03') == "bloqueada" && buy03 == true && noBuy03 == false) {
-      alert("skin03 desbloqueada!");
+      alert("skin Slicky desbloqueada!");
       numCoin = parseInt(localStorage.getItem('Coins')) - 180;
       localStorage.setItem('Coins',numCoin);
       localStorage.setItem('skin03', "desbloqueada");
       checkRadioPadrao03();
       questShop.style.display = "none";
-    }else if(parseInt(localStorage.getItem('Coins')) < 180 && localStorage.getItem('skin03') == "bloqueada" && buy03 == true && noBuy03 == false) {
-      
+    }else if(parseInt(localStorage.getItem('Coins')) < 180 && localStorage.getItem('skin03') == "bloqueada" && buy03 == true && noBuy03 == false && radio03.checked == true) {
       buy03 = false;
       noBuy03 = true;
+      alert("Valor insuficiente!");
       questShop.style.display = "none";
-    }else if(!(questShop.style.display == "grid")) {
-      noBuy03 = true;
     }
   });
   botaoNoShop.addEventListener("click", function() {
@@ -343,19 +377,17 @@ function checkRadio04() {
   noBuy04 = false;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 220 && localStorage.getItem('skin04') == "bloqueada" && buy04 == true && noBuy04 == false) {
-      alert("skin04 desbloqueada!");
+      alert("skin Treck desbloqueada!");
       numCoin = parseInt(localStorage.getItem('Coins')) - 220;
       localStorage.setItem('Coins',numCoin);
       localStorage.setItem('skin04', "desbloqueada");
       checkRadioPadrao04();
       questShop.style.display = "none";
-    }else if(parseInt(localStorage.getItem('Coins')) < 220 && localStorage.getItem('skin04') == "bloqueada" && buy04 == true && noBuy04 == false) {
-      
+    }else if(parseInt(localStorage.getItem('Coins')) < 220 && localStorage.getItem('skin04') == "bloqueada" && buy04 == true && noBuy04 == false && radio04.checked == true) {
       buy04 = false;
       noBuy04 = true;
       questShop.style.display = "none";
-    }else if(!(questShop.style.display == "grid")) {
-      noBuy04 = true;
+      alert("Valor insuficiente!");
     }
   });
   botaoNoShop.addEventListener("click", function() {
@@ -378,19 +410,17 @@ function checkRadio05() {
   noBuy05 = false;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 250 && localStorage.getItem('skin05') == "bloqueada" && buy05 == true && noBuy05 == false) {
-      alert("skin05 desbloqueada!");
+      alert("skin Dig desbloqueada!");
       numCoin = parseInt(localStorage.getItem('Coins')) - 250;
       localStorage.setItem('Coins',numCoin);
       localStorage.setItem('skin05', "desbloqueada");
       checkRadioPadrao05();
       questShop.style.display = "none";
-    }else if(parseInt(localStorage.getItem('Coins')) < 250 && localStorage.getItem('skin05') == "bloqueada" && buy05 == true && noBuy05 == false) {
-      
+    }else if(parseInt(localStorage.getItem('Coins')) < 250 && localStorage.getItem('skin05') == "bloqueada" && buy05 == true && noBuy05 == false && radio05.checked == true) {
       buy05 = false;
       noBuy05 = true;
+      alert("Valor insuficiente!");
       questShop.style.display = "none";
-    }else if(!(questShop.style.display == "grid")) {
-      noBuy05 = true;
     }
   });
   botaoNoShop.addEventListener("click", function() {
@@ -413,19 +443,17 @@ function checkRadio06() {
   noBuy06 = false;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 300 && localStorage.getItem('skin06') == "bloqueada" && buy06 == true && noBuy06 == false) {
-      alert("skin06 desbloqueada!");
+      alert("skin Phitom desbloqueada!");
       numCoin = parseInt(localStorage.getItem('Coins')) - 300;
       localStorage.setItem('Coins',numCoin);
       localStorage.setItem('skin06', "desbloqueada");
       checkRadioPadrao06();
       questShop.style.display = "none";
-    }else if(parseInt(localStorage.getItem('Coins')) < 300 && localStorage.getItem('skin06') == "bloqueada" && buy06 == true && noBuy06 == false) {
-      
+    }else if(parseInt(localStorage.getItem('Coins')) < 300 && localStorage.getItem('skin06') == "bloqueada" && buy06 == true && noBuy06 == false && radio06.checked == true) {
       buy06 = false;
       noBuy06 = true;
+      alert("Valor insuficiente!");
       questShop.style.display = "none";
-    }else if(!(questShop.style.display == "grid")) {
-      noBuy06 = true;
     }
   });
   botaoNoShop.addEventListener("click", function() {
@@ -448,19 +476,17 @@ function checkRadio07() {
   noBuy07 = false;
   botaoYesShop.addEventListener("click", function() {
     if(parseInt(localStorage.getItem('Coins')) >= 330 && localStorage.getItem('skin07') == "bloqueada" && buy07 == true && noBuy07 == false) {
-      alert("skin07 desbloqueada!");
+      alert("skin Volks desbloqueada!");
       numCoin = parseInt(localStorage.getItem('Coins')) - 330;
       localStorage.setItem('Coins',numCoin);
       localStorage.setItem('skin07', "desbloqueada");
       checkRadioPadrao07();
       questShop.style.display = "none";
-    }else if(parseInt(localStorage.getItem('Coins')) < 330 && localStorage.getItem('skin07') == "bloqueada" && buy07 == true && noBuy07 == false) {
-      
+    }else if(parseInt(localStorage.getItem('Coins')) < 330 && localStorage.getItem('skin07') == "bloqueada" && buy07 == true && noBuy07 == false && radio07.checked == true) {
       buy07 = false;
       noBuy07 = true;
+      alert("Valor insuficiente!");
       questShop.style.display = "none";
-    }else if(!(questShop.style.display == "grid")) {
-      noBuy07 = true;
     }
   });
   botaoNoShop.addEventListener("click", function() {
@@ -469,6 +495,9 @@ function checkRadio07() {
   }
   }
   }
+radioPadrao.addEventListener('click', function() {
+  checkRadioPadrao();
+});
 radio02.addEventListener('click', function() {
   checkRadio02();
   checkRadioPadrao02();
