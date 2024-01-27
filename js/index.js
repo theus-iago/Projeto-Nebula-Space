@@ -1,27 +1,27 @@
 "use strict";
-if(localStorage.getItem('Coins') == null) {
-localStorage.setItem('Coins', "0");
+if (localStorage.getItem("Coins") == null) {
+    localStorage.setItem("Coins", "0");
 }
-if(localStorage.getItem('skinPadrao') == null) {
-localStorage.setItem('skinPadrao', "desbloqueada");
+if (localStorage.getItem("skinPadrao") == null) {
+    localStorage.setItem("skinPadrao", "desbloqueada");
 }
-if(localStorage.getItem('skin02') == null) {
-localStorage.setItem('skin02', "bloqueada");
+if (localStorage.getItem("skin02") == null) {
+    localStorage.setItem("skin02", "bloqueada");
 }
-if(localStorage.getItem('skin03') == null) {
-localStorage.setItem('skin03', "bloqueada");
+if (localStorage.getItem("skin03") == null) {
+    localStorage.setItem("skin03", "bloqueada");
 }
-if(localStorage.getItem('skin04') == null) {
-localStorage.setItem('skin04', "bloqueada");
+if (localStorage.getItem("skin04") == null) {
+    localStorage.setItem("skin04", "bloqueada");
 }
-if(localStorage.getItem('skin05') == null) {
-localStorage.setItem('skin05', "bloqueada");
+if (localStorage.getItem("skin05") == null) {
+    localStorage.setItem("skin05", "bloqueada");
 }
-if(localStorage.getItem('skin06') == null) {
-localStorage.setItem('skin06', "bloqueada");
+if (localStorage.getItem("skin06") == null) {
+    localStorage.setItem("skin06", "bloqueada");
 }
-if(localStorage.getItem('skin07') == null) {
-localStorage.setItem('skin07', "bloqueada");
+if (localStorage.getItem("skin07") == null) {
+    localStorage.setItem("skin07", "bloqueada");
 }
 const body = document.querySelector("body");
 const initialGame = document.querySelector(".initial-game");
@@ -102,13 +102,13 @@ let noBuy07 = true;
 let vidaAtual = 3;
 let numShield = 0;
 let numCoin = parseInt(localStorage.getItem("Coins"));
-let skinPadraoState = localStorage.getItem('skinPadrao');
-let skin02State = localStorage.getItem('skin02');
-let skin03State = localStorage.getItem('skin03');
-let skin04State = localStorage.getItem('skin04');
-let skin05State = localStorage.getItem('skin05');
-let skin06State = localStorage.getItem('skin06');
-let skin07State = localStorage.getItem('skin07');
+let skinPadraoState = localStorage.getItem("skinPadrao");
+let skin02State = localStorage.getItem("skin02");
+let skin03State = localStorage.getItem("skin03");
+let skin04State = localStorage.getItem("skin04");
+let skin05State = localStorage.getItem("skin05");
+let skin06State = localStorage.getItem("skin06");
+let skin07State = localStorage.getItem("skin07");
 let numUnidade_Score = 0;
 let numDezena_Score = 0;
 let numCentena_Score = 0;
