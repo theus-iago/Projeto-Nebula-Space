@@ -140,6 +140,12 @@ botaoPlay.addEventListener("click", function () {
     }
 });
 
+botaoCheats.addEventListener("click", function () {
+    initialGame.style.display = "none";
+    gameBoard.style.display = "none";
+    shopGame.style.display = "none";
+    cheatsGame.style.display = "grid";
+});
 botaoShop.addEventListener("click", function () {
     initialGame.style.display = "none";
     gameBoard.style.display = "none";
