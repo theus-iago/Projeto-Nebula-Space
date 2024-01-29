@@ -141,10 +141,7 @@ botaoPlay.addEventListener("click", function () {
 });
 
 botaoCheats.addEventListener("click", function () {
-    initialGame.style.display = "none";
-    gameBoard.style.display = "none";
-    shopGame.style.display = "none";
-    cheatsGame.style.display = "grid";
+    window.alert("Cheats não estão habilitados no momento!");
 });
 botaoShop.addEventListener("click", function () {
     initialGame.style.display = "none";
