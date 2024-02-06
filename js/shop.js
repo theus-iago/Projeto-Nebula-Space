@@ -1,15 +1,19 @@
 function checkRadioPadrao() {
   const positionPlayer = player.getBoundingClientRect();
+  const lifes = [...document.querySelectorAll(".lifes")];
     if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == true){
        player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radioPadrao.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
+        /*document.getElementsByClassName("lifes")[0].src =
             `./images/${radioPadrao.value}.png`;
         document.getElementsByClassName("lifes")[1].src =
             `./images/${radioPadrao.value}.png`;
         document.getElementsByClassName("lifes")[2].src =
-            `./images/${radioPadrao.value}.png`;
+            `./images/${radioPadrao.value}.png`;*/
+            lifes.map((elements) => {
+              elements.src = `./images/${radioPadrao.value}.png`;
+            });
       }
 }
 function checkRadioPadrao02() {
