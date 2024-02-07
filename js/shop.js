@@ -1,16 +1,9 @@
 function checkRadioPadrao() {
   const positionPlayer = player.getBoundingClientRect();
-  const lifes = [...document.querySelectorAll(".lifes")];
     if(localStorage.getItem('skinPadrao') == "desbloqueada" && radioPadrao.checked == true){
        player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radioPadrao.value}.png');`;
-        /*document.getElementsByClassName("lifes")[0].src =
-            `./images/${radioPadrao.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radioPadrao.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radioPadrao.value}.png`;*/
             lifes.map((elements) => {
               elements.src = `./images/${radioPadrao.value}.png`;
             });
@@ -30,12 +23,9 @@ function checkRadioPadrao02() {
        player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            `./images/${radio02.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radio02.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radio02.value}.png`;
+        lifes.map((elements) => {
+          elements.src = `./images/${radio02.value}.png`;
+        });
         img02.style.display = "none";
         preco02.innerHTML = "Cyber";
       }
@@ -54,12 +44,9 @@ function checkRadioPadrao03() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio03.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            `./images/${radio03.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radio03.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radio03.value}.png`;
+        lifes.map((elements) => {
+          elements.src = `./images/${radio03.value}.png`;
+        });
         img03.style.display = "none";
         preco03.innerHTML = "Slicky";
       }
@@ -78,12 +65,9 @@ function checkRadioPadrao04() {
        player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio04.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            `./images/${radio04.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radio04.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radio04.value}.png`;
+        lifes.map((elements) => {
+          elements.src = `./images/${radio04.value}.png`;
+        });
         img04.style.display = "none";
         preco04.innerHTML = "Treck";
       }
@@ -102,12 +86,9 @@ function checkRadioPadrao05() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio05.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            `./images/${radio05.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radio05.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radio05.value}.png`;
+        lifes.map((elements) => {
+          elements.src = `./images/${radio05.value}.png`;
+        });
         img05.style.display = "none";
         preco05.innerHTML = "Dig";
       }
@@ -126,12 +107,9 @@ function checkRadioPadrao06() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio06.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            `./images/${radio06.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radio06.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radio06.value}.png`;
+        lifes.map((elements) => {
+          elements.src = `./images/${radio06.value}.png`;
+        });
         img06.style.display = "none";
         preco06.innerHTML = "Phitom";
       }
@@ -151,12 +129,9 @@ function checkRadioPadrao07() {
        player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio07.value}.png');`;
-        document.getElementsByClassName("lifes")[0].src =
-            `./images/${radio07.value}.png`;
-        document.getElementsByClassName("lifes")[1].src =
-            `./images/${radio07.value}.png`;
-        document.getElementsByClassName("lifes")[2].src =
-            `./images/${radio07.value}.png`;
+       lifes.map((elements) => {
+          elements.src = `./images/${radio07.value}.png`;
+        });
         img07.style.display = "none";
         preco07.innerHTML = "Volks";
       }
@@ -478,15 +453,15 @@ radio04.addEventListener('click', function() {
   checkRadio04();
   checkRadioPadrao04();
 });
-radio05.addEventListener('click', function() {
+radio05.addEventListener('click', () => {
   checkRadio05();
   checkRadioPadrao05();
 });
-radio06.addEventListener('click', function() {
+radio06.addEventListener('click', () => {
   checkRadio06();
   checkRadioPadrao06();
 });
-radio07.addEventListener('click', function() {
+radio07.addEventListener('click', () => {
   checkRadio07();
   checkRadioPadrao07();
 });
