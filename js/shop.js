@@ -7,7 +7,7 @@ function checkRadioPadrao() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radioPadrao.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radioPadrao.value}.png`;
         });
     }
@@ -34,7 +34,7 @@ function checkRadioPadrao02() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio02.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radio02.value}.png`;
         });
         img02.style.display = "none";
@@ -63,7 +63,7 @@ function checkRadioPadrao03() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio03.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radio03.value}.png`;
         });
         img03.style.display = "none";
@@ -92,7 +92,7 @@ function checkRadioPadrao04() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio04.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radio04.value}.png`;
         });
         img04.style.display = "none";
@@ -121,7 +121,7 @@ function checkRadioPadrao05() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio05.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radio05.value}.png`;
         });
         img05.style.display = "none";
@@ -150,7 +150,7 @@ function checkRadioPadrao06() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio06.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radio06.value}.png`;
         });
         img06.style.display = "none";
@@ -180,7 +180,7 @@ function checkRadioPadrao07() {
         player.style.top = positionPlayer.top;
         player.style.left = positionPlayer.left;
         player.style.cssText = `background-image: url('./images/${radio07.value}.png');`;
-        lifes.map(elements => {
+        lifes.forEach(elements => {
             elements.src = `./images/${radio07.value}.png`;
         });
         img07.style.display = "none";
