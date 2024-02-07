@@ -86,6 +86,7 @@ const skin06 = document.getElementById("skin06");
 const radio06 = document.getElementById("sk06");
 const skin07 = document.getElementById("skin07");
 const radio07 = document.getElementById("sk07");
+const lifes = [...document.querySelectorAll(".lifes")];
 
 let buy02 = false;
 let noBuy02 = true;
