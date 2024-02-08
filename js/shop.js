@@ -614,7 +614,7 @@ radios.forEach((elements, indice) => {
   radios.addEventListener("click", (event) => {
     try {
     const radioChecked = event.checked;
-    alert(elements.value);
+    alert(radioChecked.value);
     }catch (err) {
       alert("Erro")
     }
