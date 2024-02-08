@@ -611,12 +611,15 @@ function checkRadio07() {
     }
 }
 radios.forEach((elements, indice) => {
-  console.log(elements)
   elements.addEventListener("click", (event) => {
     let radioChecked = event.target.value;
-    alert(radioChecked);
+    let label = elements.nextElementSibling;
+    let preco = document.querySelector(label+"> .preco");
+    label.style.borderColor = "red";
+    preco.style.backgroundColor = "red";
   });
 });
+
 radioPadrao.addEventListener("click", () => {
     checkRadioPadrao();
 });
