@@ -612,8 +612,12 @@ function checkRadio07() {
 }
 radios.forEach((elements, indice) => {
   radios.addEventListener("click", (event) => {
+    try {
     const radioChecked = event.checked;
     alert(elements.value);
+    }catch (err) {
+      alert("Erro")
+    }
   });
 });
 radioPadrao.addEventListener("click", () => {
