@@ -610,6 +610,11 @@ function checkRadio07() {
         }
     }
 }
+radios.forEach((elements, indice) => {
+  radios.addEventListener("click", (event) => {
+    alert(elements.value);
+  });
+});
 radioPadrao.addEventListener("click", () => {
     checkRadioPadrao();
 });
