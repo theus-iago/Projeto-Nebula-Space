@@ -125,7 +125,7 @@ let isReseted = false;
 radios.forEach((elements, indice) => {
   elements.addEventListener("click", (event) => {
     let radioChecked = event.target.value;
-    let label = elememts.nextElememtSibling;
+    let label = elememts.nextElementSibling;
     
     label.style.borderColor = "Red";
   });
