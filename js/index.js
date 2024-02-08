@@ -122,15 +122,6 @@ let numUnidade_KillsM_Kills = 0;
 let isPaused = false;
 let isReseted = false;
 
-radios.forEach((elements, indice) => {
-  elements.addEventListener("click", (event) => {
-    let radioChecked = event.target.value;
-    let label = elements.nextElementSibling;
-    
-    label.style.borderColor = "Red";
-  });
-});
-
 function pausarjogo() {
     if (!isPaused) {
         body.style.animationPlayState = "paused";
