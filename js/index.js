@@ -88,13 +88,7 @@ const skin07 = document.getElementById("skin07");
 const radio07 = document.getElementById("sk07");
 const lifes = [...document.querySelectorAll(".lifes")];
 const radios = [...document.querySelectorAll(".radio")];
-radios.forEach((elements, indice) => {
-  console.log(elements)
-  elements.addEventListener("click", (event) => {
-    let radioChecked = event.target.value;
-    alert(radioChecked);
-  });
-});
+
 let buy02 = false;
 let noBuy02 = true;
 let buy03 = false;
@@ -127,6 +121,15 @@ let numCentena_Kills = 0;
 let numUnidade_KillsM_Kills = 0;
 let isPaused = false;
 let isReseted = false;
+
+radios.forEach((elements, indice) => {
+  elements.addEventListener("click", (event) => {
+    let radioChecked = event.target.value;
+    let label = elememts.nextElememtSibling;
+    
+    label.style.borderColor = "Red";
+  });
+});
 
 function pausarjogo() {
     if (!isPaused) {
