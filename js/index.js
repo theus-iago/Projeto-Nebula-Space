@@ -88,6 +88,13 @@ const skin07 = document.getElementById("skin07");
 const radio07 = document.getElementById("sk07");
 const lifes = [...document.querySelectorAll(".lifes")];
 const radios = [...document.querySelectorAll(".radio")];
+radios.forEach((elements, indice) => {
+  console.log(elements)
+  elements.addEventListener("click", (event) => {
+    let radioChecked = event.target.value;
+    alert(radioChecked);
+  });
+});
 let buy02 = false;
 let noBuy02 = true;
 let buy03 = false;
