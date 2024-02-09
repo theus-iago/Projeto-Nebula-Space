@@ -129,6 +129,7 @@ radios.forEach((elements, indice) => {
     let preco = label.querySelector(".preco");
     label.style.borderColor = "red";
     preco.style.backgroundColor = "red";
+    preco.style.borderColor = "red";
   });
 });
 
