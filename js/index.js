@@ -122,16 +122,16 @@ let numUnidade_KillsM_Kills = 0;
 let isPaused = false;
 let isReseted = false;
 
-radios.forEach((elements, indice) => {
+/*radios.forEach((elements, indice) => {
   elements.addEventListener("click", (event) => {
-    let radioChecked = event.target.value;
+    let radioChecked = event.target;
     let label = elements.nextElementSibling;
     let preco = label.querySelector(".preco");
-    label.style.borderColor = "red";
-    preco.style.backgroundColor = "red";
+    label.style.borderColor = "#1e1e1e";
+    preco.style.backgroundColor = "#1e1e1e";
     preco.style.borderColor = "red";
   });
-});
+});*/
 
 function pausarjogo() {
     if (!isPaused) {
