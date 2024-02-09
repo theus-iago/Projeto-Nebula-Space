@@ -126,7 +126,7 @@ radios.forEach((elements, indice) => {
   elements.addEventListener("click", (event) => {
     let radioChecked = event.target.value;
     let label = elements.nextElementSibling;
-    let preco = document.querySelector(label+"> .preco");
+    let preco = label.querySelector(".preco");
     label.style.borderColor = "red";
     preco.style.backgroundColor = "red";
   });
