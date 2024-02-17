@@ -429,7 +429,7 @@ button:active {
         display: none;
     }
 }
-.icon {
+.icon, .iconCoin {
     transition: all 0.8s;
 }
 #shieldIcon {
@@ -450,7 +450,7 @@ button:active {
     position: absolute;
     top: -1800px;
 }
-.coinIcon {
+.iconCoin {
     background-image: url("../images/coin.png");
     background-size: 70% 70%;
     background-position: center center;
