@@ -107,6 +107,7 @@ function colisaoIconeShield() {
 }
 function colisaoIconeCoin() {
   if (!isPaused) {
+    let collisionOccurred= false;
     coinIcons.forEach((elements) => {
       const positionPlayer = player.getBoundingClientRect();
       const positionGameBoard = gameBoard.getBoundingClientRect();
@@ -125,6 +126,7 @@ function colisaoIconeCoin() {
           positionPlayer.top <=
           positionCoinIconsBottom + positionGameBoard.top
       ) {
+        collisionOccurred = true;
         setTimeout(
           () => {
             coinIcons.forEach((elements) => {
@@ -142,5 +144,10 @@ function colisaoIconeCoin() {
         }
       }
     });
+    if(!collisionOccurred){
+      coinIcons.forEach((elements) => {
+        elements.style.animation = "";
+      });
+    }
   }
 }
