@@ -171,7 +171,6 @@ function localCoin() {
         coinNum02.innerHTML = resultCoin;
     }
 }
-setInterval(localCoin, 40);
 function back() {
     initialGame.style.display = "grid";
     gameBoard.style.display = "none";
