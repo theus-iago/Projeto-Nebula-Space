@@ -12,13 +12,33 @@ function animationShield() {
 }
 function animationCoin() {
     if (!isPaused) {
-        coinIcon.style.animation = "coin01 5s infinite ease-in-out";
-        coinIcon.style.animationDelay = "5s";
-        setTimeout(() => (coinIcon.style.opacity = "0%"), 100);
-        setTimeout(() => (coinIcon.style.opacity = "100%"), 200);
-        setTimeout(() => (coinIcon.style.opacity = "0%"), 300);
-        setTimeout(() => (coinIcon.style.opacity = "100%"), 400);
-        setTimeout(() => (coinIcon.style.opacity = "0%"), 500);
-        setTimeout(() => (coinIcon.style.opacity = "100%"), 600);
+        coinIcons.forEach((elements) => {
+          elements.style.animation = "coin01 5s infinite ease-in-out";
+        elements.style.animationDelay = "5s";
+        });
+        setTimeout(() => {
+          coinIcons.forEach((elements) => {
+          elements.style.opacity = "0%"});
+        }, 100);
+        setTimeout(() => {
+          coinIcons.forEach((elements) => {
+          elements.style.opacity = "100%"});
+        }, 200);
+        setTimeout(() => {
+          coinIcons.forEach((elements) => {
+          elements.style.opacity = "0%"});
+        }, 300);
+        setTimeout(() => {
+          coinIcons.forEach((elements) => {
+          elements.style.opacity = "100%"});
+        }, 400);
+        setTimeout(() => {
+          coinIcons.forEach((elements) => {
+          elements.style.opacity = "0%"});
+        }, 500);
+        setTimeout(() => {
+          coinIcons.forEach((elements) => {
+          elements.style.opacity = "100%"});
+        }, 600);
     }
 }
