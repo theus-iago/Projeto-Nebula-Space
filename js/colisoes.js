@@ -107,28 +107,40 @@ function colisaoIconeShield() {
 }
 function colisaoIconeCoin() {
   if (!isPaused) {
-    coinIcons.forEach((element) => {
+    let collisionOccurred = false;
+    coinIcons.forEach((elements) => {
       const positionPlayer = player.getBoundingClientRect();
       const positionGameBoard = gameBoard.getBoundingClientRect();
-      const positionCoinIcons = element.getBoundingClientRect();
+      const positionCoinIcons = elements.getBoundingClientRect();
+      const positionCoinIconsLeft = positionCoinIcons.left;
+      const positionCoinIconsRight = positionCoinIcons.right;
+      const positionCoinIconsTop = positionCoinIcons.top;
+      const positionCoinIconsBottom = positionCoinIcons.bottom;
       if (
-        positionPlayer.right >= positionCoinIcons.left + positionGameBoard.left &&
-        positionPlayer.left <= positionCoinIcons.right + positionGameBoard.left &&
-        positionPlayer.bottom >= positionCoinIcons.top + positionGameBoard.top &&
-        positionPlayer.top <= positionCoinIcons.bottom + positionGameBoard.top
+        positionPlayer.right >=
+        positionCoinIconsLeft + positionGameBoard.left &&
+        positionPlayer.left <=
+        positionCoinIconsRight + positionGameBoard.left &&
+        positionPlayer.bottom >=
+        positionCoinIconsTop + positionGameBoard.top &&
+        positionPlayer.top <=
+        positionCoinIconsBottom + positionGameBoard.top
       ) {
-        // Adiciona a classe "colidida" apenas na moeda que colidiu
-        element.classList.add("colidida");
-        
-        // Aplica a animação de morte apenas na moeda que colidiu
-        element.style.animation = "death .6s ease-in-out";
-        setTimeout(() => {
-          element.remove(); // Remove apenas a moeda que colidiu após a animação
-          if (gameBoard.style.display != "none") {
-            numCoin++;
-            localStorage.setItem("Coins", numCoin);
-          }
-        }, 600);
+        elements.classList.add("colidida");
+      }
+    });
+    coinIcons.forEach((elements) => {
+      if(elements.classList.contains("colidida")) {
+      elements.style.animation = "death .6s ease-in-out";
+      setTimeout(() => {
+    elements.remove();
+    if (gameBoard.style.display != "none") {
+      numCoin++;
+      localStorage.setItem("Coins", numCoin);
+    }
+      }, 600);
+      }else {
+        elements.style.animation = "";
       }
     });
   }
