@@ -106,22 +106,21 @@ function colisaoIconeShield() {
   }
 }
 function colisaoIconeCoin() {
+  coinIcons.forEach((elements) => {
   if (!isPaused) {
     const positionPlayer = player.getBoundingClientRect();
-    const positionCoinIcon = coinIcons.map((elements) => {
-      return elements.getBoundingClientRect();
-    });
     const positionGameBoard = gameBoard.getBoundingClientRect();
+    const positionCoinIcons =  elements.getBoundingClientRect();
     if (
       !(
-        positionPlayer.right <
-        positionCoinIcon.left + positionGameBoard.left ||
-        positionPlayer.left >
-        positionCoinIcon.right + positionGameBoard.left ||
-        positionPlayer.bottom <
-        positionCoinIcon.top + positionGameBoard.top ||
-        positionPlayer.top >
-        positionCoinIcon.bottom + positionGameBoard.top
+        positionPlayer.right <=
+        positionCoinIcons.left + positionGameBoard.left &&
+        positionPlayer.left >=
+        positionCoinIcons.right + positionGameBoard.left &&
+        positionPlayer.bottom <=
+        positionCoinIcons.top + positionGameBoard.top &&
+        positionPlayer.top >=
+        positionCoinIcons.bottom + positionGameBoard.top
       )
     ) {
       setTimeout(
@@ -141,4 +140,5 @@ function colisaoIconeCoin() {
       }
     }
   }
+    });
 }
