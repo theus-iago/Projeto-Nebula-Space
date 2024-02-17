@@ -123,7 +123,6 @@ function colisaoIconeCoin() {
         // Aplica a animação de morte apenas na moeda que colidiu
         element.style.animation = "death .6s ease-in-out";
         setTimeout(() => {
-          element.remove(); // Remove apenas a moeda que colidiu após a animação
           if (gameBoard.style.display != "none") {
             numCoin++;
             localStorage.setItem("Coins", numCoin);
