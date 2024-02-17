@@ -106,8 +106,8 @@ function colisaoIconeShield() {
   }
 }
 function colisaoIconeCoin() {
-  coinIcons.forEach((elements) => {
   if (!isPaused) {
+  coinIcons.forEach((elements) => {
     const positionPlayer = player.getBoundingClientRect();
     const positionGameBoard = gameBoard.getBoundingClientRect();
     const positionCoinIcons =  elements.getBoundingClientRect();
