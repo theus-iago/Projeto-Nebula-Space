@@ -139,6 +139,6 @@ function colisaoIconeCoin() {
         localStorage.setItem("Coins", numCoin);
       }
     }
-  }
     });
+  }
 }
