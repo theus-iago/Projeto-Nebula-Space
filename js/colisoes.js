@@ -136,6 +136,7 @@ function colisaoIconeCoin() {
                 numCoin++;
                 localStorage.setItem("Coins", numCoin);
             }
+            localCoin();
         }
     }
 }
