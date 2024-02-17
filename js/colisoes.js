@@ -107,7 +107,7 @@ function colisaoIconeShield() {
 }
 function colisaoIconeCoin() {
   if (!isPaused) {
-    let collisionOccurred= false;
+    let collisionOccurred = false;
     coinIcons.forEach((elements) => {
       const positionPlayer = player.getBoundingClientRect();
       const positionGameBoard = gameBoard.getBoundingClientRect();
@@ -117,38 +117,31 @@ function colisaoIconeCoin() {
       const positionCoinIconsTop = positionCoinIcons.top;
       const positionCoinIconsBottom = positionCoinIcons.bottom;
       if (
-          positionPlayer.right >=
-          positionCoinIconsLeft + positionGameBoard.left &&
-          positionPlayer.left <=
-          positionCoinIconsRight + positionGameBoard.left &&
-          positionPlayer.bottom >=
-          positionCoinIconsTop + positionGameBoard.top &&
-          positionPlayer.top <=
-          positionCoinIconsBottom + positionGameBoard.top
+        positionPlayer.right >=
+        positionCoinIconsLeft + positionGameBoard.left &&
+        positionPlayer.left <=
+        positionCoinIconsRight + positionGameBoard.left &&
+        positionPlayer.bottom >=
+        positionCoinIconsTop + positionGameBoard.top &&
+        positionPlayer.top <=
+        positionCoinIconsBottom + positionGameBoard.top
       ) {
-        collisionOccurred = true;
-        setTimeout(
-          () => {
-            coinIcons.forEach((elements) => {
-              elements.style.animation = "death .6s ease-in-out";
-            });
-          },
-          600
-        );
-        coinIcons.forEach((elements) => {
-          elements.style.animation = "";
-        });
-        element.parentNode.removeChild(elenent);
-        if (gameBoard.style.display != "none") {
-          numCoin++;
-          localStorage.setItem("Coins", numCoin);
-        }
+        elements.classList.add("colidida");
       }
     });
-    if(!collisionOccurred){
-      coinIcons.forEach((elements) => {
-        elements.style.animation = "";
-      });
+    coinIcons.forEach((elements) => {
+      if(elements.classList.contains("colidida")) {
+      elements.style.animation = "death .6s ease-in-out";
+      setTimeout(() => {
+    element.remove(elenent);
+    if (gameBoard.style.display != "none") {
+      numCoin++;
+      localStorage.setItem("Coins", numCoin);
     }
+      }, 600);
+      }else {
+        elements.style.animation = "";
+      }
+    });
   }
 }
