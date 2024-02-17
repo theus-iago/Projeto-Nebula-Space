@@ -119,7 +119,6 @@ function colisaoIconeCoin() {
       ) {
         // Adiciona a classe "colidida" apenas na moeda que colidiu
         element.classList.add("colidida");
-        
         // Aplica a animação de morte apenas na moeda que colidiu
         element.style.animation = "death .6s ease-in-out";
         setTimeout(() => {
