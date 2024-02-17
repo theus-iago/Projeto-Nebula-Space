@@ -133,7 +133,7 @@ function colisaoIconeCoin() {
       if(elements.classList.contains("colidida")) {
       elements.style.animation = "death .6s ease-in-out";
       setTimeout(() => {
-    element.remove(elenent);
+    element.remove();
     if (gameBoard.style.display != "none") {
       numCoin++;
       localStorage.setItem("Coins", numCoin);
