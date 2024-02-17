@@ -124,9 +124,11 @@ function colisaoIconeCoin() {
             )
         ) {
             setTimeout(
-                () => (coinIcons.forEach((elements) => {
+                () => {
+                  coinIcons.forEach((elements) => {
                   elements.style.animation = "death .6s ease-in-out";
-                })),
+                });
+                },
                 600
             );
             coinIcons.forEach((elements) => {
