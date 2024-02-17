@@ -87,7 +87,9 @@ botaoReset.addEventListener("click", function () {
         enemy02.style.display = "none";
         enemy03.style.display = "none";
         shieldIcon.style.display = "none";
-        coinIcon.style.display = "none";
+        coinIcons.forEach((elements) => {
+          elements.style.display = "none";
+        });
         questBack.style.display = "grid";
         botaoYesBack.addEventListener("click", function () {
             location.reload();
@@ -101,7 +103,9 @@ botaoReset.addEventListener("click", function () {
             enemy02.style.display = "block";
             enemy03.style.display = "block";
             shieldIcon.style.display = "flex";
-            coinIcon.style.display = "flex";
+            coinIcons.forEach((elements) => {
+              elements.style.display = "flex";
+            });
             questBack.style.display = "none";
         });
     } else {
@@ -113,7 +117,9 @@ botaoReset.addEventListener("click", function () {
         enemy02.style.display = "block";
         enemy03.style.display = "block";
         shieldIcon.style.display = "flex";
-        coinIcon.style.display = "flex";
+        coinIcons.forEach((elements) => {
+          elements.style.display = "flex";
+        });
         questBack.style.display = "none";
     }
 });
