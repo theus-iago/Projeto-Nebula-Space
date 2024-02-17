@@ -115,12 +115,7 @@ function colisaoIconeCoin() {
       const positionCoinIconsRight = positionCoinIcons.right;
       const positionCoinIconsTop = positionCoinIcons.top;
       const positionCoinIconsBottom = positionCoinIcons.bottom;
-      alert(positionCoinIconsLeft);
-      alert(positionCoinIconsRight);
-      alert(positionCoinIconsTop);
-      alert(positionCoinIconsBottom);
-      /*if (
-        !(
+      if (
           positionPlayer.right >=
           positionCoinIconsLeft + positionGameBoard.left &&
           positionPlayer.left <=
@@ -129,7 +124,6 @@ function colisaoIconeCoin() {
           positionCoinIconsTop + positionGameBoard.top &&
           positionPlayer.top <=
           positionCoinIconsBottom + positionGameBoard.top
-        )
       ) {
         setTimeout(
           () => {
@@ -146,7 +140,7 @@ function colisaoIconeCoin() {
           numCoin++;
           localStorage.setItem("Coins", numCoin);
         }
-      }*/
+      }
     });
   }
 }
