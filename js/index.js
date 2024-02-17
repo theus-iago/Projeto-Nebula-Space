@@ -54,7 +54,7 @@ const botaoTop = document.getElementById("botaoTop");
 const botaoRight = document.getElementById("botaoRight");
 const botaoBottom = document.getElementById("botaoBottom");
 const shieldIcon = document.getElementById("shieldIcon");
-const coinIcons = [...document.querySelectorAll(".coinIcon")];
+const coinIcons = [...document.querySelectorAll(".iconCoin")];
 const shieldNum = document.querySelector(".shieldNum");
 const coinNum01 = document.getElementById("coinNum01");
 const coinNum02 = document.getElementById("coinNum02");
@@ -171,6 +171,7 @@ function localCoin() {
         coinNum02.innerHTML = resultCoin;
     }
 }
+setInterval(localCoin, 40)
 function back() {
     initialGame.style.display = "grid";
     gameBoard.style.display = "none";
