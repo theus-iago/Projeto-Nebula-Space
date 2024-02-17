@@ -107,7 +107,9 @@ function colisaoIconeShield() {
 function colisaoIconeCoin() {
     if (!isPaused) {
         const positionPlayer = player.getBoundingClientRect();
-        const positionCoinIcon = coinIcon.getBoundingClientRect();
+        const positionCoinIcon = coinIcons.forEach((elements) => {
+          elements.getBoundingClientRect();
+        });
         const positionGameBoard = gameBoard.getBoundingClientRect();
         if (
             !(
@@ -122,10 +124,14 @@ function colisaoIconeCoin() {
             )
         ) {
             setTimeout(
-                () => (coinIcon.style.animation = "death .6s ease-in-out"),
+                () => (coinIcons.forEach((elements) => {
+                  elements.style.animation = "death .6s ease-in-out";
+                })),
                 600
             );
-            coinIcon.style.animation = "";
+            coinIcons.forEach((elements) => {
+              elements.style.animation = "";
+            });
             if (gameBoard.style.display != "none") {
                 numCoin++;
                 localStorage.setItem("Coins", numCoin);
