@@ -354,20 +354,20 @@ function checkRadio02() {
             noBuy02 = false;
             botaoYesShop.addEventListener("click", function () {
                 if (
-                    parseInt(localStorage.getItem("Coins")) >= 100 &&
+                    parseInt(localStorage.getItem("Coins")) >= 15 &&
                     localStorage.getItem("skin02") == "bloqueada" &&
                     buy02 == true &&
                     noBuy02 == false &&
                     radio02.checked == true
                 ) {
                     alert("skin Cyber desbloqueada!");
-                    numCoin = parseInt(localStorage.getItem("Coins")) - 100;
+                    numCoin = parseInt(localStorage.getItem("Coins")) - 15;
                     localStorage.setItem("Coins", numCoin);
                     localStorage.setItem("skin02", "desbloqueada");
                     checkRadioPadrao02();
                     questShop.style.display = "none";
                 } else if (
-                    parseInt(localStorage.getItem("Coins")) < 100 &&
+                    parseInt(localStorage.getItem("Coins")) < 15 &&
                     localStorage.getItem("skin02") == "bloqueada" &&
                     buy02 == true &&
                     noBuy02 == false &&
@@ -399,20 +399,20 @@ function checkRadio03() {
             noBuy03 = false;
             botaoYesShop.addEventListener("click", function () {
                 if (
-                    parseInt(localStorage.getItem("Coins")) >= 180 &&
+                    parseInt(localStorage.getItem("Coins")) >= 30 &&
                     localStorage.getItem("skin03") == "bloqueada" &&
                     buy03 == true &&
                     noBuy03 == false &&
                     radio03.checked == true
                 ) {
                     alert("skin Slicky desbloqueada!");
-                    numCoin = parseInt(localStorage.getItem("Coins")) - 180;
+                    numCoin = parseInt(localStorage.getItem("Coins")) - 30;
                     localStorage.setItem("Coins", numCoin);
                     localStorage.setItem("skin03", "desbloqueada");
                     checkRadioPadrao03();
                     questShop.style.display = "none";
                 } else if (
-                    parseInt(localStorage.getItem("Coins")) < 180 &&
+                    parseInt(localStorage.getItem("Coins")) < 30 &&
                     localStorage.getItem("skin03") == "bloqueada" &&
                     buy03 == true &&
                     noBuy03 == false &&
@@ -444,20 +444,20 @@ function checkRadio04() {
             noBuy04 = false;
             botaoYesShop.addEventListener("click", function () {
                 if (
-                    parseInt(localStorage.getItem("Coins")) >= 220 &&
+                    parseInt(localStorage.getItem("Coins")) >= 45 &&
                     localStorage.getItem("skin04") == "bloqueada" &&
                     buy04 == true &&
                     noBuy04 == false &&
                     radio04.checked == true
                 ) {
                     alert("skin Treck desbloqueada!");
-                    numCoin = parseInt(localStorage.getItem("Coins")) - 220;
+                    numCoin = parseInt(localStorage.getItem("Coins")) - 45;
                     localStorage.setItem("Coins", numCoin);
                     localStorage.setItem("skin04", "desbloqueada");
                     checkRadioPadrao04();
                     questShop.style.display = "none";
                 } else if (
-                    parseInt(localStorage.getItem("Coins")) < 220 &&
+                    parseInt(localStorage.getItem("Coins")) < 45 &&
                     localStorage.getItem("skin04") == "bloqueada" &&
                     buy04 == true &&
                     noBuy04 == false &&
@@ -489,20 +489,20 @@ function checkRadio05() {
             noBuy05 = false;
             botaoYesShop.addEventListener("click", function () {
                 if (
-                    parseInt(localStorage.getItem("Coins")) >= 250 &&
+                    parseInt(localStorage.getItem("Coins")) >= 60 &&
                     localStorage.getItem("skin05") == "bloqueada" &&
                     buy05 == true &&
                     noBuy05 == false &&
                     radio05.checked == true
                 ) {
                     alert("skin Dig desbloqueada!");
-                    numCoin = parseInt(localStorage.getItem("Coins")) - 250;
+                    numCoin = parseInt(localStorage.getItem("Coins")) - 60;
                     localStorage.setItem("Coins", numCoin);
                     localStorage.setItem("skin05", "desbloqueada");
                     checkRadioPadrao05();
                     questShop.style.display = "none";
                 } else if (
-                    parseInt(localStorage.getItem("Coins")) < 250 &&
+                    parseInt(localStorage.getItem("Coins")) < 60 &&
                     localStorage.getItem("skin05") == "bloqueada" &&
                     buy05 == true &&
                     noBuy05 == false &&
@@ -534,20 +534,20 @@ function checkRadio06() {
             noBuy06 = false;
             botaoYesShop.addEventListener("click", function () {
                 if (
-                    parseInt(localStorage.getItem("Coins")) >= 300 &&
+                    parseInt(localStorage.getItem("Coins")) >= 75 &&
                     localStorage.getItem("skin06") == "bloqueada" &&
                     buy06 == true &&
                     noBuy06 == false &&
                     radio06.checked == true
                 ) {
                     alert("skin Phitom desbloqueada!");
-                    numCoin = parseInt(localStorage.getItem("Coins")) - 300;
+                    numCoin = parseInt(localStorage.getItem("Coins")) - 75;
                     localStorage.setItem("Coins", numCoin);
                     localStorage.setItem("skin06", "desbloqueada");
                     checkRadioPadrao06();
                     questShop.style.display = "none";
                 } else if (
-                    parseInt(localStorage.getItem("Coins")) < 300 &&
+                    parseInt(localStorage.getItem("Coins")) < 75 &&
                     localStorage.getItem("skin06") == "bloqueada" &&
                     buy06 == true &&
                     noBuy06 == false &&
@@ -579,20 +579,20 @@ function checkRadio07() {
             noBuy07 = false;
             botaoYesShop.addEventListener("click", function () {
                 if (
-                    parseInt(localStorage.getItem("Coins")) >= 330 &&
+                    parseInt(localStorage.getItem("Coins")) >= 90 &&
                     localStorage.getItem("skin07") == "bloqueada" &&
                     buy07 == true &&
                     noBuy07 == false &&
                     radio07.checked == true
                 ) {
                     alert("skin Volks desbloqueada!");
-                    numCoin = parseInt(localStorage.getItem("Coins")) - 330;
+                    numCoin = parseInt(localStorage.getItem("Coins")) - 90;
                     localStorage.setItem("Coins", numCoin);
                     localStorage.setItem("skin07", "desbloqueada");
                     checkRadioPadrao07();
                     questShop.style.display = "none";
                 } else if (
-                    parseInt(localStorage.getItem("Coins")) < 330 &&
+                    parseInt(localStorage.getItem("Coins")) < 90 &&
                     localStorage.getItem("skin07") == "bloqueada" &&
                     buy07 == true &&
                     noBuy07 == false &&
