@@ -107,38 +107,38 @@ function colisaoIconeShield() {
 }
 function colisaoIconeCoin() {
   if (!isPaused) {
-  coinIcons.forEach((elements) => {
-    const positionPlayer = player.getBoundingClientRect();
-    const positionGameBoard = gameBoard.getBoundingClientRect();
-    const positionCoinIcons =  elements.getBoundingClientRect();
-    if (
-      !(
-        positionPlayer.right >=
-        positionCoinIcons.left + positionGameBoard.left &&
-        positionPlayer.left <=
-        positionCoinIcons.right + positionGameBoard.left &&
-        positionPlayer.bottom >=
-        positionCoinIcons.top + positionGameBoard.top &&
-        positionPlayer.top <=
-        positionCoinIcons.bottom + positionGameBoard.top
-      )
-    ) {
-      setTimeout(
-        () => {
-          coinIcons.forEach((elements) => {
-            elements.style.animation = "death .6s ease-in-out";
-          });
-        },
-        600
-      );
-      coinIcons.forEach((elements) => {
-        elements.style.animation = "";
-      });
-      if (gameBoard.style.display != "none") {
-        numCoin++;
-        localStorage.setItem("Coins", numCoin);
+    coinIcons.forEach((elements) => {
+      const positionPlayer = player.getBoundingClientRect();
+      const positionGameBoard = gameBoard.getBoundingClientRect();
+      const positionCoinIcons = elements.getBoundingClientRect();
+      if (
+        !(
+          positionPlayer.right >=
+          positionCoinIcons.left + positionGameBoard.left &&
+          positionPlayer.left <=
+          positionCoinIcons.right + positionGameBoard.left &&
+          positionPlayer.bottom >=
+          positionCoinIcons.top + positionGameBoard.top &&
+          positionPlayer.top <=
+          positionCoinIcons.bottom + positionGameBoard.top
+        )
+      ) {
+        setTimeout(
+          () => {
+            coinIcons.forEach((elements) => {
+              elements.style.animation = "death .6s ease-in-out";
+            });
+          },
+          600
+        );
+        coinIcons.forEach((elements) => {
+          elements.style.animation = "";
+        });
+        if (gameBoard.style.display != "none") {
+          numCoin++;
+          localStorage.setItem("Coins", numCoin);
+        }
       }
-    }
     });
   }
 }
