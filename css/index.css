@@ -450,7 +450,7 @@ button:active {
     position: absolute;
     top: -1800px;
 }
-#coinIcon {
+.coinIcon {
     background-image: url("../images/coin.png");
     background-size: 70% 70%;
     background-position: center center;
