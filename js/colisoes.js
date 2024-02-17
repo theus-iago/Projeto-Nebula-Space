@@ -107,20 +107,28 @@ function colisaoIconeShield() {
 }
 function colisaoIconeCoin() {
   if (!isPaused) {
-    /*coinIcons.forEach((elements) => {
+    coinIcons.forEach((elements) => {
       const positionPlayer = player.getBoundingClientRect();
       const positionGameBoard = gameBoard.getBoundingClientRect();
       const positionCoinIcons = elements.getBoundingClientRect();
-      if (
+      const positionCoinIconsLeft = positionCoinIcons.left;
+      const positionCoinIconsRight = positionCoinIcons.right;
+      const positionCoinIconsTop = positionCoinIcons.top;
+      const positionCoinIconsBottom = positionCoinIcons.bottom;
+      alert(positionCoinIconsLeft);
+      alert(positionCoinIconsRight);
+      alert(positionCoinIconsTop);
+      alert(positionCoinIconsBottom);
+      /*if (
         !(
           positionPlayer.right >=
-          positionCoinIcons.left + positionGameBoard.left &&
+          positionCoinIconsLeft + positionGameBoard.left &&
           positionPlayer.left <=
-          positionCoinIcons.right + positionGameBoard.left &&
+          positionCoinIconsRight + positionGameBoard.left &&
           positionPlayer.bottom >=
-          positionCoinIcons.top + positionGameBoard.top &&
+          positionCoinIconsTop + positionGameBoard.top &&
           positionPlayer.top <=
-          positionCoinIcons.bottom + positionGameBoard.top
+          positionCoinIconsBottom + positionGameBoard.top
         )
       ) {
         setTimeout(
@@ -138,7 +146,7 @@ function colisaoIconeCoin() {
           numCoin++;
           localStorage.setItem("Coins", numCoin);
         }
-      }
-    });*/
+      }*/
+    });
   }
 }
