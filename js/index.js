@@ -54,7 +54,7 @@ const botaoTop = document.getElementById("botaoTop");
 const botaoRight = document.getElementById("botaoRight");
 const botaoBottom = document.getElementById("botaoBottom");
 const shieldIcon = document.getElementById("shieldIcon");
-const coinIcon = document.getElementById("coinIcon");
+const coinIcons = [...document.querySelectorAll("#coinIcon")];
 const shieldNum = document.querySelector(".shieldNum");
 const coinNum01 = document.getElementById("coinNum01");
 const coinNum02 = document.getElementById("coinNum02");
@@ -140,7 +140,9 @@ function pausarjogo() {
         enemy02.style.animationPlayState = "paused";
         enemy03.style.animationPlayState = "paused";
         shieldIcon.style.animationPlayState = "paused";
-        coinIcon.style.animationPlayState = "paused";
+        coinIcons.forEach((elements) => {
+          elements.style.animationPlayState = "paused";
+        });
         isPaused = true;
     }
 }
@@ -151,7 +153,9 @@ function retomarjogo() {
         enemy02.style.animationPlayState = "running";
         enemy03.style.animationPlayState = "running";
         shieldIcon.style.animationPlayState = "running";
-        coinIcon.style.animationPlayState = "running";
+        coinIcons.forEach((elements) => {
+          elements.style.animationPlayState = "running";
+        });
         isPaused = false;
     }
 }
