@@ -138,6 +138,7 @@ function colisaoIconeCoin() {
         coinIcons.forEach((elements) => {
           elements.style.animation = "";
         });
+        element.parentNode.removeChild(elenent);
         if (gameBoard.style.display != "none") {
           numCoin++;
           localStorage.setItem("Coins", numCoin);
