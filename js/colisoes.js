@@ -113,13 +113,13 @@ function colisaoIconeCoin() {
     const positionCoinIcons =  elements.getBoundingClientRect();
     if (
       !(
-        positionPlayer.right <=
+        positionPlayer.right >=
         positionCoinIcons.left + positionGameBoard.left &&
-        positionPlayer.left >=
+        positionPlayer.left <=
         positionCoinIcons.right + positionGameBoard.left &&
-        positionPlayer.bottom <=
+        positionPlayer.bottom >=
         positionCoinIcons.top + positionGameBoard.top &&
-        positionPlayer.top >=
+        positionPlayer.top <=
         positionCoinIcons.bottom + positionGameBoard.top
       )
     ) {
