@@ -105,8 +105,10 @@ function colisaoIconeShield() {
     shieldIcon.style.opacity = 1;
   }
 }
-function colisaoIconeCoin(coin) {
-  if (!isPaused) {
+
+function colisaoIconeCoin() {
+  function colisaoCoin(coin) {
+    if (!isPaused) {
       const positionPlayer = player.getBoundingClientRect();
       const positionGameBoard = gameBoard.getBoundingClientRect();
       const positionCoinIcons = coin.getBoundingClientRect();
@@ -125,8 +127,10 @@ function colisaoIconeCoin(coin) {
             numCoin++;
             localStorage.setItem("Coins", numCoin);
           }
-        }, 600);
+        },
+          600);
       }
+    }
   }
+  coinIcons.map(colisaoIconeCoin);
 }
-coinIcons.map(colisaoIconeCoin);
