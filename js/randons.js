@@ -92,7 +92,7 @@ function coinLeft() {
     if (!isPaused) {
         const random = (min, max) =>
             Math.floor(Math.random() * (max - min) + min);
-        const lefts = ["80%", "75%", "25%", "50%", "10%"];
+        const lefts = ["80%", "10%", "75%", "25%", "50%", "10%"];
         coinIcons.forEach((elements) => {
           elements.style.left = lefts[random(0, lefts.length)];
         });
