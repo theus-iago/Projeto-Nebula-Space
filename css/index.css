@@ -465,6 +465,22 @@ button:active {
     position: absolute;
     top: -1800px;
 }
+#coinIcon01 {
+    transition: all .8s;
+  
+}
+#coinIcon02 {
+    transition: all .4s;
+  
+}
+#coinIcon03 {
+    transition: all .6s;
+  
+}
+#coinIcon04 {
+    transition: all 1s;
+  
+}
 .botoes {
     background-color: rgba(128, 128, 128, 0.63);
     height: 220px;
