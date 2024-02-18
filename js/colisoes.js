@@ -105,12 +105,11 @@ function colisaoIconeShield() {
     shieldIcon.style.opacity = 1;
   }
 }
-function colisaoIconeCoin() {
+function colisaoIconeCoin(coin) {
   if (!isPaused) {
-    coinIcons.forEach((element) => {
       const positionPlayer = player.getBoundingClientRect();
       const positionGameBoard = gameBoard.getBoundingClientRect();
-      const positionCoinIcons = element.getBoundingClientRect();
+      const positionCoinIcons = coin.getBoundingClientRect();
       if (
         positionPlayer.right >= positionCoinIcons.left + positionGameBoard.left &&
         positionPlayer.left <= positionCoinIcons.right + positionGameBoard.left &&
@@ -118,9 +117,9 @@ function colisaoIconeCoin() {
         positionPlayer.top <= positionCoinIcons.bottom + positionGameBoard.top
       ) {
         // Adiciona a classe "colidida" apenas na moeda que colidiu
-        element.classList.add("colidida");
+        coin.classList.add("colidida");
         // Aplica a animação de morte apenas na moeda que colidiu
-        element.style.animation = "death .6s ease-in-out";
+        coin.style.animation = "death .6s ease-in-out";
         setTimeout(() => {
           if (gameBoard.style.display != "none") {
             numCoin++;
@@ -128,6 +127,6 @@ function colisaoIconeCoin() {
           }
         }, 600);
       }
-    });
   }
 }
+coinIcons.map(colisaoIconeCoin);
