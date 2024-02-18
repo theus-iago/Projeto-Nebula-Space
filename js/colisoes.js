@@ -132,5 +132,5 @@ function colisaoIconeCoin() {
       }
     }
   }
-  coinIcons.map(colisaoIconeCoin);
+  coinIcons.forEach(colisaoCoin);
 }
